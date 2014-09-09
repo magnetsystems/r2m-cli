@@ -1,0 +1,148 @@
+#!/bin/bash
+# ----------------------------------------------------------------------------
+# Magnet Application Builder Startup script
+#
+# The tool does it best to find the following values:
+# --------------------------------------------------
+#   JAVA_HOME - location of a JDK home dir
+#   JAVA_CMD - location of the java command
+#   MYSQL_HOME - location of the MySQL installation for use when working with local persistence.
+#   MAGNET_TOOL_HOME - The directory containing the magnet tool installation.
+#   MAGNET_TOOL_VERSION - the version of the magnet tool
+#
+# If those env variables are already set, the tool will not try to infer these values from the PATH or
+# binaries well-known location.
+#
+#   cygwin
+#   darwin
+#   mingw
+# ----------------------------------------------------------------------------
+
+function realpath {
+    local r=$1; local t=$(readlink $r)
+    while [ $t ]; do
+        r=$(cd $(dirname $r) && cd $(dirname $t) && pwd -P)/$(basename $t)
+        t=$(readlink $r)
+    done
+    echo $r
+}
+
+
+if [ -z "$MAGNET_TOOL_HOME" ]; then
+  mabexec=$(realpath $0)
+  mabdir=$(cd "$(dirname $mabexec)/.." && pwd)
+  if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+    # the bin may be a softlink
+    mabparent=$(realpath $(cd "$(dirname $mabexec)" && pwd))
+    mabdir=$(cd "$(dirname $mabparent)" && pwd)
+    if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+      echo "Cannot determine ReST-to-Mobile installation directory, manually set your environment variable MAGNET_TOOL_HOME"
+      exit -1
+    fi;
+  fi
+  export MAGNET_TOOL_HOME=$(realpath $mabdir)
+fi
+
+
+if [ -z "$MAGNET_TOOL_VERSION" ]; then
+  export MAGNET_TOOL_VERSION=${project.version}
+fi
+
+if [ -z "$MAB_HOME" ]; then
+  export MAB_HOME="$HOME/.magnet.com"
+fi
+
+# OS specific support.  $var _must_ be set to either true or false.
+cygwin=false;
+darwin=false;
+mingw=false
+case "`uname`" in
+  CYGWIN*) cygwin=true ;;
+  MINGW*) mingw=true;;
+  Darwin*) darwin=true
+           if [ -z "$JAVA_VERSION" ] ; then
+             JAVA_VERSION="CurrentJDK"
+           fi
+           if [ -z "$JAVA_HOME" ] ; then
+             JAVA_HOME=`/usr/libexec/java_home`
+           fi
+           ;;
+esac
+
+if [ -z "$JAVA_HOME" ] ; then
+  if [ -r /etc/gentoo-release ] ; then
+    JAVA_HOME=`java-config --jre-home`
+  fi
+fi
+
+# For Cygwin, ensure paths are in UNIX format before anything is touched
+if $cygwin ; then
+  [ -n "$JAVA_HOME" ] &&
+    JAVA_HOME=`cygpath --unix "$JAVA_HOME"`
+fi
+
+# For Migwn, ensure paths are in UNIX format before anything is touched
+if $mingw ; then
+  [ -n "$JAVA_HOME" ] &&
+    JAVA_HOME="`(cd "$JAVA_HOME"; pwd)`"
+  # TODO classpath?
+fi
+
+if [ -z "$JAVA_HOME" ]; then
+  javaExecutable="`which javac`"
+  if [ -n "$javaExecutable" -a ! "`expr \"$javaExecutable\" : '\([^ ]*\)'`" = "no" ]; then
+    # readlink(1) is not available as standard on Solaris 10.
+    readLink=`which readlink`
+    if [ ! `expr "$readLink" : '\([^ ]*\)'` = "no" ]; then
+      javaExecutable="`readlink -f \"$javaExecutable\"`"
+      javaHome="`dirname \"$javaExecutable\"`"
+      javaHome=`expr "$javaHome" : '\(.*\)/bin'`
+      JAVA_HOME="$javaHome"
+      export JAVA_HOME
+    fi
+  fi
+fi
+
+if [ -z "$JAVACMD" ] ; then
+  if [ -n "$JAVA_HOME"  ] ; then
+    if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
+      # IBM's JDK on AIX uses strange locations for the executables
+      JAVACMD="$JAVA_HOME/jre/sh/java"
+    else
+      JAVACMD="$JAVA_HOME/bin/java"
+    fi
+  else
+    JAVACMD="`which java`"
+  fi
+fi
+
+if [ ! -x "$JAVACMD" ] ; then
+  echo "Error: JAVA_HOME is not defined correctly."
+  echo "  We cannot execute $JAVACMD"
+  exit 1
+fi
+
+if [ -z "$JAVA_HOME" ] ; then
+  echo "Warning: JAVA_HOME environment variable is not set."
+fi
+
+if [ -z "$MAGNET_TOOL_HOME" ] ; then
+  echo "Warning: MAGNET_TOOL_HOME environment variable is not set."
+fi
+
+if [ -z "$MYSQL_HOME" ] ; then
+  MYSQL=`which mysql`
+  if [ $? -eq 0 ] ; then
+      echo "Using the 'mysql' command on the current PATH" >> /dev/null
+  elif [ -x /usr/bin/mysql ] ; then
+    export MYSQL_HOME="/usr"
+  elif [ -x /usr/local/bin/mysql ] ; then
+    export MYSQL_HOME="/usr/local"
+  elif [ -x /usr/local/mysql/bin/mysql ] ; then
+    export MYSQL_HOME="/usr/local/mysql"
+  else
+    echo "Unable to locate the 'mysql' command. It is required for running local server using MySql as default database" >> /dev/null
+    echo "   Please set the MYSQL_HOME environment variable to the location where MySQL is installed," >> /dev/null
+    echo "   or ensure the 'mysql' and 'mysqladmin' commands are on your PATH." >> /dev/null
+  fi
+fi

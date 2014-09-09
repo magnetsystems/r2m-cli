@@ -1,0 +1,19 @@
++Name texasHoldem
++Request
+https://neurone-texas-holdem.p.mashape.com/playGame/2
++Headers
+X-Mashape-Authorization: WDV0ZCWjXdFNsyxxpwOkUiQtkLjsEBKv
+
++Response
++Body
+{
+  "playerCards": [
+    "10h, Jd",
+    "4s, 5d"
+  ],
+  "showdown": [
+    "9h, 6s, 5s",
+    "6h",
+    "5c"
+  ]
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+JAVA_ARGS="$JAVA_ARGS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000"
+DIRNAME=`dirname "$0"`
+. "$DIRNAME/r2m"
+

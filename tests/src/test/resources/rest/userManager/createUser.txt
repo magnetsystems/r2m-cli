@@ -1,0 +1,21 @@
++name createUser
++Request
+POST http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/createUser
++Headers
+appId : app1
++Content-type application/json
++Body
+{
+"id":1,
+"primaryEmailAddress":"jim.liu@magnet.com"
+}
++Response 200
++Content-type application/json
++Body
+{
+  "id" : 1,
+  "appId" : "app1",
+  "createdTime" : "2013-12-29T08:00:00Z",
+  "updatedTime" : "2013-12-29T08:00:00Z",
+  "primaryEmailAddress" : "jim.liu@magnet.com"
+}

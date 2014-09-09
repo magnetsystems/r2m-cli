@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2014 Magnet Systems, Inc.
+  ~ All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you
+  ~ may not use this file except in compliance with the License. You
+  ~ may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+  ~ implied. See the License for the specific language governing
+  ~ permissions and limitations under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--
+  This module generates a secured WLS domain, start and stop it
+  Use mvn initialize with -Pcreate or -Pstart, or -Pstop to call individual operational command
+  -->
+  <groupId>com.magnet.connect</groupId>
+  <version>2.1.0_M1</version>
+  <artifactId>ols-scripts-maven</artifactId>
+  <packaging>pom</packaging>
+  <name>Magnet Connect Maven scripts</name>
+  <description>${project.name}</description>
+
+  <properties>
+    <wls-maven-plugin.version>12.1.1.0</wls-maven-plugin.version>
+    <weblogic.middlewareHome>${user.home}/Oracle/Software</weblogic.middlewareHome>
+  </properties>
+  <profiles>
+    <profile>
+      <id>stop</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.oracle.weblogic</groupId>
+            <artifactId>wls-maven-plugin</artifactId>
+            <configuration>
+              <middlewareHome>${weblogic.middlewareHome}</middlewareHome>
+              <user>${weblogic.user}</user>
+              <password>${weblogic.password}</password>
+              <domainHome>${domainHome}</domainHome>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>initialize</phase>
+                <goals>
+                  <goal>stop-server</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
+        </plugins>
+      </build>
+
+    </profile>
+    <profile>
+      <id>start</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.oracle.weblogic</groupId>
+            <artifactId>wls-maven-plugin</artifactId>
+            <configuration>
+              <middlewareHome>${weblogic.middlewareHome}</middlewareHome>
+              <user>${weblogic.user}</user>
+              <password>${weblogic.password}</password>
+              <domainHome>${domainHome}</domainHome>
+              <httpPingUrl>${httpPingUrl}</httpPingUrl>
+              <timeoutSecs>90</timeoutSecs>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>initialize</phase>
+                <goals>
+                  <goal>start-server</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
+        </plugins>
+      </build>
+
+    </profile>
+  </profiles>
+  <build>
+    <plugins>
+      <!-- create domain, start and stop server -->
+      <plugin>
+        <groupId>com.oracle.weblogic</groupId>
+        <artifactId>wls-maven-plugin</artifactId>
+        <version>${wls-maven-plugin.version}</version>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

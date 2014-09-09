@@ -1,0 +1,67 @@
++Name YouTube
++Request
+GET https://www.googleapis.com/youtube/v3/videos?id=a2mI4gwnvgE&key=AIzaSyBplE_WWVhPVuQUxlej5NkJlRPa_uOmCng&part=snippet,contentDetails,status
+
++Response
++Content-type application/json
++Body
+{
+    "kind": "youtube#videoListResponse",
+    "etag": "\"gMjDJfS6nsym0T-NKCXALC_u_rM/HQDxJw0omAy8lJBEndAHR6qrbco\"",
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 1
+    },
+    "items": [{
+        "kind": "youtube#video",
+        "etag": "\"gMjDJfS6nsym0T-NKCXALC_u_rM/iY-5JxVioAFTDCyD-vHGRN3sNlQ\"",
+        "id": "7lCDEYXw3mM",
+        "snippet": {
+            "publishedAt": "2012-06-20T23:12:38.000Z",
+            "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+            "title": "Google I/O 101: Q&A On Using Google APIs",
+            "description": "Antonio Fuentes speaks to us and takes questions on working with Google APIs and OAuth 2.0.",
+            "thumbnails": {
+                "default": {
+                    "url": "https://i.ytimg.com/vi/7lCDEYXw3mM/default.jpg",
+                    "width": 120,
+                    "height": 90
+                },
+                "medium": {
+                    "url": "https://i.ytimg.com/vi/7lCDEYXw3mM/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                },
+                "high": {
+                    "url": "https://i.ytimg.com/vi/7lCDEYXw3mM/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                }
+            },
+            "channelTitle": "Google Developers",
+            "categoryId": "28",
+            "liveBroadcastContent": "none"
+        },
+        "contentDetails": {
+            "duration": "PT15M51S",
+            "dimension": "2d",
+            "definition": "hd",
+            "caption": "true",
+            "licensedContent": false
+        },
+        "status": {
+            "uploadStatus": "processed",
+            "privacyStatus": "public",
+            "license": "youtube",
+            "embeddable": true,
+            "publicStatsViewable": true
+        },
+        "statistics": {
+            "viewCount": "5141",
+            "likeCount": "30",
+            "dislikeCount": "1",
+            "favoriteCount": "0",
+            "commentCount": "22"
+        }
+    }]
+}

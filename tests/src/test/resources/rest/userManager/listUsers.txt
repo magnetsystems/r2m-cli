@@ -1,0 +1,21 @@
++Name listUsers
++Request
+GET http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/listUsers?startIndex=1&pageSize=10
++Headers
+appId : app1
+
++Response 200
++Content-type application/json
++Body
+[ {
+    "id" : 1,
+    "appId" : "app1",
+    "createdTime" : "2013-12-29T08:00:00Z",
+    "primaryEmailAddress" : "jim.liu@magnet.com"
+  }, {
+    "id" : 1,
+    "appId" : "app1",
+    "createdTime" : "2013-12-29T08:00:00Z",
+    "primaryEmailAddress" : "jim.liu2@magnet.com",
+    "updatedTime" : "2013-12-29T20:00:00Z"
+  } ]

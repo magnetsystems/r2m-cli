@@ -1,0 +1,12 @@
++name login
++Request
+POST http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/login
++Headers
+appId : app1
++Content-type application/x-www-form-urlencoded
++Body
+userName=jim.liu&password=password
+
++Response 200 text/plain
++Body
+success

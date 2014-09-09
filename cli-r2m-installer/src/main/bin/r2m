@@ -1,0 +1,81 @@
+#!/bin/bash
+# ----------------------------------------------------------------------------
+# Magnet Application Builder Startup script
+#
+# Required ENV vars:
+# ------------------
+#   JAVA_HOME - location of a JDK home dir
+#   M2_HOME  - location of a the maven installation
+#
+# Optional ENV vars
+# -----------------
+#   MYSQL_HOME - location of the MySQL installation for use when working with local persistence.
+#   MAGNET_TOOL_HOME - The directory containing the magnet tool installation.
+#   MAGNET_OPTS parameters passed to the Java VM when running Magnet
+#     e.g. to debug the tool itself, use
+#       set MAGNET_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
+# ----------------------------------------------------------------------------
+
+function realpath {
+    local r=$1; local t=$(readlink $r)
+    while [ $t ]; do
+        r=$(cd $(dirname $r) && cd $(dirname $t) && pwd -P)/$(basename $t)
+        t=$(readlink $r)
+    done
+    echo $r
+}
+
+TOOL_NAME=r2m
+
+if [ -z "$MAGNET_TOOL_HOME" ]; then
+  mabexec=$(realpath $0)
+  mabdir=$(cd "$(dirname $mabexec)/.." && pwd)
+  if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+    # the bin may be a softlink
+    mabparent=$(realpath $(cd "$(dirname $mabexec)" && pwd))
+    mabdir=$(cd "$(dirname $mabparent)" && pwd)
+    if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+      echo "Cannot determine $TOOL_NAME installation directory, manually set your environment variable MAGNET_TOOL_HOME"
+      exit -1
+    fi;
+  fi
+  export MAGNET_TOOL_HOME=$(realpath $mabdir)
+fi
+
+. "${MAGNET_TOOL_HOME}/bin/${TOOL_NAME}-env"
+
+VERSION_MESSAGE="ReST-to-Mobile $MAGNET_TOOL_VERSION"
+FULL_VERSION_MESSAGE="$VERSION_MESSAGE (${buildNumber}; ${buildTime})"
+
+while getopts v name
+do
+  case $name in
+    v) echo $FULL_VERSION_MESSAGE
+       exit 0;;
+    ?) printf "Usage: %s: [-v|command args]\n" $0
+       exit 2;;
+   esac
+done
+
+echo "Starting $VERSION_MESSAGE"
+
+# For Cygwin, switch paths to Windows format before running java
+if $cygwin; then
+  [ -n "$JAVA_HOME" ] &&
+    JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`
+fi
+
+# Set class path
+CONFIG_DIR="${MAGNET_TOOL_HOME}"/config
+LIB_DIR="${MAGNET_TOOL_HOME}"/lib/*
+CLASSPATH="${CONFIG_DIR}":"${LIB_DIR}"
+if [ -n "$MAB_EXTRA_CLASSPATH" ]; then
+    CLASSPATH="${MAB_EXTRA_CLASSPATH}":"${CLASSPATH}"
+fi
+
+# handle whitespaces in command arguments.
+for f in "$@" ; do
+    args+=("$f")
+done
+
+exec "$JAVACMD" $JAVA_ARGS -classpath $CLASSPATH com.magnet.tools.cli.core.Main "${args[@]}"

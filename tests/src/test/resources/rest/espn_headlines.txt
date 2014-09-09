@@ -1,0 +1,1368 @@
++Name getEspnSportsNews
++Request
+GET https://wmerydith-espn.p.mashape.com/sports/news?apikey=fnbkkygduuavvvmg2y846vmh
++Headers
+X-Mashape-Authorization: uaAKETtgdX58iYtBcbx7kb79gerYqOw1
+
++Response 200
++Content-type application/json
++Body
+{
+  "timestamp": "2014-06-12T22:24:03Z",
+  "resultsOffset": 0,
+  "status": "success",
+  "resultsLimit": 10,
+  "resultsCount": 6751,
+  "headlines": [
+    {
+      "headline": "Tempers flare as Rockies beat Braves 10-3",
+      "keywords": [],
+      "lastModified": "2014-06-12T22:20:07Z",
+      "premium": false,
+      "gameId": "340612127",
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11074306"
+          },
+          "events": {
+            "href": "http://api.espn.com/v1/sports/baseball/mlb/events/340612127"
+          }
+        },
+        "web": {
+          "href": "http://scores.espn.go.com/mlb/recap?gameId=340612127&ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://scores.espn.go.com/mlb/gamecast?gameId=340612127&version=mobile&ex_cid=espnapi_public"
+        }
+      },
+      "type": "Recap",
+      "related": [],
+      "id": 11074306,
+      "story": "",
+      "linkText": "Tempers flare as Rockies beat Braves 10-3",
+      "source": "Associated Press",
+      "description": "Tempers flare as Rockies beat Braves 10-3",
+      "images": [],
+      "categories": [
+        {
+          "description": "Colorado Rockies",
+          "type": "team",
+          "sportId": 10,
+          "teamId": 27,
+          "team": {
+            "id": 27,
+            "description": "Colorado Rockies",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/teams/27"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/mlb/team/_/name/col/colorado-rockies?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/mlb/clubhouse?teamId=27&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10~t:27"
+        },
+        {
+          "description": "Atlanta Braves",
+          "type": "team",
+          "sportId": 10,
+          "teamId": 15,
+          "team": {
+            "id": 15,
+            "description": "Atlanta Braves",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/teams/15"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/mlb/team/_/name/atl/atlanta-braves?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/mlb/clubhouse?teamId=15&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10~t:15"
+        },
+        {
+          "description": "MLB",
+          "type": "league",
+          "sportId": 10,
+          "leagueId": 10,
+          "league": {
+            "id": 10,
+            "description": "MLB",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10"
+        }
+      ],
+      "published": "2014-06-12T22:20:20Z",
+      "video": []
+    },
+    {
+      "headline": "Seahawks, Kevin Williams agree",
+      "keywords": [
+        "roster moves",
+        "signings",
+        "defensive",
+        "defensive line"
+      ],
+      "lastModified": "2014-06-12T22:08:59Z",
+      "premium": false,
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11074117"
+          }
+        },
+        "web": {
+          "href": "http://espn.go.com/nfl/story/_/id/11074117/seattle-seahawks-agree-defensive-tackle-kevin-williams?ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=11074117&ex_cid=espnapi_public"
+        }
+      },
+      "type": "HeadlineNews",
+      "related": [],
+      "id": 11074117,
+      "story": "",
+      "title": "Seattle Seahawks agree with defensive tackle Kevin Williams",
+      "linkText": "Sources: Seahawks add ex-Vikes DT Williams",
+      "byline": "Ed Werder",
+      "source": "ESPN",
+      "description": "The defending Super Bowl champion Seattle Seahawks have reached agreement with defensive tackle Kevin Williams on a one-year contract, according to league sources.",
+      "images": [],
+      "categories": [
+        {
+          "description": "NFL",
+          "type": "league",
+          "sportId": 28,
+          "leagueId": 28,
+          "league": {
+            "id": 28,
+            "description": "NFL",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/nfl/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/nfl/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:20~l:28"
+        },
+        {
+          "description": "Seattle Seahawks",
+          "type": "team",
+          "sportId": 28,
+          "teamId": 26,
+          "team": {
+            "id": 26,
+            "description": "Seattle Seahawks",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/football/nfl/teams/26"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/nfl/team/_/name/sea/seattle-seahawks?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/nfl/clubhouse?teamId=26&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:20~l:28~t:26"
+        },
+        {
+          "description": "Kevin Williams",
+          "type": "athlete",
+          "sportId": 28,
+          "athleteId": 4467,
+          "athlete": {
+            "id": 4467,
+            "description": "Kevin Williams",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/football/nfl/athletes/4467"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/nfl/player/_/id/4467/kevin-williams?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/nfl/playercard?playerId=4467&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "topic",
+          "sportId": 0,
+          "topicId": 52
+        }
+      ],
+      "published": "2014-06-12T21:53:54Z",
+      "video": []
+    },
+    {
+      "headline": "Reports: Open set for Portrush return",
+      "keywords": [
+        "Open Championship",
+        "Royal Portrush",
+        "links",
+        "Northern Ireland"
+      ],
+      "lastModified": "2014-06-12T22:18:23Z",
+      "premium": false,
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11073792"
+          }
+        },
+        "web": {
+          "href": "http://espn.go.com/golf/story/_/id/11073792/open-championship-set-return-royal-portrush-northern-ireland?ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/wireless/story?storyId=11073792&ex_cid=espnapi_public"
+        }
+      },
+      "type": "HeadlineNews",
+      "related": [],
+      "id": 11073792,
+      "story": "",
+      "title": "Open Championship set to return to Royal Portrush in Northern Ireland",
+      "linkText": "Reports: Open Championship headed to Portrush",
+      "byline": "Bob Harig",
+      "source": "ESPN.com",
+      "description": "The Open Championship will be headed to Royal Portrush in Northern Ireland in 2019, several news outlets in the United Kingdom and Ireland as well as GolfDigest.com are reporting. ",
+      "images": [],
+      "categories": [
+        {
+          "description": "Golf",
+          "type": "league",
+          "sportId": 1106,
+          "leagueId": 1106,
+          "league": {
+            "id": 1106,
+            "description": "Golf",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/golf"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1100~l:1106"
+        }
+      ],
+      "published": "2014-06-12T21:20:31Z",
+      "video": []
+    },
+    {
+      "headline": "Brignac, Mayberry lead Phillies over Padres",
+      "keywords": [],
+      "lastModified": "2014-06-12T21:15:14Z",
+      "premium": false,
+      "gameId": "340612122",
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11073491"
+          },
+          "events": {
+            "href": "http://api.espn.com/v1/sports/baseball/mlb/events/340612122"
+          }
+        },
+        "web": {
+          "href": "http://scores.espn.go.com/mlb/recap?gameId=340612122&ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://scores.espn.go.com/mlb/gamecast?gameId=340612122&version=mobile&ex_cid=espnapi_public"
+        }
+      },
+      "shortLinkText": "Brignac, Mayberry lead Phillies over Padres ",
+      "type": "Recap",
+      "related": [],
+      "id": 11073491,
+      "story": "",
+      "linkText": "Brignac, Mayberry lead Phillies over Padres",
+      "source": "Associated Press",
+      "description": "Brignac, Mayberry lead Phillies over Padres",
+      "images": [
+        {
+          "height": 324,
+          "alt": "",
+          "width": 576,
+          "name": "Phillies Sweep Padres",
+          "caption": "Reid Brignac hit a tiebreaking, two-run double in the sixth inning as the Phillies beat the Padres 7-3 to complete a three-game sweep.",
+          "type": "video",
+          "url": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_mlb_phi_sd_hl/dm_140612_mlb_phi_sd_hl.jpg"
+        }
+      ],
+      "categories": [
+        {
+          "description": "Philadelphia Phillies",
+          "type": "team",
+          "sportId": 10,
+          "teamId": 22,
+          "team": {
+            "id": 22,
+            "description": "Philadelphia Phillies",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/teams/22"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/mlb/team/_/name/phi/philadelphia-phillies?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/mlb/clubhouse?teamId=22&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10~t:22"
+        },
+        {
+          "description": "San Diego Padres",
+          "type": "team",
+          "sportId": 10,
+          "teamId": 25,
+          "team": {
+            "id": 25,
+            "description": "San Diego Padres",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/teams/25"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/mlb/team/_/name/sd/san-diego-padres?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/mlb/clubhouse?teamId=25&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10~t:25"
+        },
+        {
+          "description": "MLB",
+          "type": "league",
+          "sportId": 10,
+          "leagueId": 10,
+          "league": {
+            "id": 10,
+            "description": "MLB",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10"
+        }
+      ],
+      "published": "2014-06-12T20:36:52Z",
+      "video": [
+        {
+          "id": 11073541,
+          "title": "Phillies Sweep Padres",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_mlb_phi_sd_hl/dm_140612_mlb_phi_sd_hl.jpg",
+          "tracking": {
+            "sportName": "mlb",
+            "leagueName": "No League",
+            "coverageType": "Highlight",
+            "trackingName": "COM_MLB Highlight (Padres-Phillies) 2014/06/12 ESHEET"
+          },
+          "description": "Reid Brignac hit a tiebreaking, two-run double in the sixth inning as the Phillies beat the Padres 7-3 to complete a three-game sweep.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11073541&ex_cid=espnapi_public"
+            }
+          }
+        },
+        {
+          "id": 11073541,
+          "title": "Phillies Sweep Padres",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_mlb_phi_sd_hl/dm_140612_mlb_phi_sd_hl.jpg",
+          "tracking": {
+            "sportName": "mlb",
+            "leagueName": "No League",
+            "coverageType": "Highlight",
+            "trackingName": "COM_MLB Highlight (Padres-Phillies) 2014/06/12 ESHEET"
+          },
+          "description": "Reid Brignac hit a tiebreaking, two-run double in the sixth inning as the Phillies beat the Padres 7-3 to complete a three-game sweep.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11073541&ex_cid=espnapi_public"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "headline": "Hanley Ramirez (shoulder) out",
+      "keywords": [
+        "cortisone",
+        "injury",
+        "shoulder",
+        "dodgers"
+      ],
+      "lastModified": "2014-06-12T20:37:14Z",
+      "premium": false,
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11073379"
+          }
+        },
+        "web": {
+          "href": "http://espn.go.com/los-angeles/mlb/story/_/id/11073379/hanley-ramirez-los-angeles-dodgers-receives-cortisone-injection-shoulder?ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/mlb/story?storyId=11073379&ex_cid=espnapi_public"
+        }
+      },
+      "type": "HeadlineNews",
+      "related": [],
+      "id": 11073379,
+      "story": "",
+      "title": "Hanley Ramirez of Los Angeles Dodgers receives cortisone injection in shoulder",
+      "linkText": "Ramirez gets cortisone, out at least 2 games",
+      "byline": "Mark Saxon",
+      "source": "ESPNLosAngeles.com",
+      "description": "Los Angeles Dodgers shortstop Hanley Ramirez received a cortisone injection in his right shoulder Wednesday night and is unavailable for at least the next two games, manager Don Mattingly said Thursday. ",
+      "images": [],
+      "categories": [
+        {
+          "description": "Los Angeles Dodgers",
+          "type": "team",
+          "sportId": 10,
+          "teamId": 19,
+          "team": {
+            "id": 19,
+            "description": "Los Angeles Dodgers",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/teams/19"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/mlb/team/_/name/lad/los-angeles-dodgers?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/mlb/clubhouse?teamId=19&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10~t:19"
+        },
+        {
+          "description": "MLB",
+          "type": "league",
+          "sportId": 10,
+          "leagueId": 10,
+          "league": {
+            "id": 10,
+            "description": "MLB",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10"
+        },
+        {
+          "description": "Hanley Ramirez",
+          "type": "athlete",
+          "sportId": 10,
+          "athleteId": 6195,
+          "athlete": {
+            "id": 6195,
+            "description": "Hanley Ramirez",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/athletes/6195"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/mlb/player/_/id/6195/hanley-ramirez?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/mlb/playercard?playerId=6195&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "published": "2014-06-12T20:11:03Z",
+      "video": []
+    },
+    {
+      "headline": "U.S. Am champ Fitzpatrick takes penalty",
+      "keywords": [
+        "U.S. Open",
+        "Pinehurst No. 2"
+      ],
+      "lastModified": "2014-06-12T20:23:26Z",
+      "premium": false,
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11072994"
+          }
+        },
+        "web": {
+          "href": "http://espn.go.com/golf/blog/_/name/golf/id/11072994/us-amateur-champion-matthew-fitzpatrick-takes-penalty-us-open-golf?ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/golf/story?storyId=11072994&ex_cid=espnapi_public"
+        }
+      },
+      "type": "BlogEntry",
+      "related": [],
+      "id": 11072994,
+      "story": "",
+      "title": "U.S. Amateur champion Matthew Fitzpatrick takes penalty at U.S. Open -- Golf",
+      "linkText": "U.S. Am champ Fitzpatrick takes penalty",
+      "byline": "Bob Harig",
+      "description": "U.S. Am champ Fitzpatrick takes penalty",
+      "images": [],
+      "categories": [
+        {
+          "description": "Golf",
+          "type": "league",
+          "sportId": 1106,
+          "leagueId": 1106,
+          "league": {
+            "id": 1106,
+            "description": "Golf",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/golf"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1100~l:1106"
+        }
+      ],
+      "published": "2014-06-12T19:34:27Z",
+      "video": []
+    },
+    {
+      "headline": "Alfredo Simon earns 9th win, leads Reds to win over Dodgers",
+      "keywords": [],
+      "lastModified": "2014-06-12T21:34:13Z",
+      "premium": false,
+      "gameId": "340612117",
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11072945"
+          },
+          "events": {
+            "href": "http://api.espn.com/v1/sports/baseball/mlb/events/340612117"
+          }
+        },
+        "web": {
+          "href": "http://scores.espn.go.com/mlb/recap?gameId=340612117&ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://scores.espn.go.com/mlb/gamecast?gameId=340612117&version=mobile&ex_cid=espnapi_public"
+        }
+      },
+      "shortLinkText": "Simon gets 9th win as Reds beat Dodgers ",
+      "type": "Recap",
+      "related": [],
+      "id": 11072945,
+      "story": "",
+      "linkText": "Simon gets 9th win as Reds beat Dodgers",
+      "source": "Associated Press",
+      "description": "Todd Frazier hit a two-run homer off Zack Greinke, who lost his perfect record at Great American Ball Park, and the Cincinnati Reds beat the Los Angeles Dodgers 4-1 on Thursday afternoon for a split of their four-game series.",
+      "images": [
+        {
+          "height": 324,
+          "alt": "",
+          "width": 576,
+          "name": "Frazier's Home Run Powers Reds",
+          "caption": "Todd Frazier hit a two-run home run as the Reds beat the Dodgers 4-1 to gain a split of their four-game series.",
+          "type": "video",
+          "url": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_mlb_lad_cin_hl/dm_140612_mlb_lad_cin_hl.jpg"
+        }
+      ],
+      "categories": [
+        {
+          "description": "Cincinnati Reds",
+          "type": "team",
+          "sportId": 10,
+          "teamId": 17,
+          "team": {
+            "id": 17,
+            "description": "Cincinnati Reds",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/teams/17"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/mlb/team/_/name/cin/cincinnati-reds?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/mlb/clubhouse?teamId=17&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10~t:17"
+        },
+        {
+          "description": "Los Angeles Dodgers",
+          "type": "team",
+          "sportId": 10,
+          "teamId": 19,
+          "team": {
+            "id": 19,
+            "description": "Los Angeles Dodgers",
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb/teams/19"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "http://espn.go.com/mlb/team/_/name/lad/los-angeles-dodgers?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.go.com/mlb/clubhouse?teamId=19&ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10~t:19"
+        },
+        {
+          "description": "MLB",
+          "type": "league",
+          "sportId": 10,
+          "leagueId": 10,
+          "league": {
+            "id": 10,
+            "description": "MLB",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/baseball/mlb"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/mlb/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1~l:10"
+        }
+      ],
+      "published": "2014-06-12T19:31:28Z",
+      "video": [
+        {
+          "id": 11073132,
+          "title": "Frazier's Home Run Powers Reds",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_mlb_lad_cin_hl/dm_140612_mlb_lad_cin_hl.jpg",
+          "tracking": {
+            "sportName": "mlb",
+            "leagueName": "No League",
+            "coverageType": "Highlight",
+            "trackingName": "COM_MLB Highlight (Dodgers-Reds) 2014/06/12 ESHEET SC"
+          },
+          "description": "Todd Frazier hit a two-run home run as the Reds beat the Dodgers 4-1 to gain a split of their four-game series.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11073132&ex_cid=espnapi_public"
+            }
+          }
+        },
+        {
+          "id": 11073132,
+          "title": "Frazier's Home Run Powers Reds",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_mlb_lad_cin_hl/dm_140612_mlb_lad_cin_hl.jpg",
+          "tracking": {
+            "sportName": "mlb",
+            "leagueName": "No League",
+            "coverageType": "Highlight",
+            "trackingName": "COM_MLB Highlight (Dodgers-Reds) 2014/06/12 ESHEET SC"
+          },
+          "description": "Todd Frazier hit a two-run home run as the Reds beat the Dodgers 4-1 to gain a split of their four-game series.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11073132&ex_cid=espnapi_public"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "headline": "Johnson's tee shot tests a greenside mike",
+      "keywords": [
+        "U.S. Open",
+        "Pinehurst No. 2",
+        "Dustin Johnson"
+      ],
+      "lastModified": "2014-06-12T19:31:37Z",
+      "premium": false,
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11072931"
+          }
+        },
+        "web": {
+          "href": "http://espn.go.com/golf/blog/_/name/golf/id/11072931/dustin-johnson-hits-mike-round-1-golf?ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/golf/story?storyId=11072931&ex_cid=espnapi_public"
+        }
+      },
+      "type": "BlogEntry",
+      "related": [],
+      "id": 11072931,
+      "story": "",
+      "title": "Dustin Johnson hits a mike in Round 1 -- Golf",
+      "linkText": "Dustin Johnson hits a mike in Round 1 ",
+      "byline": "ESPN.com",
+      "description": "Jordan Spieth Round 1 U.S. Open interview ",
+      "images": [
+        {
+          "height": 324,
+          "alt": "",
+          "width": 576,
+          "name": "Johnson Goes Off Mike",
+          "caption": "On the sixth hole at Pinehurst No. 2, Dustin Johnson's tee shot lands on a microphone near the green, and bounces away into the rough.",
+          "type": "video",
+          "url": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_golf_dustin_johnson_shot/dm_140612_golf_dustin_johnson_shot.jpg"
+        }
+      ],
+      "categories": [
+        {
+          "description": "Golf",
+          "type": "league",
+          "sportId": 1106,
+          "leagueId": 1106,
+          "league": {
+            "id": 1106,
+            "description": "Golf",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/golf"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1100~l:1106"
+        },
+        {
+          "description": "Dustin Johnson",
+          "type": "athlete",
+          "sportId": 1106,
+          "athleteId": 3448,
+          "athlete": {
+            "id": 3448,
+            "description": "Dustin Johnson",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/golf/athletes/3448"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/golf/player/_/id/3448/dustin-johnson?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/golf/playercard?playerId=3448&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "published": "2014-06-12T19:26:43Z",
+      "video": [
+        {
+          "id": 11072858,
+          "title": "Johnson Goes Off Mike",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_golf_dustin_johnson_shot/dm_140612_golf_dustin_johnson_shot.jpg",
+          "tracking": {
+            "sportName": "Golf",
+            "leagueName": "No League",
+            "coverageType": "Highlight",
+            "trackingName": "Mobile_Golf_Highlight (Dustin Johnson Off Mike) 2014/06/12 ESHEET"
+          },
+          "description": "On the sixth hole at Pinehurst No. 2, Dustin Johnson's tee shot lands on a microphone near the green, and bounces away into the rough.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11072858&ex_cid=espnapi_public"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "headline": "Phil Mickelson shoots even-par 70",
+      "keywords": [
+        "U.S. Open",
+        "results",
+        "round 1",
+        "first round",
+        "putter",
+        "claw grip",
+        "Pinehurst"
+      ],
+      "lastModified": "2014-06-12T21:09:16Z",
+      "premium": false,
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11072853"
+          }
+        },
+        "web": {
+          "href": "http://espn.go.com/golf/usopen14/story/_/id/11072853/2014-us-open-phil-mickelson-shoots-even-par-70-first-round?ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/golf/story?storyId=11072853&ex_cid=espnapi_public"
+        }
+      },
+      "shortLinkText": "Mickelson tallies 70, laments putter ",
+      "type": "HeadlineNews",
+      "related": [
+        {
+          "id": 11066004,
+          "title": "Drama continues to follow Phil Mickelson at U.S. Open -- golf",
+          "links": {
+            "api": {
+              "news": {
+                "href": "http://api.espn.com/v1/sports/news/11066004"
+              }
+            },
+            "web": {
+              "href": "http://espn.go.com/golf/usopen14/story/_/id/11066004/drama-continues-follow-phil-mickelson-us-open-golf?ex_cid=espnapi_public"
+            },
+            "mobile": {
+              "href": "http://m.espn.go.com/golf/story?storyId=11066004&ex_cid=espnapi_public"
+            }
+          }
+        }
+      ],
+      "id": 11072853,
+      "story": "",
+      "title": "2014 U.S. Open -- Phil Mickelson shoots even-par 70 in first round",
+      "linkText": "Lefty shoots 70 at U.S. Open, laments putter",
+      "byline": "Bob Harig",
+      "source": "ESPN.com",
+      "description": "Phil Mickelson's quest for the fourth leg of the career Grand Slam got off to a decent start Thursday, an even-par 70 at Pinehurst No. 2 that left the five-time major champion in good position after his first round at the U.S. Open.",
+      "images": [
+        {
+          "height": 324,
+          "alt": "",
+          "width": 576,
+          "name": "Mickelson In Contention At U.S. Open",
+          "caption": "Phil Mickelson is within striking distance at the U.S. Open.",
+          "type": "video",
+          "url": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_golf_usopen_2pm/dm_140612_golf_usopen_2pm.jpg"
+        },
+        {
+          "height": 324,
+          "alt": "Phil Mickelson",
+          "width": 576,
+          "name": "Mickelson_Phil 140605 [576x324]",
+          "type": "inline",
+          "credit": "Andrew Redington/Getty Images",
+          "url": "http://a.espncdn.com/photo/2014/0605/pga_g_mickelson03jr_576x324.jpg"
+        }
+      ],
+      "categories": [
+        {
+          "description": "Golf",
+          "type": "league",
+          "sportId": 1106,
+          "leagueId": 1106,
+          "league": {
+            "id": 1106,
+            "description": "Golf",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/golf"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1100~l:1106"
+        },
+        {
+          "description": "Phil Mickelson",
+          "type": "athlete",
+          "sportId": 1106,
+          "athleteId": 308,
+          "athlete": {
+            "id": 308,
+            "description": "Phil Mickelson",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/golf/athletes/308"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/golf/player/_/id/308/phil-mickelson?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/golf/playercard?playerId=308&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        },
+        {
+          "description": "Graeme McDowell",
+          "type": "athlete",
+          "sportId": 1106,
+          "athleteId": 301,
+          "athlete": {
+            "id": 301,
+            "description": "Graeme McDowell",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/golf/athletes/301"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/golf/player/_/id/301/graeme-mcdowell?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/golf/playercard?playerId=301&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        },
+        {
+          "description": "Kevin Na",
+          "type": "athlete",
+          "sportId": 1106,
+          "athleteId": 318,
+          "athlete": {
+            "id": 318,
+            "description": "Kevin Na",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/golf/athletes/318"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/golf/player/_/id/318/kevin-na?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/golf/playercard?playerId=318&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        },
+        {
+          "description": "Justin Rose",
+          "type": "athlete",
+          "sportId": 1106,
+          "athleteId": 569,
+          "athlete": {
+            "id": 569,
+            "description": "Justin Rose",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/golf/athletes/569"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/golf/player/_/id/569/justin-rose?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/golf/playercard?playerId=569&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        },
+        {
+          "description": "Matthew Fitzpatrick",
+          "type": "athlete",
+          "sportId": 1106,
+          "athleteId": 9037,
+          "athlete": {
+            "id": 9037,
+            "description": "Matthew Fitzpatrick",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/golf/athletes/9037"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/golf/player/_/id/9037/matthew-fitzpatrick?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/golf/playercard?playerId=9037&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "published": "2014-06-12T19:10:06Z",
+      "video": [
+        {
+          "id": 11072456,
+          "title": "Mickelson In Contention At U.S. Open",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_golf_usopen_2pm/dm_140612_golf_usopen_2pm.jpg",
+          "tracking": {
+            "sportName": "Golf",
+            "leagueName": "No League",
+            "coverageType": "Highlight",
+            "trackingName": "COM_GOLF Highlight (US Open 2pm) 2014/06/12"
+          },
+          "description": "Phil Mickelson is within striking distance at the U.S. Open.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11072456&ex_cid=espnapi_public"
+            }
+          }
+        },
+        {
+          "id": 11072261,
+          "title": "Mickelson On Even-Par First Round",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_golf_phil_mickelson_rd_1/dm_140612_golf_phil_mickelson_rd_1.jpg",
+          "tracking": {
+            "sportName": "Golf",
+            "leagueName": "No League",
+            "coverageType": "Interview",
+            "trackingName": "**UNPUB 6/15 AFTER US OPEN** COM_GOLF_Interview (Phil Mickelson Round 1) 2014/06/12"
+          },
+          "description": "Phil Mickelson discusses what went right and wrong in his even-par 70 in the first round of the U.S. Open.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11072261&ex_cid=espnapi_public"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "headline": "Jordan Spieth talks about his first round",
+      "keywords": [
+        "U.S. Open",
+        "Pinehurst No. 2",
+        "Jordan Spieth"
+      ],
+      "lastModified": "2014-06-12T18:55:11Z",
+      "premium": false,
+      "mobileStory": "",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api.espn.com/v1/sports/news/11072727"
+          }
+        },
+        "web": {
+          "href": "http://espn.go.com/golf/blog/_/name/golf/id/11072727/jordan-spieth-round-1-us-open-interview-golf?ex_cid=espnapi_public"
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/golf/story?storyId=11072727&ex_cid=espnapi_public"
+        }
+      },
+      "type": "BlogEntry",
+      "related": [],
+      "id": 11072727,
+      "story": "",
+      "title": "Jordan Spieth Round 1 U.S. Open interview -- Golf",
+      "linkText": "Jordan Spieth Round 1 U.S. Open interview ",
+      "byline": "ESPN.com",
+      "description": "Jordan Spieth Round 1 U.S. Open interview ",
+      "images": [
+        {
+          "height": 324,
+          "alt": "",
+          "width": 576,
+          "name": "Spieth Had Fun In Round 1",
+          "caption": "Jordan Spieth discusses playing with Hideki Matsuyama and Rickie Fowler in the first round of the U.S. Open.",
+          "type": "video",
+          "url": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_golf_jordan_spieth/dm_140612_golf_jordan_spieth.jpg"
+        }
+      ],
+      "categories": [
+        {
+          "description": "Golf",
+          "type": "league",
+          "sportId": 1106,
+          "leagueId": 1106,
+          "league": {
+            "id": 1106,
+            "description": "Golf",
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://api.espn.com/v1/sports/golf"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "http://espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.go.com/golf/?ex_cid=espnapi_public"
+                }
+              }
+            }
+          },
+          "uid": "s:1100~l:1106"
+        },
+        {
+          "description": "Jordan Spieth",
+          "type": "athlete",
+          "sportId": 1106,
+          "athleteId": 5467,
+          "athlete": {
+            "id": 5467,
+            "description": "Jordan Spieth",
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://api.espn.com/v1/sports/golf/athletes/5467"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "http://espn.go.com/golf/player/_/id/5467/jordan-spieth?ex_cid=espnapi_public"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.go.com/golf/playercard?playerId=5467&ex_cid=espnapi_public"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "published": "2014-06-12T18:53:33Z",
+      "video": [
+        {
+          "id": 11072396,
+          "title": "Spieth Had Fun In Round 1",
+          "thumbnail": "http://a.espncdn.com/media/motion/2014/0612/dm_140612_golf_jordan_spieth/dm_140612_golf_jordan_spieth.jpg",
+          "tracking": {
+            "sportName": "Golf",
+            "leagueName": "No League",
+            "coverageType": "Interview",
+            "trackingName": "**UNPUB 6/15 AFTER US OPEN ** COM_GOLF_Interview (Jordan Spieth Round 1) 2014/06/12"
+          },
+          "description": "Jordan Spieth discusses playing with Hideki Matsuyama and Rickie Fowler in the first round of the U.S. Open.",
+          "links": {
+            "web": {
+              "href": "http://espn.go.com/video/clip?id=11072396&ex_cid=espnapi_public"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
++Name SFOAuthToken
++Request
+POST https://login.salesforce.com/services/oauth2/token
++Content-type application/x-www-form-urlencoded
++Body
+grant_type=password&client_id=3MVG9A2kN3Bn17hs5zK6yabCVz3SdVW_97wvsPFREv6SCBgB.PCQhfx3twUJagKBH.g8zzrQJZLjHYWNktbj6&client_secret=6069758035670157576&username=paul.chan@magnet.com&password=magnetqa1
+
++Response
++Content-type application/json
++Body
+{
+    "id": "https://login.salesforce.com/id/00Di0000000jEm8EAE/005i0000002hpnjAAA",
+    "issued_at": "1408399825003",
+    "token_type": "Bearer",
+    "instance_url": "https://na15.salesforce.com",
+    "signature": "U72fVCmeghzVX15EJ5ZQ93n7nywXkRrnI0/Jqy8LwwU=",
+    "access_token": "00Di0000000jEm8!ARgAQE1Ws3Uk8B2ReO3KbX2felHwt2cMVZXc7VaRXj5diQHYZfwl38uq3xpVH7qQiVBCQhdzzKHe0f_yKoF2ayI9hpSKpDMX"
+}

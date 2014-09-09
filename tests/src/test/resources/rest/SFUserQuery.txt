@@ -1,0 +1,32 @@
++Name SFUserQuery
++Request
+GET https://na15.salesforce.com/services/data/v31.0/query/?q=SELECT+name+from+User
+
++Headers
+Authorization:Bearer 00Di0000000jEm8!ARgAQG9qyBpcCOG9rpop8ritxdsGWSH6WzMvBWCI4449ocye_MJCzOSYFReNgDn5V8dJ11kTsUuykQGLH_ZRXeRGzkgzwrIF
+
++Response 200 Content-Type application/json
++Body
+{
+  "totalSize" : 3,
+  "done" : true,
+  "records" : [ {
+    "attributes" : {
+      "type" : "User",
+      "url" : "/services/data/v31.0/sobjects/User/005i0000002hpnjAAA"
+    },
+    "Name" : "Paul Chan"
+  }, {
+    "attributes" : {
+      "type" : "User",
+      "url" : "/services/data/v31.0/sobjects/User/005i0000002hz1CAAQ"
+    },
+    "Name" : "Chung Chan"
+  }, {
+    "attributes" : {
+      "type" : "User",
+      "url" : "/services/data/v31.0/sobjects/User/005i0000002hz2JAAQ"
+    },
+    "Name" : "Raymond Woo"
+  } ]
+}

@@ -1,0 +1,12 @@
++Name createQRGenerator
++Request
+https://mutationevent-qr-code-generator.p.mashape.com/generate.php?content=%3Ccontent%3E&quality=%3Cquality%3E&size=%3Csize%3E&type=%3Ctype%3E
++Headers
+X-Mashape-Authorization: WDV0ZCWjXdFNsyxxpwOkUiQtkLjsEBKv
+
++Response
++Body
+{
+  "original_text": "Paul Chan",
+  "image_url": "http://qrcode.mutationevent.com/img/QRad348b1cdcf88a218fa8cfb8ce3b2ef7.png"
+}

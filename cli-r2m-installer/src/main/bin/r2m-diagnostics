@@ -1,0 +1,164 @@
+#!/bin/bash
+############################################################################
+# Creates a zip file of data that may be useful in diagnosing mab issues.
+# The zip is diagnostics.zip and is placed in the Magnet directory:
+# $MAB_DIR/mab.
+# The data in the zip include:
+#   The maven settings file: magnet-maven-settings.xml
+#   Environment variables relevant to the mab tool in file: variables
+#   Versions of various tools in file: versions
+#   A subset of the tool directory including logs and project setup in directory: mab
+############################################################################
+
+VERBOSE=true
+
+function log {
+    if [ "$VERBOSE" == "true" ] ; then
+      echo $@
+    fi
+}
+
+function writeVariable {
+  if [ -n "$2" ] ; then
+    echo "$1=$2"
+  else
+    echo "#$1 not set"
+  fi                 
+}
+
+function writeAllVariables {
+  dest=$1
+  log "Writing variables to: $dest"
+  (
+    echo "#Magnet tool related variables defined in environment"
+    echo
+
+    writeVariable MAGNET_TOOL_HOME $MAGNET_TOOL_HOME
+    writeVariable MAGNET_TOOL_VERSION $MAGNET_TOOL_VERSION
+    writeVariable JAVA_HOME $JAVA_HOME
+    writeVariable JAVACMD $JAVACMD
+    writeVariable MYSQL_HOME $MYSQL_HOME
+    writeVariable MYSQL $MYSQL
+    writeVariable M2_HOME $M2_HOME
+    writeVariable MAGNET_MAVEN_SETTINGS $MAGNET_MAVEN_SETTINGS
+    writeVariable MAB_HOME $MAB_HOME
+    
+    writeVariable cygwin $cygwin
+    writeVariable darwin $darwin
+    writeVariable mingw $mingw
+  ) > "$dest"
+}
+
+function writeAllVersions() {
+  dest=$1
+  log "Writing versions to: $file"
+  (
+    echo "OS version:"
+    uname -a
+
+    echo
+    echo "Java version:"
+    if [ -n "$JAVACMD" ] ; then
+      $JAVACMD -version
+    elif [ -n "$JAVA_HOME" ] ; then
+      $JAVA_HOME/bin/java -version
+    else
+      java -version
+    fi
+
+    echo
+    echo "Maven version:"
+    if [ -n "$M2_HOME" ] ; then
+      $M2_HOME/bin/mvn -version
+    else
+      mvn -version
+    fi
+
+    echo
+    echo "MySQL version"
+    if [ -n "$MY_SQL" ] ; then
+      "$MY_SQL" --version
+    elif [ -n "$MYSQL_HOME" ] ; then
+      "$MYSQL_HOME"/bin/mysql --version
+    else
+      echo "WARNING: \$MYSQL_HOME not set"
+    fi
+  ) > "$dest" 2>&1
+
+}
+
+function copyMabFiles {
+  dest=$1
+  source="$MAB_HOME/mob"
+  log "Copying files from: $source to: $dest"
+  (
+    mkdir -p "$dest"
+    cd "$source"
+    cp *.project *.cloud magnet.* "$dest"
+  )
+}
+
+function copyMavenSettings {
+  dest=$1
+  if [ -n "$MAGNET_MAVEN_SETTINGS" -a -r "$MAGNET_MAVEN_SETTINGS" ] ; then
+    log "Copying: $MAGNET_MAVEN_SETTINGS to: $dest"
+    cp "$MAGNET_MAVEN_SETTINGS" "$dest"
+  elif [ -r "$HOME/.m2/settings.xml" ] ; then
+    log "Copying: $HOME/.m2/settings.xml to: $dest"
+    cp "$HOME/.m2/settings.xml" "$dest"
+  else
+    echo "WARNING: mvn settings file not found"
+  fi
+}
+
+function createZip {
+  source=$1
+  dest=$2
+  log "Creating zip from: $source to file: $dest"
+  (
+    cd "$source"
+    zip -r "$dest" .
+  )
+}
+
+function realpath {
+    local r=$1; local t=$(readlink $r)
+    while [ $t ]; do
+        r=$(cd $(dirname $r) && cd $(dirname $t) && pwd -P)/$(basename $t)
+        t=$(readlink $r)
+    done
+    echo $r
+}
+
+if [ -z "$MAGNET_TOOL_HOME" ]; then
+  mabexec=$(realpath $0)
+  mabdir=$(cd "$(dirname $mabexec)/.." && pwd)
+  if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+    # the bin may be a softlink
+    mabparent=$(realpath $(cd "$(dirname $mabexec)" && pwd))
+    mabdir=$(cd "$(dirname $mabparent)" && pwd)
+    if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+      echo "Cannot determine App Builder installation directory, manually set your environment variable MAGNET_TOOL_HOME"
+      exit -1
+    fi;
+  fi
+  export MAGNET_TOOL_HOME=$(realpath $mabdir)
+fi
+. "${MAGNET_TOOL_HOME}/bin/mab-env"
+
+OUTPUT_DIR=$(mktemp -d -t mab-diag)
+
+echo "output being written to $OUTPUT_DIR"
+
+writeAllVariables "$OUTPUT_DIR/variables"
+writeAllVersions "$OUTPUT_DIR/versions"
+copyMabFiles "$OUTPUT_DIR/mab"
+copyMavenSettings "$OUTPUT_DIR/magnet-maven-settings.xml"
+
+dest="$MAB_HOME/mab/diagnostics.zip"
+createZip "$OUTPUT_DIR" "$dest"
+
+rm -rf "$OUTPUT_DIR"
+
+echo "Diagnostic zip file is: $dest"
+

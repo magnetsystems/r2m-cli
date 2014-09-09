@@ -1,0 +1,36 @@
+      # This is a sample request that can be used as the Rest specification for a controller
+      # Be sure to precede request example with '# Request' and example response with '# Response'
+       +name googleDistance
+
+       +Request
+
+       http://maps.googleapis.com/maps/api/distancematrix/json?origins=435+Tasso+Street+Palo+Alto+CA&destinations=Embarcadero+Street+San+Francisco+CA&sensor=false&mode=driving&language=en&units=imperial
+
+       # This is the expected response:
+       +Response
+      +Content-type application/json
+      +Headers
+      token : sdafjiodsfsad
+       +Body
+       {
+         "destination_addresses" : [ "Embarcadero, 298 Market Street, San Francisco, CA 94111, USA" ],
+         "origin_addresses" : [ "435 Tasso Street, Palo Alto, CA 94301, USA" ],
+         "rows" : [
+           {
+             "elements" : [
+               {
+                 "distance" : {
+                   "text" : "33.1 mi",
+                   "value" : "53242"
+                 },
+                 "duration" : {
+                   "text" : "42 mins",
+                   "value" : "2512"
+                 },
+                   "status" : "OK"
+               }
+             ]
+           }
+         ],
+         "status" : "OK"
+       }

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2014 Magnet Systems, Inc.
+  ~ All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you
+  ~ may not use this file except in compliance with the License. You
+  ~ may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+  ~ implied. See the License for the specific language governing
+  ~ permissions and limitations under the License.
+  -->
+
+<definitions xmlns:tns="http://www.bea.com/examples/Trader"
+             xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/"
+             xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+             xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+             xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+             xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding"
+             xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:s="http://www.w3.org/2001/XMLSchema"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             targetNamespace="http://www.bea.com/examples/Trader">
+  <types xmlns:tns="http://www.bea.com/examples/Trader"
+         xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/"
+         xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+         xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+         xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+         xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding"
+         xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/"
+         xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+         xmlns:s="http://www.w3.org/2001/XMLSchema"
+         xmlns="http://schemas.xmlsoap.org/wsdl/">
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:stns="java:examples.webservices.complex.statelessSession"
+                elementFormDefault="qualified"
+                attributeFormDefault="qualified"
+                targetNamespace="java:examples.webservices.complex.statelessSession">
+      <xsd:complexType name="TradeResult">
+        <xsd:sequence>
+          <xsd:element type="xsd:int"
+                       name="numberTraded"
+                       minOccurs="1"
+                       maxOccurs="1">
+          </xsd:element>
+          <xsd:element type="xsd:string"
+                       name="stockSymbol"
+                       minOccurs="1"
+                       nillable="true"
+                       maxOccurs="1">
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="buy">
+    <part xmlns:partns="http://www.w3.org/2001/XMLSchema"
+          type="partns:string"
+          name="string">
+    </part>
+    <part xmlns:partns="http://www.w3.org/2001/XMLSchema"
+          type="partns:int"
+          name="intVal">
+    </part>
+  </message>
+  <message name="buyResponse">
+    <part xmlns:partns="java:examples.webservices.complex.statelessSession"
+          type="partns:TradeResult"
+          name="result">
+    </part>
+  </message>
+  <message name="sell">
+    <part xmlns:partns="http://www.w3.org/2001/XMLSchema"
+          type="partns:string"
+          name="string">
+    </part>
+    <part xmlns:partns="http://www.w3.org/2001/XMLSchema"
+          type="partns:int"
+          name="intVal">
+    </part>
+  </message>
+  <message name="sellResponse">
+    <part xmlns:partns="java:examples.webservices.complex.statelessSession"
+          type="partns:TradeResult"
+          name="result">
+    </part>
+  </message>
+  <portType name="TraderServicePort">
+    <operation name="buy">
+      <input message="tns:buy">
+      </input>
+      <output message="tns:buyResponse">
+      </output>
+    </operation>
+    <operation name="sell">
+      <input message="tns:sell">
+      </input>
+      <output message="tns:sellResponse">
+      </output>
+    </operation>
+  </portType>
+  <binding type="tns:TraderServicePort"
+           name="TraderServicePort">
+    <soap:binding style="rpc"
+                  transport="http://schemas.xmlsoap.org/soap/http">
+    </soap:binding>
+    <operation name="buy">
+      <soap:operation style="rpc"
+                      soapAction="">
+      </soap:operation>
+      <input>
+        <soap:body namespace="http://www.bea.com/examples/Trader"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                   use="encoded">
+        </soap:body>
+      </input>
+      <output>
+        <soap:body namespace="http://www.bea.com/examples/Trader"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                   use="encoded">
+        </soap:body>
+      </output>
+    </operation>
+    <operation name="sell">
+      <soap:operation style="rpc"
+                      soapAction="">
+      </soap:operation>
+      <input>
+        <soap:body namespace="http://www.bea.com/examples/Trader"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                   use="encoded">
+        </soap:body>
+      </input>
+      <output>
+        <soap:body namespace="http://www.bea.com/examples/Trader"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+                   use="encoded">
+        </soap:body>
+      </output>
+    </operation>
+  </binding>
+  <service name="TraderService">
+    <port name="TraderServicePort"
+          binding="tns:TraderServicePort">
+      <soap:address location="http://ec2-54-234-110-40.compute-1.amazonaws.com:7001/webservice/TraderService">
+      </soap:address>
+    </port>
+  </service>
+</definitions>

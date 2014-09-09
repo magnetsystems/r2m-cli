@@ -1,0 +1,11 @@
++name dns2zip
++Request
+https://jack-dns-tools.p.mashape.com/dnstools.php?dns=google.com&_method=DNS2IP
++Headers
+X-Mashape-Authorization: WDV0ZCWjXdFNsyxxpwOkUiQtkLjsEBKv
+
++Response
++Body
+{
+  "ip": "184.169.148.19"
+}

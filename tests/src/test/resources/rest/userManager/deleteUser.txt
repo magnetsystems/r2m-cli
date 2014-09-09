@@ -1,0 +1,7 @@
++name deleteUser
++Request
+DELETE http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/users/{userId}
++Headers
+appId : app1
+
++Response 200

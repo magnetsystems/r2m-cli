@@ -1,0 +1,2285 @@
++name getEpisodes
++Request
+http://nsscreencast.com/api/episodes.json
++Response
+
+[
+  {
+    "episode": {
+      "id": 140,
+      "episode_number": 134,
+      "title": "Visual Format Language",
+      "description": "In this episode we explore Apple's Visual Format Language for building Auto Layout Constraints.  While a bit strange at first glance, the Visual Format Language can really convey a lot of layout information in just a few characters in comparison to the manual building of NSLayoutConstraints can be.",
+      "published_at": "2014-08-28T22:00:10Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/134-visual-format-language\/134-visual-format-language-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#E7A572",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/134-visual-format-language\/134-visual-format-language-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/134-visual-format-language\/134-visual-format-language-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/134-visual-format-language\/134-visual-format-language-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/134-visual-format-language\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 139,
+      "episode_number": 133,
+      "title": "Auto Layout in Code",
+      "description": "In this episode we take a look at how to set up auto layout constraints in code, rather than with Interface Builder \/ Storyboards.  Whether you prefer to work in code or storyboards to lay you user interfaces, often times setting things up in code is required.  You'll see how to use NSLayoutConstraint to fully specify a layout, and hopefully understand a bit more about how auto layout works.",
+      "published_at": "2014-08-21T15:00:08Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/133-auto-layout-in-code\/133-auto-layout-in-code-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#76D3DD",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/133-auto-layout-in-code\/133-auto-layout-in-code-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/133-auto-layout-in-code\/133-auto-layout-in-code-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/133-auto-layout-in-code\/133-auto-layout-in-code-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/133-auto-layout-in-code\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 138,
+      "episode_number": 132,
+      "title": "Realm",
+      "description": "Realm is a new project that aims to replace Core Data and even SQLite for mobile app persistent storage needs. While an ambitious goal, I like seeing alternatives in this area, as Core Data is not always my favorite framework. In this episode we'll add Realm to a project and store a few rudimentary objects.  We'll also see a quick way to query the data in the \"realm\".",
+      "published_at": "2014-08-14T10:00:09Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/132-realm\/132-realm-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#F2858C",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/132-realm\/132-realm-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/132-realm\/132-realm-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/132-realm\/132-realm-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/132-realm\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 137,
+      "episode_number": 131,
+      "title": "Swift JSON Redux Part 2",
+      "description": "In this episode we wrap up our JSON parsing exploration in Swift by extending the decoding to work with arrays. Doing so cleans up the extraction code significantly.",
+      "published_at": "2014-08-07T14:00:07Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/131-swift-json-redux-part-2\/131-swift-json-redux-part-2-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#D56C1E",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/131-swift-json-redux-part-2\/131-swift-json-redux-part-2-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/131-swift-json-redux-part-2\/131-swift-json-redux-part-2-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/131-swift-json-redux-part-2\/131-swift-json-redux-part-2-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/131-swift-json-redux-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 136,
+      "episode_number": 130,
+      "title": "Swift JSON Redux - Part 1",
+      "description": "In this episode we attempt to write a more idiomatic JSON Parsing framework leveraging Swift.  To accomplish this we'll lean heavily on Swift's powerful enum features and apply a couple of custom operators to clean up syntax and reduce redundant code.",
+      "published_at": "2014-07-31T12:00:00Z",
+      "duration": 30,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/130-swift-json-redux-part-1\/130-swift-json-redux-part-1-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#D56C1E",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/130-swift-json-redux-part-1\/130-swift-json-redux-part-1-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/130-swift-json-redux-part-1\/130-swift-json-redux-part-1-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/130-swift-json-redux-part-1\/130-swift-json-redux-part-1-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/130-swift-json-redux-part-1\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 135,
+      "episode_number": 129,
+      "title": "Swift JSON",
+      "description": "In Swift, parsing JSON (which provides no contracts or type guarantees) can be difficult and tedious in Swift.  Many of the problems you are forced to deal with were easier to ignore in Objective-C, but that doesn't mean they weren't present.  In this episode we'll take a look at a very manual approach to mapping from a JSON response to a Swift type.",
+      "published_at": "2014-07-24T11:00:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/129-swift-json\/129-swift-json-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#89BD3B",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/129-swift-json\/129-swift-json-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/129-swift-json\/129-swift-json-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/129-swift-json\/129-swift-json-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/129-swift-json\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 134,
+      "episode_number": 128,
+      "title": "Swift Networking",
+      "description": "In this episode we take a look at the NSURLSession API from a Swift perspective.  We create a class to fetch JSON from an API, and along the way see lazy properties and type aliases.",
+      "published_at": "2014-07-17T10:00:08Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/128-swift-networking\/128-swift-networking.png",
+      "episode_type": "paid",
+      "dominant_color": "#F9A11B",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/128-swift-networking\/128-swift-networking@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/128-swift-networking\/128-swift-networking-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/128-swift-networking\/128-swift-networking-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/128-swift-networking\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 133,
+      "episode_number": 127,
+      "title": "Swift Operators",
+      "description": "One of Swift's powerful features is the ability to define custom operators. In this episode we take a look at two examples of custom operators, one for easy regular expression matching, and another for computing the dot product between two vectors.",
+      "published_at": "2014-07-10T10:00:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/127-swift-operators\/127-swift-operators-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#A8C679",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/127-swift-operators\/127-swift-operators-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/127-swift-operators\/127-swift-operators-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/127-swift-operators\/127-swift-operators-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/127-swift-operators\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 132,
+      "episode_number": 126,
+      "title": "Swift Classes",
+      "description": "Continuing on with our Swift exploration, we focus this time on Swift classes.  We talk about initializers, inheritance, protocols, type inspection, and more.",
+      "published_at": "2014-07-03T10:00:10Z",
+      "duration": 11,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/126-swift-classes\/126-swift-classes-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#BDE6FA",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/126-swift-classes\/126-swift-classes-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/126-swift-classes\/126-swift-classes-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/126-swift-classes\/126-swift-classes-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/126-swift-classes\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 131,
+      "episode_number": 125,
+      "title": "Swift Basics",
+      "description": "In this episode we take a first look at Apple's brand new programming language Swift.",
+      "published_at": "2014-06-26T10:00:00Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/125-swift-basics\/125-swift-basics-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#E67E22",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/125-swift-basics\/125-swift-basics-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/125-swift-basics\/125-swift-basics-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/125-swift-basics\/125-swift-basics-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/125-swift-basics\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 130,
+      "episode_number": 124,
+      "title": "Method Swizzling",
+      "description": "In this episode we delve into the wonderful Objective-C runtime in order to replace method implementations with our own.  Using this technique we can add or change behavior to existing classes, which can be extremely useful for Aspect Oriented Programming (logging\/benchmarking), or analytics.",
+      "published_at": "2014-06-19T10:00:00Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/124-method-swizzling\/124-swizzling.png",
+      "episode_type": "paid",
+      "dominant_color": "#00ACBF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/124-method-swizzling\/124-swizzling@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/124-method-swizzling\/124-swizzling-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/124-method-swizzling\/124-swizzling-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/124-method-swizzling\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 129,
+      "episode_number": 123,
+      "title": "STHTTPRequest",
+      "description": "In this episode I take a look at a lightweight network library called STHTTPRequst.  Specifically I like two features it provides: easy curl logging of outgoing requests, and a test response queue for performing unit tests against canned responses. Whether or not you want to use this library, there are some good things to learn here.",
+      "published_at": "2014-06-13T10:00:09Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/123-sthttprequest\/123-sthttprequest.png",
+      "episode_type": "paid",
+      "dominant_color": "#FDC67C",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/123-sthttprequest\/123-sthttprequest@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/123-sthttprequest\/123-sthttprequest-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/123-sthttprequest\/123-sthttprequest-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/123-sthttprequest\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 128,
+      "episode_number": 122,
+      "title": "Animating with POP",
+      "description": "In this episode I cover Facebook's new, shiny animation framework called Pop. With it we explore spring & decay animations that can make your apps feel more alive.",
+      "published_at": "2014-06-05T10:00:00Z",
+      "duration": 19,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/122-animating-with-pop\/122-animating-with-pop.png",
+      "episode_type": "paid",
+      "dominant_color": "#4FAFCA",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/122-animating-with-pop\/122-animating-with-pop@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/122-animating-with-pop\/122-animating-with-pop-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/122-animating-with-pop\/122-animating-with-pop-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/122-animating-with-pop\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 127,
+      "episode_number": 121,
+      "title": "Mantle with Core Data Part 2",
+      "description": "In this episode we continue with our mantle example, this time binding the code to the UI.  This involves mapping back to our mantle model for display on the cell, as well as responding to changes using the NSFetchedResultsControllerDelegate protocol.",
+      "published_at": "2014-05-29T15:00:08Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/121-mantle-with-core-data-part-2\/121-mantle-with-core-data-part-2.png",
+      "episode_type": "paid",
+      "dominant_color": "#C8B49C",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/121-mantle-with-core-data-part-2\/121-mantle-with-core-data-part-2@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/121-mantle-with-core-data-part-2\/121-mantle-with-core-data-part-2-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/121-mantle-with-core-data-part-2\/121-mantle-with-core-data-part-2-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/121-mantle-with-core-data-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 126,
+      "episode_number": 120,
+      "title": "Mantle with Core Data",
+      "description": "In this episode we cover a different feature of Mantle, which allows us to serialize our models into Core Data entities.  This episode continues where we left off in Episode 116.",
+      "published_at": "2014-05-22T10:00:08Z",
+      "duration": 17,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/120-mantle-with-core-data\/120-mantle-with-core-data.png",
+      "episode_type": "paid",
+      "dominant_color": "#C6B198",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/120-mantle-with-core-data\/120-mantle-with-core-data@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/120-mantle-with-core-data\/120-mantle-with-core-data-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/120-mantle-with-core-data\/120-mantle-with-core-data-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/120-mantle-with-core-data\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 125,
+      "episode_number": 119,
+      "title": "URL Scheme Callbacks",
+      "description": "In this episode I cover the x-callback-url draft standard, which is an attempt to formalize a way that applications can exchange data back & forth.  Using this technique you can have an application expose functionality available to another application.  We'll cover parsing URLs to extract out query parameters and how to respond to callbacks in your application.",
+      "published_at": "2014-05-15T10:00:08Z",
+      "duration": 20,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/119-url-scheme-callbacks\/119-url-scheme-callbacks-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#254112",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/119-url-scheme-callbacks\/119-url-scheme-callbacks-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/119-url-scheme-callbacks\/119-url-scheme-callbacks-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/119-url-scheme-callbacks\/119-url-scheme-callbacks-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/119-url-scheme-callbacks\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 124,
+      "episode_number": 118,
+      "title": "Integrating with 1Password",
+      "description": "In this episode we talk about adding support for 1Password when creating your login forms.  This is an easy technique that can add a nice touch to your applications if you need to support user login.",
+      "published_at": "2014-05-08T10:00:09Z",
+      "duration": 9,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/118-integrating-with-1password\/118-integrating-with-1password-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#244012",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/118-integrating-with-1password\/118-integrating-with-1password-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/118-integrating-with-1password\/118-integrating-with-1password-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/118-integrating-with-1password\/118-integrating-with-1password-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/118-integrating-with-1password\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 123,
+      "episode_number": 117,
+      "title": "URL Schemes",
+      "description": "In this episode I cover how you can expose your app's functionality through URL schemes.  Inter-app communication is something that iOS is somewhat lacking in, but URL schemes can enable some handy integration scenarios.",
+      "published_at": "2014-05-01T22:00:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/117-url-schemes\/117-url-schemes-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#244012",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/117-url-schemes\/117-url-schemes-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/117-url-schemes\/117-url-schemes-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/117-url-schemes\/117-url-schemes-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/117-url-schemes\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 122,
+      "episode_number": 116,
+      "title": "Mantle",
+      "description": "In this episode we go over a handy little model framework called Mantle.  With Mantle we can easily get support for NSCoding, NSCopying, and JSON serialization for our model objects.",
+      "published_at": "2014-04-24T14:00:00Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/116-mantle\/116-mantle-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#C6B198",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/116-mantle\/116-mantle-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/116-mantle\/116-mantle-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/116-mantle\/116-mantle-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/116-mantle\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 121,
+      "episode_number": 115,
+      "title": "Submitting to the App Store",
+      "description": "In this episode I walk through the process of submitting GiggleTouch to the App Store.  Starting with setting the app up to take posed screenshots, requesting certificates, provisioning profiles, and more.",
+      "published_at": "2014-04-17T18:00:00Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/115-submitting-to-the-app-store\/115-submitting-to-the-app-store-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#af88c8",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/115-submitting-to-the-app-store\/115-submitting-to-the-app-store-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/115-submitting-to-the-app-store\/115-submitting-to-the-app-store-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/115-submitting-to-the-app-store\/115-submitting-to-the-app-store-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/115-submitting-to-the-app-store\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 120,
+      "episode_number": 114,
+      "title": "Playing Sounds with Sprite Kit",
+      "description": "In this episode we add looping background music to the game using AVFoundation and AVAudioPlayer.  We then add sound effects using Sprite Kit's SKAction.  In order to reduce lag, we preload the audio files so that they play instantaneously.  We also implement rate limiting to avoid sound effect overload using SAMRateLimit.",
+      "published_at": "2014-04-10T10:00:00Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/114-playing-sounds-with-sprite-kit\/114-playing-sounds-with-sprite-kit-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FFCCFF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/114-playing-sounds-with-sprite-kit\/114-playing-sounds-with-sprite-kit-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/114-playing-sounds-with-sprite-kit\/114-playing-sounds-with-sprite-kit-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/114-playing-sounds-with-sprite-kit\/114-playing-sounds-with-sprite-kit-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/114-playing-sounds-with-sprite-kit\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 119,
+      "episode_number": 113,
+      "title": "Giggletouch - Part 2",
+      "description": "In this episode we continue on building GiggleTouch.  This time we improve our random number functions, add a \"giggler\" node with SKSequence and test on a real device to see what kind of frame rate we get.",
+      "published_at": "2014-04-03T13:34:00Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FFCCFF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/113-giggletouch-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 118,
+      "episode_number": 112,
+      "title": "Giggletouch",
+      "description": "In this episode I start recreating an old app for toddlers called Giggletouch.  In the video I use SpriteKit to render shapes that are subsequently rotated, scaled, and faded.  The shapes are drawn with Sketch and random colors are applied to the shape at runtime.",
+      "published_at": "2014-03-20T14:00:07Z",
+      "duration": 31,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FFCCFF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/112-giggletouch\/112-giggletouch-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/112-giggletouch\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 117,
+      "episode_number": 111,
+      "title": "Xcode 5.1",
+      "description": "In this episode we take a look at a couple of new features in Xcode 5.1.  The first is creating your own Quick Look representations for custom objects, which can be quite a handy feature for visualizing data (such as images, locations, and paths).  The second is a new Autolayout constraint in Interface Builder called \"Aspect Ratio\" which can further help describe your intent when laying out views with Autolayout.",
+      "published_at": "2014-03-13T23:00:00Z",
+      "duration": 6,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/111-xcode-51\/111-xcode-51-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#66B4FE",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/111-xcode-51\/111-xcode-51-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/111-xcode-51\/111-xcode-51-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/111-xcode-51\/111-xcode-51-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/111-xcode-5-1\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 116,
+      "episode_number": 110,
+      "title": "Swipe to Reveal Redux",
+      "description": "In this episode we fix the problem of a scroll view blocking touches to a UITableViewCell by forwarding touch events from the scroll view and onto a delegate, which manages the cell's highlighted state properly.",
+      "published_at": "2014-03-06T16:00:00Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/110-swipe-to-reveal-redux\/110-swipe-to-reveal-redux-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FDC67C",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/110-swipe-to-reveal-redux\/110-swipe-to-reveal-redux-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/110-swipe-to-reveal-redux\/110-swipe-to-reveal-redux-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/110-swipe-to-reveal-redux\/110-swipe-to-reveal-redux-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/110-swipe-to-reveal-redux\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 115,
+      "episode_number": 109,
+      "title": "MDMCoreData",
+      "description": "In this episode we add Core Data to our Weight Tracker application, but we lean on a new library called MDMCoreData to set up our Core Data stack for us.  Using MDMCoreData we can get a sensible parent\/child context set up where the main context is a child of the parent writer context.  We also leverage a handy class that dovetails with NSFetchedResultsController to display records in a UITableView.",
+      "published_at": "2014-02-27T21:00:00Z",
+      "duration": 21,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/109-mdmcoredata\/109-mdmcoredata-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#4FAFCA",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/109-mdmcoredata\/109-mdmcoredata-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/109-mdmcoredata\/109-mdmcoredata-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/109-mdmcoredata\/109-mdmcoredata-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/109-mdmcoredata\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 114,
+      "episode_number": 108,
+      "title": "Unwinding Segues",
+      "description": "UIStoryboards can help visualize your screen flow and even describe how to transition between view controllers using segues.  In this episode I'll show you how you can take advantage of built-in support to unwind segues to back to where you came from.  I'll show the automatic way as well as how to manually unwind a segue.",
+      "published_at": "2014-02-20T20:00:00Z",
+      "duration": 8,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/108-unwinding-segues\/108-unwinding-segues-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#876089",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/108-unwinding-segues\/108-unwinding-segues-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/108-unwinding-segues\/108-unwinding-segues-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/108-unwinding-segues\/108-unwinding-segues-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/108-unwinding-segues\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 113,
+      "episode_number": 107,
+      "title": "Swipe to Reveal Cells",
+      "description": "In this episode I customize UITableViewCell to provide swipe to reveal behavior, similar to Mail.app.  We use UIScrollView's delegate methods to ensure that we never land mid-way through the swipe, raise notifications to make sure only one cell is open at a time, and we use a help app called Reveal to assist us in visualizing the view hierarchy.",
+      "published_at": "2014-02-13T18:00:00Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/107-swipe-to-reveal-cells\/107-swipe-to-reveal-cells-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#86BCCC",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/107-swipe-to-reveal-cells\/107-swipe-to-reveal-cells-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/107-swipe-to-reveal-cells\/107-swipe-to-reveal-cells-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/107-swipe-to-reveal-cells\/107-swipe-to-reveal-cells-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/107-swipe-to-reveal-cells\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 112,
+      "episode_number": 106,
+      "title": "UITableViewCell Swipe Action",
+      "description": "In this episode I cover how to extend UITableViewCells to provide a swipe action, marking an item as read or unread.  Combined with a nifty little progress animation, this adds functionality to your table view cells without requiring extra buttons or action sheets.",
+      "published_at": "2014-02-06T16:00:10Z",
+      "duration": 11,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/106-uitableviewcell-swipe-action\/106-uitableviewcell-swipe-action-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FDC67C",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/106-uitableviewcell-swipe-action\/106-uitableviewcell-swipe-action-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/106-uitableviewcell-swipe-action\/106-uitableviewcell-swipe-action-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/106-uitableviewcell-swipe-action\/106-uitableviewcell-swipe-action-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/106-uitableviewcell-swipe-action\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 111,
+      "episode_number": 105,
+      "title": "Strong versus Copy",
+      "description": "In this episode we examine the difference between strong and copy semantics for properties, and why you'd favor copy for types such as NSString and NSArray.",
+      "published_at": "2014-01-30T10:00:06Z",
+      "duration": 9,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/105-strong-versus-copy\/105-strong-versus-copy-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#C8C8C8",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/105-strong-versus-copy\/105-strong-versus-copy-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/105-strong-versus-copy\/105-strong-versus-copy-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/105-strong-versus-copy\/105-strong-versus-copy-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/105-strong-versus-copy\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 110,
+      "episode_number": 104,
+      "title": "Blur",
+      "description": "In this episode we tackle how to implement an ever increasing trend in iOS 7 app design: blur.  We start by doing it the \"easy\" way using UIToolbar, then move on to a more custom and flexible approach using our own blurred image. ",
+      "published_at": "2014-01-23T10:00:07Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/104-blur\/104-blur-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#85BBCA",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/104-blur\/104-blur-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/104-blur\/104-blur-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/104-blur\/104-blur-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/104-blur\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 109,
+      "episode_number": 103,
+      "title": "Refactoring View Controllers - Part 2",
+      "description": "In this episode we wrap up our refactoring of a complex view controller, this time introducing a model, factoring out a new data source class, and more.",
+      "published_at": "2014-01-16T10:00:06Z",
+      "duration": 23,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/103-refactoring-view-controllers-part-2\/103-refactoring-view-controllers-part-2-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FEAB3E",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/103-refactoring-view-controllers-part-2\/103-refactoring-view-controllers-part-2-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/103-refactoring-view-controllers-part-2\/103-refactoring-view-controllers-part-2-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/103-refactoring-view-controllers-part-2\/103-refactoring-view-controllers-part-2-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/103-refactoring-view-controllers-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 108,
+      "episode_number": 102,
+      "title": "Refactoring View Controllers",
+      "description": "In this episode I take a fairly simple application with a single view controller and examine how we can refactor it into more discrete parts.  ",
+      "published_at": "2014-01-09T12:00:00Z",
+      "duration": 33,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/102-refactoring-view-controllers\/102-refactoring-view-controllers-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FEAB3E",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/102-refactoring-view-controllers\/102-refactoring-view-controllers-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/102-refactoring-view-controllers\/102-refactoring-view-controllers-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/102-refactoring-view-controllers\/102-refactoring-view-controllers-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/102-refactoring-view-controllers\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 107,
+      "episode_number": 101,
+      "title": "NSPredicate",
+      "description": "In this episode we look at a powerful built-in Foundation class called NSPredicate.  With predicates we can easily filter large collections of data based on values contained in the collection.",
+      "published_at": "2014-01-02T16:00:06Z",
+      "duration": 9,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/101-nspredicate\/101-nspredicate-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#B91C3A",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/101-nspredicate\/101-nspredicate-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/101-nspredicate\/101-nspredicate-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/101-nspredicate\/101-nspredicate-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/101-nspredicate\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 106,
+      "episode_number": 100,
+      "title": "Particle Systems",
+      "description": "In our special 100th episode I dive into a fun little class called CAEmitterLayer.  Using this class we can create cool particle effects such as fire, water, smoke, clouds, or a fountain of stars.",
+      "published_at": "2013-12-19T16:44:15Z",
+      "duration": 20,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/100-particle-systems\/100-particle-systems-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#CA3E27",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/100-particle-systems\/100-particle-systems-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/100-particle-systems\/100-particle-systems-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/100-particle-systems\/100-particle-systems-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/100-particle-systems\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 105,
+      "episode_number": 99,
+      "title": "Parsing and Formatting Dates",
+      "description": "In this episode we cover a basic but fundamentally important topic: dealing with dates & times.  Particularly when dealing with an API, dates can arrive in all shapes and sizes.  We'll examine some of the common ones, talk about how to parse these formats into NSDate instances, and how to use NSDateFormatter to display them back again as a string.",
+      "published_at": "2013-12-12T14:00:00Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/099-parsing-and-formatting-dates\/099-parsing-and-formatting-dates-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#9C87BB",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/099-parsing-and-formatting-dates\/099-parsing-and-formatting-dates-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/099-parsing-and-formatting-dates\/099-parsing-and-formatting-dates-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/099-parsing-and-formatting-dates\/099-parsing-and-formatting-dates-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/99-parsing-and-formatting-dates\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 104,
+      "episode_number": 98,
+      "title": "Camera Capture",
+      "description": "In this episode we grab image data live from the camera on an iPhone 5.  We discuss inputs and outputs, image formats, and finally (you guessed it) put a mustache live on each face in the video frame using the face detection techniques demonstrated in Episode 96.",
+      "published_at": "2013-12-05T10:04:22Z",
+      "duration": 21,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/098-camera-capture\/098-camera-capture-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FBAD8E",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/098-camera-capture\/098-camera-capture-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/098-camera-capture\/098-camera-capture-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/098-camera-capture\/098-camera-capture-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/98-camera-capture\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 103,
+      "episode_number": 97,
+      "title": "Scrolling Nub",
+      "description": "In this episode I implement a fast scrolling \"nub\" to assist with scrolling through table views with many entries.  The technique was lifted from the Dropbox app and I build a quick prototype of how it works.",
+      "published_at": "2013-11-28T10:00:00Z",
+      "duration": 23,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/097-scrolling-nub\/097-scrolling-nub-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#61C3BB",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/097-scrolling-nub\/097-scrolling-nub-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/097-scrolling-nub\/097-scrolling-nub-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/097-scrolling-nub\/097-scrolling-nub-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/97-scrolling-nub\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 102,
+      "episode_number": 96,
+      "title": "Face Detection",
+      "description": "In this episode we dive into CoreImage with a fun feature: detecting faces in photos!  We also find the eyes & mouth positions and use Core Graphics to draw on our photo.",
+      "published_at": "2013-11-21T18:04:10Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/096-face-detection\/096-face-detection-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#D979A2",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/096-face-detection\/096-face-detection-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/096-face-detection\/096-face-detection-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/096-face-detection\/096-face-detection-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/96-face-detection\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 101,
+      "episode_number": 95,
+      "title": "Fun with iBeacons",
+      "description": "In this episode we take a look at implementing an iBeacon transmitter and receiver.  Using this technology we can detect nearby beacons and range them in order to see how far away they are.",
+      "published_at": "2013-11-14T16:02:00Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/095-fun-with-i-beacons\/095-fun-with-i-beacons-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/095-fun-with-i-beacons\/095-fun-with-i-beacons-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/095-fun-with-i-beacons\/095-fun-with-i-beacons-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/095-fun-with-i-beacons\/095-fun-with-i-beacons-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/95-fun-with-ibeacons\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 100,
+      "episode_number": 94,
+      "title": "Upgrading an Old Project to XCTest",
+      "description": "In this episode I upgrade the sample app created way back in Episode 4 using Kiwi to Xcode 5 and XCTest.  Along the way, we're greeted with a number of warnings & errors that we have to address to get the Kiwi tests to run with XCTest.",
+      "published_at": "2013-11-07T10:02:09Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/094-upgrading-an-old-project-to-xctest\/094-upgrading-an-old-project-to-xctest-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#88A14B",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/094-upgrading-an-old-project-to-xctest\/094-upgrading-an-old-project-to-xctest-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/094-upgrading-an-old-project-to-xctest\/094-upgrading-an-old-project-to-xctest-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/094-upgrading-an-old-project-to-xctest\/094-upgrading-an-old-project-to-xctest-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/94-upgrading-an-old-project-to-xctest\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 99,
+      "episode_number": 93,
+      "title": "Background Transfers",
+      "description": "Background transfers are a new feature of iOS 7 where you can have the OS download files in the background and have them ready for your application when you launch it the next time.   In this episode we write a simple image downloader that takes advantage of background sessions.",
+      "published_at": "2013-10-31T18:03:00Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/093-background-transfers\/093-background-transfers-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#F49948",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/093-background-transfers\/093-background-transfers-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/093-background-transfers\/093-background-transfers-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/093-background-transfers\/093-background-transfers-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/93-background-transfers\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 98,
+      "episode_number": 92,
+      "title": "Background Fetch",
+      "description": "In this episode we write an application that takes advantage of iOS 7's background fetch feature, allowing us to keep our application updated in the background so that the user doesn't have to wait for updated data when the application is launched.",
+      "published_at": "2013-10-24T10:03:04Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/092-background-fetch\/092-background-fetch-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#1768F4",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/092-background-fetch\/092-background-fetch-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/092-background-fetch\/092-background-fetch-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/92-background-fetch\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 97,
+      "episode_number": 91,
+      "title": "AFNetworking 2.0",
+      "description": "In this episode we take a look at the brand new design of AFNetworking 2.0.  We'll convert our TuneStore application to leverage AFNetworking and clean up our View Controller by introducing a new class to handle the network plumbing.  We'll also take a look at a handy UIKit category for easily managing an activity indicator's state.",
+      "published_at": "2013-10-17T10:04:00Z",
+      "duration": 19,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/091-afnetworking-2-0\/091-afnetworking-2-0-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#F16021",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/091-afnetworking-2-0\/091-afnetworking-2-0-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/091-afnetworking-2-0\/091-afnetworking-2-0-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/091-afnetworking-2-0\/091-afnetworking-2-0-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/91-afnetworking-2-0\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 96,
+      "episode_number": 90,
+      "title": "Table View Images in iOS 7",
+      "description": "In this episode we continue our example from Episode 89, using NSURLSessionDataTask to download images for our rows.  We also see how we can benefit from the built-in cache settings of NSURLSessionConfiguration and how to efficiently request images while scrolling.",
+      "published_at": "2013-10-10T10:03:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/090-tableview-images-in-ios7\/090-tableview-images-in-ios7-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#01CAF6",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/090-tableview-images-in-ios7\/090-tableview-images-in-ios7-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/090-tableview-images-in-ios7\/090-tableview-images-in-ios7-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/090-tableview-images-in-ios7\/090-tableview-images-in-ios7-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/90-table-view-images-in-ios-7\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 95,
+      "episode_number": 89,
+      "title": "Networking in iOS 7",
+      "description": "In this episode we take a look at the brand new NSURLSession family of classes.  We'll consume the iTunes Affiliate Search API and show how to do a simple GET request.",
+      "published_at": "2013-10-03T10:00:00Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/089-networking-in-ios7\/089-networking-in-ios7-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/089-networking-in-ios7\/089-networking-in-ios7-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/089-networking-in-ios7\/089-networking-in-ios7-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/089-networking-in-ios7\/089-networking-in-ios7-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/89-networking-in-ios-7\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 94,
+      "episode_number": 88,
+      "title": "Interactive View Controller Transitions",
+      "description": "In this episode we continue our transition example from episode 86.  We create a new InteractiveSwipe transition class that we can use for dismissal so the user can swipe the view controllers away instead of tapping a button.",
+      "published_at": "2013-09-26T12:03:00Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/088-interactive-view-controller-transitions\/088-interactive-view-controller-transitions-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#444646",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/088-interactive-view-controller-transitions\/088-interactive-view-controller-transitions-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/088-interactive-view-controller-transitions\/088-interactive-view-controller-transitions-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/088-interactive-view-controller-transitions\/088-interactive-view-controller-transitions-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/88-interactive-view-controller-transitions\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 93,
+      "episode_number": 87,
+      "title": "Xcode 5 Autolayout Improvements",
+      "description": "This week we have another free bonus video on the improvements that Xcode 5 brings to Autolayout.  As something that has been quite obnoxious to work with in the past, many people dismissed auto layout when it was introduced to iOS 6.  With these improvements it is much more friendly and dare I say... usable?",
+      "published_at": "2013-09-26T10:02:32Z",
+      "duration": 7,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/087-xcode5-autolayout-improvements\/087-xcode5-autolayout-improvements-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#86B91B",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/087-xcode5-autolayout-improvements\/087-xcode5-autolayout-improvements-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/087-xcode5-autolayout-improvements\/087-xcode5-autolayout-improvements-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/087-xcode5-autolayout-improvements\/087-xcode5-autolayout-improvements-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/87-xcode-5-autolayout-improvements\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 92,
+      "episode_number": 86,
+      "title": "iOS 7 View Controller Transitions",
+      "description": "Now that the iOS 7 is out and the NDA has been lifted you can expect NSScreencast to cover lots of the new features.  In this episode I show how you can take a simple stock modal transition for a color picker and create something more unique and playful that fits with the \"swatch\" theme.",
+      "published_at": "2013-09-19T10:01:59Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/086-ios7-view-controller-transitions\/086-ios7-view-controller-transitions-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FBB33D",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/086-ios7-view-controller-transitions\/086-ios7-view-controller-transitions-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/086-ios7-view-controller-transitions\/086-ios7-view-controller-transitions-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/086-ios7-view-controller-transitions\/086-ios7-view-controller-transitions-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/86-ios-7-view-controller-transitions\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 91,
+      "episode_number": 85,
+      "title": "Hello, iOS 7",
+      "description": "To celebrate the launch of iOS 7, here is a bonus free screencast covering a few of the concepts in iOS 7 such as the status bar behavior, tint color, and navigation bar transitions.  We'll also take a look at Xcode 5 with a couple of the new features, including the integrated test runner.",
+      "published_at": "2013-09-19T10:01:00Z",
+      "duration": 7,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/085-hello-ios7\/085-hello-ios7-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#1497f2",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/085-hello-ios7\/085-hello-ios7-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/085-hello-ios7\/085-hello-ios7-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/085-hello-ios7\/085-hello-ios7-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/85-hello-ios-7\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 90,
+      "episode_number": 84,
+      "title": "xctool",
+      "description": "Trying to run unit tests with xcodebuild leaves a lot to be desired.  In this screencast I'll show you why xctool is a superior alternative.  Quick, parsable build output and easy to follow pass\/fail status on test runs make xctool worth checking out.",
+      "published_at": "2013-09-12T10:03:00Z",
+      "duration": 8,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/084-xctool\/084-xctool.png",
+      "episode_type": "paid",
+      "dominant_color": "#231F20",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/084-xctool\/084-xctool@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/084-xctool\/084-xctool.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/084-xctool\/084-xctool.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/84-xctool\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 89,
+      "episode_number": 83,
+      "title": "TDD View Controllers Part 2",
+      "description": "We continue our TDD exercise, building a view controller one test at a time using Specta and OCMock. This time we introduce the alert view behavior for invalid logins, performing a segue for valid logins, and capturing arguments passed to mocks in order to affect the system, all in tests.",
+      "published_at": "2013-09-05T10:02:00Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/083-tdd-view-controllers-part-2\/083-tdd-view-controllers-part-2.png",
+      "episode_type": "paid",
+      "dominant_color": "#D66F1F",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/083-tdd-view-controllers-part-2\/083-tdd-view-controllers-part-2@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/083-tdd-view-controllers-part-2\/083-tdd-view-controllers-part-2.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/083-tdd-view-controllers-part-2\/083-tdd-view-controllers-part-2.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/83-tdd-view-controllers-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 88,
+      "episode_number": 82,
+      "title": "TDD View Controllers with Specta and OCMock",
+      "description": "In this episode I cover test driving a UIViewController using Specta and OCMock.  We'll first talk about how to verify that your storyboard is wired up correctly with all outlets & actions and then talk about how to isolate the view controller from other dependencies using mock objects.",
+      "published_at": "2013-08-29T10:03:44Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/082-tdd-view-controllers-with-specta-and-ocmock\/082-tdd-view-controllers-with-specta-and-ocmock.png",
+      "episode_type": "paid",
+      "dominant_color": "#D66F1F",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/082-tdd-view-controllers-with-specta-and-ocmock\/082-tdd-view-controllers-with-specta-and-ocmock@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/082-tdd-view-controllers-with-specta-and-ocmock\/082-tdd-view-controllers-with-specta-and-ocmock.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/082-tdd-view-controllers-with-specta-and-ocmock\/082-tdd-view-controllers-with-specta-and-ocmock.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/82-tdd-view-controllers-with-specta-and-ocmock\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 87,
+      "episode_number": 81,
+      "title": "Associated Objects",
+      "description": "In this episode I add a block-based tap handler to UIButton, and discovering the limitation that categories can't define ivars or properties.  To fix this, we use the objective-c runtime to add associated object storage.  We also identify a block retain cycle and discuss a fix.",
+      "published_at": "2013-08-22T10:00:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/081-associated-objects\/081-associated-storage.png",
+      "episode_type": "paid",
+      "dominant_color": "#9A9DA0",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/081-associated-objects\/081-associated-storage@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/081-associated-objects\/081-associated-storage.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/081-associated-objects\/081-associated-storage.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/81-associated-objects\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 86,
+      "episode_number": 80,
+      "title": "PaintCode",
+      "description": "In this episode I cover a really interesting & powerful tool called PaintCode.  With this vector-based drawing app you can export your artwork as Core Graphics source code.",
+      "published_at": "2013-08-15T10:00:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/080-paint-code\/080-paint-code.png",
+      "episode_type": "paid",
+      "dominant_color": "#499FD8",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/080-paint-code\/080-paint-code@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/080-paint-code\/080-paint-code.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/080-paint-code\/080-paint-code.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/80-paintcode\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 85,
+      "episode_number": 79,
+      "title": "Sketch",
+      "description": "In this episode I take a break from code to show off a powerful vector drawing program called Sketch.  I show off some Sketch basics, create a simple (yet cheesy) cloud icon, and show how Sketch can be used to design mockups or full-fledged designs.",
+      "published_at": "2013-08-08T10:04:40Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/079-sketch\/079-sketch-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#C9C9C9",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/079-sketch\/079-sketch-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/079-sketch\/079-sketch-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/079-sketch\/079-sketch-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/79-sketch\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 84,
+      "episode_number": 78,
+      "title": "TDD Money Part 2",
+      "description": "In part 2 we continue our Money example.  We start by adding the ability to add 2 Moneys of the same currency, then extract the concept of Expressions in order to defer conversion until the very end.",
+      "published_at": "2013-08-01T15:04:03Z",
+      "duration": 41,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#40722E",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/78-tdd-money-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 83,
+      "episode_number": 77,
+      "title": "TDD Money with Specta and Expecta",
+      "description": "In this episode I walk through Kent Beck's Money example from his book, Test Driven Development by example.  We'll start off by setting up to use Specta & Expecta for our tests, and then drive out an implementation test-first.  We'll see opportunities for refactoring and use our tests to guide us.",
+      "published_at": "2013-07-25T14:04:00Z",
+      "duration": 35,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#40722E",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/077-tdd-money-with-specta-and-expecta\/077-tdd-money-with-specta-and-expecta-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/77-tdd-money-with-specta-and-expecta\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 82,
+      "episode_number": 76,
+      "title": "Extracting Data From Strings",
+      "description": "In this episode I cover a few techniques on how to pull information out of strings.  We start of by using regular expressions via NSRegularExpression, then take a look at NSDataDetector, and wrap up by examining the lexical structure of sentences using NSLinguisticTagger.",
+      "published_at": "2013-07-18T20:03:07Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/076-extracting-data-from-strings\/076-extracting-data-from-strings-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#924304",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/076-extracting-data-from-strings\/076-extracting-data-from-strings-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/076-extracting-data-from-strings\/076-extracting-data-from-strings-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/076-extracting-data-from-strings\/076-extracting-data-from-strings-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/76-extracting-data-from-strings\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 81,
+      "episode_number": 75,
+      "title": "A Tale of UIScrollView Customization",
+      "description": "In this episode I attempt to implement a custom scroll view behavior, where a table view can grow while scrolling to eventually encompass the entire screen.  The implementation, while mostly functional, has drawbacks and the code is complicated.  After taking a break, I approach the problem anew, and implement it much cleaner. ",
+      "published_at": "2013-07-11T14:01:51Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/075-a-tale-of-uiscrollview-customization\/075-a-tale-of-uiscrollview-customization-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#7A98A7",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/075-a-tale-of-uiscrollview-customization\/075-a-tale-of-uiscrollview-customization-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/075-a-tale-of-uiscrollview-customization\/075-a-tale-of-uiscrollview-customization-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/075-a-tale-of-uiscrollview-customization\/075-a-tale-of-uiscrollview-customization-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/75-a-tale-of-uiscrollview-customization\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 80,
+      "episode_number": 74,
+      "title": "OAuth2",
+      "description": "In this episode we cover how to authenticate with an OAuth2 provider for user authentication.  As an example, we authenticate with Instagram using the Client Profile, which is most suited to a mobile application.",
+      "published_at": "2013-07-05T10:00:00Z",
+      "duration": 11,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/074-oauth2\/074-oauth2-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#E7A572",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/074-oauth2\/074-oauth2-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/074-oauth2\/074-oauth2-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/074-oauth2\/074-oauth2-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/74-oauth2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 79,
+      "episode_number": 73,
+      "title": "SSL Pinning",
+      "description": "In this episode I show how you can self-sign a certificate in Charles to inspect and modify requests & responses to an API.  Using a technique called SSL Pinning, we can prevent this type of man in the middle attack and make our applications more secure.",
+      "published_at": "2013-06-28T14:01:49Z",
+      "duration": 8,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/073-ssl-pinning\/073-ssl-pinning-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#6BC3EF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/073-ssl-pinning\/073-ssl-pinning-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/073-ssl-pinning\/073-ssl-pinning-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/073-ssl-pinning\/073-ssl-pinning-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/73-ssl-pinning\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 78,
+      "episode_number": 72,
+      "title": "Objective-C Collections",
+      "description": "Choosing the appropriate collection for your use case is important, not only for ease of implementation but for performance.  In this episode, we'll examine the performance characteristics of various collections such as NSSet, NSArray, NSOrderedSet, and NSDictionary.",
+      "published_at": "2013-06-21T10:00:00Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/072-objective-c-collections\/072-objective-c-collections-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#999A9A",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/072-objective-c-collections\/072-objective-c-collections-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/072-objective-c-collections\/072-objective-c-collections-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/072-objective-c-collections\/072-objective-c-collections-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/72-objective-c-collections\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 77,
+      "episode_number": 71,
+      "title": "NSNumberFormatter",
+      "description": "In this episode I take a look at NSNumberFormatter, which is a useful class for getting various string representations of numbers.  We then use this to add live number formatting to a UITextField.",
+      "published_at": "2013-06-13T10:01:00Z",
+      "duration": 9,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/071-nsnumberformatter\/071-nsnumberformatter-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#AEC071",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/071-nsnumberformatter\/071-nsnumberformatter-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/071-nsnumberformatter\/071-nsnumberformatter-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/071-nsnumberformatter\/071-nsnumberformatter-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/71-nsnumberformatter\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 76,
+      "episode_number": 70,
+      "title": "Autolayout with Cells",
+      "description": "Autolayout can be very powerful tool to provide layouts that are responsive to changes.  In this episode we'll visit a case with UITableViewCells that makes using auto-layout somewhat frustrating, where constraints are applied to the cell itself instead of the cell's contentView.",
+      "published_at": "2013-06-06T12:00:00Z",
+      "duration": 8,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/070-autolayout-with-cells\/070-autolayout-with-cells-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#CA789B",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/070-autolayout-with-cells\/070-autolayout-with-cells-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/070-autolayout-with-cells\/070-autolayout-with-cells-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/070-autolayout-with-cells\/070-autolayout-with-cells-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/70-autolayout-with-cells\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 75,
+      "episode_number": 69,
+      "title": "NSFetchedResultsController",
+      "description": "In this episode we take a look at how to correctly detect & respond to underlying changes in an NSManagedObjectContext and insert, update, move, and remove UITableView rows with the proper animations.",
+      "published_at": "2013-05-30T16:00:00Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/069-nsfetchedresultscontroller\/069-nsfetchedresultscontroller-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#ADC070",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/069-nsfetchedresultscontroller\/069-nsfetchedresultscontroller-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/069-nsfetchedresultscontroller\/069-nsfetchedresultscontroller-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/069-nsfetchedresultscontroller\/069-nsfetchedresultscontroller-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/69-nsfetchedresultscontroller\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 74,
+      "episode_number": 68,
+      "title": "Xcode Project Templates",
+      "description": "In this episode we dive into the undocumented world of Xcode project templates.  By studying the existing templates, we can learn how to make our own templates that better match our style or needs.",
+      "published_at": "2013-05-23T16:02:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/068-xcode-project-templates\/068-xcode-project-templates-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#2EBFF4",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/068-xcode-project-templates\/068-xcode-project-templates-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/068-xcode-project-templates\/068-xcode-project-templates-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/068-xcode-project-templates\/068-xcode-project-templates-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/68-xcode-project-templates\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 73,
+      "episode_number": 67,
+      "title": "Map Overlays",
+      "description": "In this episode we take the shape file data we parsed in episode 66 and use it to draw outlines around US States.  We do this using the MKPolygon overlay in combination with MKPolygonView, which allows us to fill & stroke the provided vertices.",
+      "published_at": "2013-05-16T13:03:00Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/067-map-overlays\/067-map-overlays-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#DE8948",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/067-map-overlays\/067-map-overlays-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/067-map-overlays\/067-map-overlays-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/067-map-overlays\/067-map-overlays-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/67-map-overlays\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 72,
+      "episode_number": 66,
+      "title": "Processing Shape Files",
+      "description": "In this episode I cover how to parse ESRI Shapefiles and their DBF attribute counterparts, in order to get a list of vertices of US State boundaries.  This episode covers interacting with a C library (shapelib).  The data extracted will be useful in the next episode.",
+      "published_at": "2013-05-09T10:02:37Z",
+      "duration": 21,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/066-processing-shape-files\/066-processing-shape-files-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#EAF6F7",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/066-processing-shape-files\/066-processing-shape-files-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/066-processing-shape-files\/066-processing-shape-files-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/066-processing-shape-files\/066-processing-shape-files-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/66-processing-shape-files\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 71,
+      "episode_number": 65,
+      "title": "Alcatraz Package Manager",
+      "description": "In this short episode I quickly cover the Alcatraz Package Manager for Xcode, which allows you to easily install many user contributed plugins and color shemes in Xcode.",
+      "published_at": "2013-05-02T20:00:00Z",
+      "duration": 3,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/065-alcatraz-package-manager\/065-alcatraz-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#8F9295",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/065-alcatraz-package-manager\/065-alcatraz-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/065-alcatraz-package-manager\/065-alcatraz-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/065-alcatraz-package-manager\/065-alcatraz-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/65-alcatraz-package-manager\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 70,
+      "episode_number": 64,
+      "title": "MapKit Annotations",
+      "description": "In this episode I continue our WhatsAround sample from Episode 63.  Using the Foursquare API, we fetch coffee shops near the user's location and display a pin on the map for each using the MKAnnotation protocol.",
+      "published_at": "2013-04-25T10:00:00Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/064-mapkit-annotations\/064-mapkit-annotations-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#124779",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/064-mapkit-annotations\/064-mapkit-annotations-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/064-mapkit-annotations\/064-mapkit-annotations-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/064-mapkit-annotations\/064-mapkit-annotations-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/64-mapkit-annotations\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 69,
+      "episode_number": 63,
+      "title": "From Scratch",
+      "description": "In this episode I go over how I typically start new projects.  I start off when an empty app template, do a bit of organization with groups to keep things tidy, introduce CocoaPods and a workspace, and wrap it up by setting up a map view controller using Storyboards on both the iPhone and the iPad.  This project will be handy to use as a base for future episodes.",
+      "published_at": "2013-04-18T10:03:00Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/063-from-scratch\/063-from-scratch-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#124779",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/063-from-scratch\/063-from-scratch-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/063-from-scratch\/063-from-scratch-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/063-from-scratch\/063-from-scratch-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/63-from-scratch\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 68,
+      "episode_number": 62,
+      "title": "Mailing Logs",
+      "description": "In this episode we continue with our example from last week's logging episode, and discuss how you can retrieve your logs out in the field.  We use a pod called SSZipArchive to zip up the files as well as MFMailComposeViewController to enable testers to send us detailed logs of what is happening in the app.",
+      "published_at": "2013-04-11T10:02:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/062-mailing-logs\/062-mailing-logs-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#84A63C",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/062-mailing-logs\/062-mailing-logs-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/062-mailing-logs\/062-mailing-logs-poster-960.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/062-mailing-logs\/062-mailing-logs-poster-1280.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/62-mailing-logs\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 67,
+      "episode_number": 61,
+      "title": "Cocoa Lumberjack",
+      "description": "In this episode we take a look at a fast & flexible alternative logging framework for iOS called Cocoa Lumberjack.  We take a look at the various loggers that are available and how to write logs to a file.",
+      "published_at": "2013-04-04T10:02:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/061-cocoa-lumberjack\/061-cocoa-lumberjack.png",
+      "episode_type": "paid",
+      "dominant_color": "#3B2314",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/061-cocoa-lumberjack\/061-cocoa-lumberjack@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/061-cocoa-lumberjack\/061-cocoa-lumberjack.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/061-cocoa-lumberjack\/061-cocoa-lumberjack.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/61-cocoa-lumberjack\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 66,
+      "episode_number": 60,
+      "title": "Windows Azure Mobile Services Part 2",
+      "description": "We continue with our example chat application here and add the ability post a message, poll for updates, and receive push notifications.  This episode utilizes a pod calles MessagesTableView controller to present an SMS like interface for the messages.",
+      "published_at": "2013-04-02T16:00:00Z",
+      "duration": 27,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/060-windows-azure-mobile-services-part-2\/060-windows-azure-mobile-services-part-2-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#3C444F",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/060-windows-azure-mobile-services-part-2\/060-windows-azure-mobile-services-part-2-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/060-windows-azure-mobile-services-part-2\/060-windows-azure-mobile-services-part-2-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/060-windows-azure-mobile-services-part-2\/060-windows-azure-mobile-services-part-2-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/60-windows-azure-mobile-services-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 65,
+      "episode_number": 59,
+      "title": "Windows Azure Mobile Services",
+      "description": "This week we take a look at Windows Azure Mobile Services, a back-end for mobile applications that has first class iOS support.  In this episode we begin building a full featured chat application.  This is part 1 of 2, in which we set up a new mobile service, wire up the SDK with CocoaPods, set up Twitter authentication and enrich the data using Javascript on the server.  \r\n\r\nThis episode has been sponsored by Microsoft.",
+      "published_at": "2013-03-28T22:00:00Z",
+      "duration": 24,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/059-windows-azure-mobile-services\/059-windows-azure-mobile-services-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#3C444F",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/059-windows-azure-mobile-services\/059-windows-azure-mobile-services-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/059-windows-azure-mobile-services\/059-windows-azure-mobile-services-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/059-windows-azure-mobile-services\/059-windows-azure-mobile-services-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/59-windows-azure-mobile-services\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 64,
+      "episode_number": 58,
+      "title": "Container View Controllers",
+      "description": "In this episode I create a container view controller using the UIViewController containment APIs.  The container view controller mimicks a style where the starting view controller fades into the background instead of sliding to the left.",
+      "published_at": "2013-03-21T16:00:41Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/058-container-view-controllers\/058-container-view-controllers.png",
+      "episode_type": "paid",
+      "dominant_color": "#CECECE",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/058-container-view-controllers\/058-container-view-controllers@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/058-container-view-controllers\/058-container-view-controllers.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/058-container-view-controllers\/058-container-view-controllers.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/58-container-view-controllers\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 63,
+      "episode_number": 57,
+      "title": "Facebook Integration",
+      "description": "In this episode we build on our Social App from episode 56 and add Facebook support. We cover setting up an Facebook application and the requisite permissions required to authenticate & fetch a user's friend list, all using the Social Framework in iOS 6.",
+      "published_at": "2013-03-14T16:01:50Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/057-facebook-integration\/057-facebook-integration-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#AEBAD4",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/057-facebook-integration\/057-facebook-integration-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/057-facebook-integration\/057-facebook-integration-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/057-facebook-integration\/057-facebook-integration-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/57-facebook-integration\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 62,
+      "episode_number": 56,
+      "title": "Twitter Integration",
+      "description": "In this episode we implement the Social framework in order to integrate with Twitter.  Using the provided framework, we issue an authenticated API call to get a list of Twitter followers for a given account, as well as compose a tweet with the new SLComposeViewController.",
+      "published_at": "2013-03-07T10:01:54Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/056-twitter-integration\/056-twitter-integration-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#4285A0",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/056-twitter-integration\/056-twitter-integration-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/056-twitter-integration\/056-twitter-integration-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/056-twitter-integration\/056-twitter-integration-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/56-twitter-integration\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 61,
+      "episode_number": 55,
+      "title": "Versioning",
+      "description": "In this app I cover iOS application versioning.  I cover what the purpose of CFBundleVersion and CFBundleShortVersionString are, how to set them, and how to use agvtool to automatically increment build numbers for any distributed build.",
+      "published_at": "2013-02-28T10:00:00Z",
+      "duration": 6,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/055-versioning\/055-versioning-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#C1C1C1",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/055-versioning\/055-versioning-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/055-versioning\/055-versioning-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/055-versioning\/055-versioning-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/55-versioning\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 60,
+      "episode_number": 54,
+      "title": "Pony Debugger",
+      "description": "In this episode we take a look at Pony Debugger, a fantastic little tool by the fine folks at Square, to inspect HTTP traffic and dive into our Core Data model all via a Chrome inspector pane in the browser.",
+      "published_at": "2013-02-21T10:04:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/054-pony-debugger\/054-pony-debugger-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FADDE9",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/054-pony-debugger\/054-pony-debugger-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/054-pony-debugger\/054-pony-debugger-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/054-pony-debugger\/054-pony-debugger-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/54-pony-debugger\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 59,
+      "episode_number": 53,
+      "title": "RestKit - Object Manager",
+      "description": "This episode covers some additional pieces of RestKit, abstracting network requests even further by providing a route & mapping for a given object and utilizing RKObjectManager to perform the work for us.  Instead of using a live API, we verify the behavior using SenTestingKit.",
+      "published_at": "2013-02-14T16:01:57Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/053-restkit-object-manager\/053-restkit-object-manager-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/053-restkit-object-manager\/053-restkit-object-manager-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/053-restkit-object-manager\/053-restkit-object-manager-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/053-restkit-object-manager\/053-restkit-object-manager-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/53-restkit-object-manager\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 58,
+      "episode_number": 52,
+      "title": "RestKit - CoreData",
+      "description": "In this episode we continue on our exploration of RestKit, this time with a focus on CoreData.  It turns out to be fairly easy to change our existing code to support saving the responses into NSManagedObject classes in a database.",
+      "published_at": "2013-02-07T15:02:24Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/052-restkit-coredata\/052-restkit-core-data-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/052-restkit-coredata\/052-restkit-core-data-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/052-restkit-coredata\/052-restkit-core-data-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/052-restkit-coredata\/052-restkit-core-data-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/52-restkit-coredata\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 57,
+      "episode_number": 51,
+      "title": "Intro to RestKit: Mapping",
+      "description": "RestKit is a framework that aims to simplify the \"plumbing\" of your application to allow you to focus on your core features.  In this screencast, I focus on fetching JSON from an API and mapping it onto our own objects using RestKit's mapping features.",
+      "published_at": "2013-01-31T10:00:00Z",
+      "duration": 25,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/051-intro-to-restkit-mapping\/051-intro-to-restkit-mapping-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/051-intro-to-restkit-mapping\/051-intro-to-restkit-mapping-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/051-intro-to-restkit-mapping\/051-intro-to-restkit-mapping-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/051-intro-to-restkit-mapping\/051-intro-to-restkit-mapping-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/51-intro-to-restkit-mapping\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 56,
+      "episode_number": 50,
+      "title": "Custom Cells",
+      "description": "In this episode we design a custom table view cell including a designing custom repeatable background & highlight images in Photoshop, dynamically layout out the labels, as well as observing a tricky problem regarding cell animations. We also take a look at how to profile the graphics performance (FPS) using Instruments.",
+      "published_at": "2013-01-24T10:00:00Z",
+      "duration": 26,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/050-custom-cells\/050-custom-cells-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#4D4D4D",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/050-custom-cells\/050-custom-cells-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/050-custom-cells\/050-custom-cells-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/050-custom-cells\/050-custom-cells-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/50-custom-cells\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 55,
+      "episode_number": 49,
+      "title": "Slide Out Menus",
+      "description": "In this episode I cover a few of the available 3rd party libraries for implementing a slide to reveal menu, similar to what you see in the Facebook application.",
+      "published_at": "2013-01-17T10:00:00Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/049-slide-out-menus\/049-slide-out-menus-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#4E1818",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/049-slide-out-menus\/049-slide-out-menus-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/049-slide-out-menus\/049-slide-out-menus-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/049-slide-out-menus\/049-slide-out-menus-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/49-slide-out-menus\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 54,
+      "episode_number": 48,
+      "title": "Code Snippets",
+      "description": "In this episode we examine Xcode's code snippets feature and how it can speed up your day to day development.  We also take a look at a handy gem for easily installing code snippets you've found online.",
+      "published_at": "2013-01-10T10:08:15Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/048-code-snippets\/048-code-snippets-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#140B02",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/048-code-snippets\/048-code-snippets-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/048-code-snippets\/048-code-snippets-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/048-code-snippets\/048-code-snippets-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/48-code-snippets\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 53,
+      "episode_number": 47,
+      "title": "Gesture Recognizers",
+      "description": "Detecting touches used to be a chore.  Thanks to the UIGestureRecognizer family of classes, detecting touches & gestures is a breeze. In this episode we implement a Photo Table where you can add photos, move them around, as well as pinch & rotate.",
+      "published_at": "2013-01-03T15:01:39Z",
+      "duration": 29,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/047-gesture-recognizers\/047-gesture-recognizers.png",
+      "episode_type": "paid",
+      "dominant_color": "#D4E8FF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/047-gesture-recognizers\/047-gesture-recognizers@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/047-gesture-recognizers\/047-gesture-recognizers.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/047-gesture-recognizers\/047-gesture-recognizers.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/47-gesture-recognizers\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 52,
+      "episode_number": 46,
+      "title": "Fun with UICollectionView",
+      "description": "In this episode we dive into UICollectionView for displaying ... collections of views.  We start by looking at how to tweak the builtin UICollectionViewFlowLayout as well as extending to create an interesting custom variation.",
+      "published_at": "2012-12-20T22:00:00Z",
+      "duration": 24,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/046-fun-with-uicollectionview\/046-fun-with-uicollection-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#739290",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/046-fun-with-uicollectionview\/046-fun-with-uicollection-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/046-fun-with-uicollectionview\/046-fun-with-uicollection-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/046-fun-with-uicollectionview\/046-fun-with-uicollection-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/46-fun-with-uicollectionview\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 51,
+      "episode_number": 45,
+      "title": "Validating IAP Receipts",
+      "description": "Here we continue on with our In App Purchase example, but this time we take the receipt given to us by StoreKit and we send it to our custom rails server to be validated with Apple.",
+      "published_at": "2012-12-13T15:00:00Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/045-validating-iap-receipts\/045-validating-iap-receipts-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#106168",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/045-validating-iap-receipts\/045-validating-iap-receipts-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/045-validating-iap-receipts\/045-validating-iap-receipts-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/045-validating-iap-receipts\/045-validating-iap-receipts-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/45-validating-iap-receipts\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 50,
+      "episode_number": 44,
+      "title": "In App Purchases",
+      "description": "In this episode I dive into the world of IAP (In App Purchases) using StoreKit.  I start by creating a product in iTunes Connect, retrieving that product on the device, and emulating the App Store buy confirmation buttons using a handy CocoaPod.",
+      "published_at": "2012-12-06T16:01:00Z",
+      "duration": 35,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/044-in-app-purchases\/044-in-app-purchases-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#6C8BA3",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/044-in-app-purchases\/044-in-app-purchases-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/044-in-app-purchases\/044-in-app-purchases-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/044-in-app-purchases\/044-in-app-purchases-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/44-in-app-purchases\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 49,
+      "episode_number": 43,
+      "title": "AVAudioPlayer",
+      "description": "The iOS SDK has numerous ways to play back audio.  In this episode we take a look at how to play a local mp3 file using AVAudioPlayer.  We add play\/pause support, volume, and show the song progress in a UISlider.  We finish it off by monitoring the audio levels using a custom view.",
+      "published_at": "2012-11-29T10:01:11Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/043-avaudioplayer\/043-avaudioplayer-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#CFCFCF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/043-avaudioplayer\/043-avaudioplayer-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/043-avaudioplayer\/043-avaudioplayer-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/043-avaudioplayer\/043-avaudioplayer-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/43-avaudioplayer\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 48,
+      "episode_number": 42,
+      "title": "Retrying HTTP Requests",
+      "description": "We pick up where we left off in Episode 41 and implement a mechanism to automatically detect expired authentication tokens, re-login the user automatically, and retry the original request. This takes a bit of refactoring and use of blocks, but allows for transparent HTTP retries.",
+      "published_at": "2012-11-16T10:00:00Z",
+      "duration": 30,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/042-retrying-requests\/042-retrying-http-requests-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#187764",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/042-retrying-requests\/042-retrying-http-requests-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/042-retrying-requests\/042-retrying-http-requests-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/042-retrying-requests\/042-retrying-http-requests-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/42-retrying-http-requests\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 47,
+      "episode_number": 41,
+      "title": "Authentication with AFNetworking",
+      "description": "Many APIs require some sort of authentication.  In this episode, we explore the use of an API that authenticates with a username and password, and returns an authenticated token that has an expiration date.  You'll see use of AFNetworking to deal with the request, attaching the authenticated token as an HTTP Header to outgoing requests, as well as the use of SSKeychain to abstract away the lower level Keychain API.",
+      "published_at": "2012-11-08T15:00:54Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/041-authentication-with-afnetworking\/041-authentication-with-afnetworking-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#A75757",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/041-authentication-with-afnetworking\/041-authentication-with-afnetworking-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/041-authentication-with-afnetworking\/041-authentication-with-afnetworking-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/041-authentication-with-afnetworking\/041-authentication-with-afnetworking-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/41-authentication-with-afnetworking\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 46,
+      "episode_number": 40,
+      "title": "Shine Effect",
+      "description": "Creating an animated shine effect, similar to what you see on the slide to unlock screen on the iPhone.  In this episode, I show how to achieve this effect with CALayers, layer masks, and a CABasicAnimation.",
+      "published_at": "2012-11-01T14:42:35Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/040-shine-effect\/040-shine-effect-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#DADADA",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/040-shine-effect\/040-shine-effect-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/040-shine-effect\/040-shine-effect-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/040-shine-effect\/040-shine-effect-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/40-shine-effect\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 45,
+      "episode_number": 39,
+      "title": "Smart JSON Parsing",
+      "description": "Parsing JSON responses into Objective-C Objects can be tedious. In this episode, we start development on a smart JSON parsing class that can alleviate some of the mundane work usually required for this functionality.",
+      "published_at": "2012-10-25T10:01:00Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/039-smart-json-parsing\/039-smart-json-parsing-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#92171B",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/039-smart-json-parsing\/039-smart-json-parsing-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/039-smart-json-parsing\/039-smart-json-parsing-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/039-smart-json-parsing\/039-smart-json-parsing-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/39-smart-json-parsing\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 44,
+      "episode_number": 38,
+      "title": "Class Introspection",
+      "description": "In this episode I create an application to introspect classes to list out methods and instance variables using Objective-C's runtime features.  Bonus: Can you spot the memory leak?",
+      "published_at": "2012-10-18T10:00:53Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/038-class-introspection\/038-class-introspection-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#664A75",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/038-class-introspection\/038-class-introspection-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/038-class-introspection\/038-class-introspection-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/038-class-introspection\/038-class-introspection-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/38-class-introspection\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 43,
+      "episode_number": 37,
+      "title": "Xcode Tips & Tricks",
+      "description": "In this episode I cover some of the Xcode tips & tricks that help me be effective.  I cover many keyboard shortcuts for keeping my hands on the keyboard, as well as a couple of useful plugins for Xcode for Vim key bindings and picking colors.",
+      "published_at": "2012-10-11T10:00:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/037-xcode-tips-tricks\/037-xcode-tips-tricks-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#828282",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/037-xcode-tips-tricks\/037-xcode-tips-tricks-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/037-xcode-tips-tricks\/037-xcode-tips-tricks-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/037-xcode-tips-tricks\/037-xcode-tips-tricks-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/37-xcode-tips-tricks\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 42,
+      "episode_number": 36,
+      "title": "Searching in UITableView",
+      "description": "Using UISearchDisplayController you can quickly add searching behavior to a UITableView.  In this this episode we start off with a CoreData model of products, displayed in custom UITableViewCells and add search to filter the products in the table.",
+      "published_at": "2012-10-04T10:01:17Z",
+      "duration": 15,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/036-searching-in-uitableview\/036-searching-in-uitableview-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#E8E8E8",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/036-searching-in-uitableview\/036-searching-in-uitableview-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/036-searching-in-uitableview\/036-searching-in-uitableview-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/036-searching-in-uitableview\/036-searching-in-uitableview-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/36-searching-in-uitableview\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 41,
+      "episode_number": 35,
+      "title": "Autolayout Fun",
+      "description": "In this episode I dive into the complex world of auto layout.  Autolayout is an important and powerful new layout system in iOS 6, but it definitely takes some practice to understand fully.  Even after practicing this episode a few times I ran into a couple of snags, however I hope this intro to Autolayout provides useful.",
+      "published_at": "2012-09-27T10:00:54Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/035-autolayout-fun\/035-autolayout-fun-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#7E8189",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/035-autolayout-fun\/035-autolayout-fun-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/035-autolayout-fun\/035-autolayout-fun-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/035-autolayout-fun\/035-autolayout-fun-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/35-autolayout-fun\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 40,
+      "episode_number": 34,
+      "title": "Upgrading to iOS 6 and iPhone 5",
+      "description": "Now that iOS 6 is out, and the iPhone 5 is only a day away, it is important to update our applications to make sure there are no issues.  In this episode, I convert a rudimentary application to support the taller screen of the iPhone 5 and support iOS 6.",
+      "published_at": "2012-09-20T10:00:00Z",
+      "duration": 7,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/034-upgrading-to-ios6\/034-upgrading-to-ios6-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/034-upgrading-to-ios6\/034-upgrading-to-ios6-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/034-upgrading-to-ios6\/034-upgrading-to-ios6-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/034-upgrading-to-ios6\/034-upgrading-to-ios6-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/34-upgrading-to-ios-6-and-iphone-5\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 39,
+      "episode_number": 33,
+      "title": "Core Graphics: Polygons",
+      "description": "We continue our journey into Core Graphics.  This week, we'll draw a polygon with a dynamic number of sides, learn how to use CGMutablePathRef, shadows, clipping paths, and a bit of math.",
+      "published_at": "2012-09-13T10:00:00Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/033-core-graphics-polygons\/033-core-graphics-polygons-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#353535",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/033-core-graphics-polygons\/033-core-graphics-polygons-poster@2x.png",
+      "medium_artwork_url": "",
+      "large_artwork_url": "",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/33-core-graphics-polygons\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 38,
+      "episode_number": 32,
+      "title": "Core Graphics: Gradients",
+      "description": "Core Graphics is a complex topic, but can be very handy to create designs without using images, as well as maintaining resolution independence.  In this episode I show how to create a couple of simple gradients using Core Graphics.",
+      "published_at": "2012-09-06T05:00:51Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/032-core-graphics-gradients\/032-core-graphics-gradients-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#FF0000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/032-core-graphics-gradients\/032-core-graphics-gradients-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/032-core-graphics-gradients\/032-core-graphics-gradients-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/032-core-graphics-gradients\/032-core-graphics-gradients-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/32-core-graphics-gradients\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 37,
+      "episode_number": 31,
+      "title": "Posting Multi-part Forms with AFNetworking",
+      "description": "In this episode, I take an existing app and add the ability to post information to a server, including photo uploads.  We report on the progress of the upload and configure AFNetworking to do a proper muliti-part HTTP form post.  In addition, I cover how to build a standalone static TableViewController to represent a form using Storyboards.",
+      "published_at": "2012-08-30T10:00:00Z",
+      "duration": 31,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/031-forms\/031-forms-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/031-forms\/031-forms-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/031-forms\/031-forms-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/031-forms\/031-forms-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/31-posting-multi-part-forms-with-afnetworking\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 36,
+      "episode_number": 30,
+      "title": "Parse",
+      "description": "In this episode I build an app with Parse, a service that provides custom data storage, files, push notifications, a geolocation support.",
+      "published_at": "2012-08-23T10:00:00Z",
+      "duration": 17,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/030-parse\/030-parse-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#023F81",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/030-parse\/030-parse-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/030-parse\/030-parse-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/030-parse\/030-parse-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/30-parse\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 35,
+      "episode_number": 29,
+      "title": "RubyMotion",
+      "description": "RubyMotion is a toolkit that allows you to write native iOS applications using Ruby.  Normally I'm pretty skeptical of these alternative frameworks, but RubyMotion is actually quite interesting.  In this episode I build a small application and talk about the pros & cons of using the toolkit.",
+      "published_at": "2012-08-16T13:01:20Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/029-rubymotion\/029-rubymotion-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#B8B8B8",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/029-rubymotion\/029-rubymotion-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/029-rubymotion\/029-rubymotion-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/029-rubymotion\/029-rubymotion-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/29-rubymotion\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 34,
+      "episode_number": 28,
+      "title": "Creating a Cocoapod",
+      "description": "In this episode, we'll create a CocoaPod out of the modal picker view component we created in episodes 25 & 26.  We'll see how to tag & push our code to a github repository and create a podspec so that others can use this component in their projects.",
+      "published_at": "2012-08-09T10:00:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/028-creating-a-cocoapod\/028-creating-a-cocoapod-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#BFBDA6",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/028-creating-a-cocoapod\/028-creating-a-cocoapod-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/028-creating-a-cocoapod\/028-creating-a-cocoapod-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/028-creating-a-cocoapod\/028-creating-a-cocoapod-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/28-creating-a-cocoapod\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 33,
+      "episode_number": 27,
+      "title": "New Objective-C Syntax",
+      "description": "The latest version of the LLVM compiler supports some excellent new syntax additions to the Objective-C language.  In this episode, I cover what the new syntax is, how to use it, and a few caveats to look out for.",
+      "published_at": "2012-08-02T10:01:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/027-new-objective-c-syntax\/new-syntax-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#438AFF",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/027-new-objective-c-syntax\/new-syntax-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/027-new-objective-c-syntax\/new-syntax-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/027-new-objective-c-syntax\/new-syntax-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/27-new-objective-c-syntax\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 32,
+      "episode_number": 26,
+      "title": "Building a Custom Picker Component - Part 2",
+      "description": "In this episode, I continue where I left of in episode 25.  I add a nice animation to present & dismiss the picker, as well as a backdrop view that allows you to tap anywhere to cancel.",
+      "published_at": "2012-07-26T10:00:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/026-custom-picker-component-part-2\/custom-picker-part-2-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#464646",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/026-custom-picker-component-part-2\/custom-picker-part-2-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/026-custom-picker-component-part-2\/custom-picker-part-2-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/026-custom-picker-component-part-2\/custom-picker-part-2-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/26-building-a-custom-picker-component-part-2\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 31,
+      "episode_number": 25,
+      "title": "Building a Custom Picker Component",
+      "description": "\r\nIn this episode, we'll talk about how to extract code from a  view controller into a reusable component.  We'll create a simple class that combines a UIPickerView with a toolbar for making quick selections from a small list of values.  This ran a little long, so it is broken down into 2 parts.\r\n",
+      "published_at": "2012-07-19T10:00:00Z",
+      "duration": 19,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/025-custom-picker-component-part-1\/custom-picker-part-1-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#464646",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/025-custom-picker-component-part-1\/custom-picker-part-1-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/025-custom-picker-component-part-1\/custom-picker-part-1-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/025-custom-picker-component-part-1\/custom-picker-part-1-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/25-building-a-custom-picker-component\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 30,
+      "episode_number": 24,
+      "title": "Pull to Refresh",
+      "description": "In this episode, I cover how to implement Pull to Refresh on UITableView using an easy open source project called SSPullToRefresh, by Sam Soffes.  I cover the basics, as well as creating a custom loading panel, drawn with Core Graphics.",
+      "published_at": "2012-07-12T10:01:00Z",
+      "duration": 19,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/024-pull-to-refresh\/pull-to-refresh-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#DBE1E8",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/024-pull-to-refresh\/pull-to-refresh-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/024-pull-to-refresh\/pull-to-refresh-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/024-pull-to-refresh\/pull-to-refresh-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/24-pull-to-refresh\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 29,
+      "episode_number": 23,
+      "title": "Intro to Storyboards",
+      "description": "In this episode I dive into Storyboards to lay out view controllers and transitions.  I start out by converting a blank slate project to use storyboards, then move on to transitions, dynamic table view prototype cells, and cover static table views at the end.  It's a slightly longer video than normal, but if you haven't gotten into storyboards yet, this one's for you.",
+      "published_at": "2012-07-06T10:00:00Z",
+      "duration": 30,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/023-storyboards\/storyboards-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#F50F0F",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/023-storyboards\/storyboards-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/023-storyboards\/storyboards-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/023-storyboards\/storyboards-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/23-intro-to-storyboards\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 28,
+      "episode_number": 22,
+      "title": "Customizing UITabBar",
+      "description": "In this episode, I continue deconstructing Foursquare's custom UI.  This time I focus on how to customize the UITabBar with the iOS 5 customization APIs.",
+      "published_at": "2012-06-28T10:01:22Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/022-custom-tabbar\/custom-tabbar-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#E3DED8",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/022-custom-tabbar\/custom-tabbar-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/022-custom-tabbar\/custom-tabbar-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/022-custom-tabbar\/custom-tabbar-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/22-customizing-uitabbar\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 27,
+      "episode_number": 21,
+      "title": "Customizing UINavigationBar",
+      "description": "In this episode, I decompose the Foursquare UI and recreate the custom navigation bar, using the iOS 5 customization APIs.  You'll see how to set a custom background image, a title view that you can tap on, a custom bar button item, and a custom back button style.",
+      "published_at": "2012-06-26T10:01:50Z",
+      "duration": 21,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/021-custom-navbar\/custom-navbar-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "https:\/\/nsscreencast.s3.amazonaws.com\/021-custom-navbar\/custom-navbar-poster@2x.png",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/021-custom-navbar\/custom-navbar-poster@2x.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/021-custom-navbar\/custom-navbar-poster@2x.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/21-customizing-uinavigationbar\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 24,
+      "episode_number": 20,
+      "title": "Dissecting Apps",
+      "description": "It can be helpful to draw inspiration from how existing applications are built. In this screencast, we'll look at how to extract & view images from iOS applications you've downloaded from the App Store.  In addition, we'll use a proxy to intercept and inspect network traffic so you can see how application APIs behave.",
+      "published_at": "2012-06-14T15:16:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/020-dissecting-apps\/dissecting-apps-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/020-dissecting-apps\/dissecting-apps-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/020-dissecting-apps\/dissecting-apps-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/20-dissecting-apps\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 20,
+      "episode_number": 19,
+      "title": "Push Notifications",
+      "description": "In this episode, I set up a push notification server using Rails and Urban Airship, and show the steps required to handle push notifications in an application.\r\n",
+      "published_at": "2012-06-07T10:00:00Z",
+      "duration": 18,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/019-push-notifications\/push-notifications-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#1D2627",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/019-push-notifications\/push-notifications-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/019-push-notifications\/push-notifications-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/19-push-notifications\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 19,
+      "episode_number": 18,
+      "title": "Adhoc Provisioning",
+      "description": "To distribute your application to a wider audience of beta testers, you'll use what is called \"adhoc provisioning.\"  In this episode, I create an adhoc build configuration, show how to create a distribution profile for adhoc builds, and how to manually put the build on a device using the iPhone Configuration Utility.  Lastly, I cover how to use Test Flight to easily send out builds to be installed over the air.",
+      "published_at": "2012-05-31T15:16:33Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/018-adhoc-provisioning\/adhoc-provisioning-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#7D7D7D",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/018-adhoc-provisioning\/adhoc-provisioning-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/018-adhoc-provisioning\/adhoc-provisioning-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/18-adhoc-provisioning\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 18,
+      "episode_number": 17,
+      "title": "App Provisioning",
+      "description": "In this episode, I'll walk you through how to set up your Apple development certificate and provisioning profile in order to deploy an application to your device.",
+      "published_at": "2012-05-24T15:10:09Z",
+      "duration": 6,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/017-app-provisioning\/app-provisioning-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#1D2627",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/017-app-provisioning\/app-provisioning-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/017-app-provisioning\/app-provisioning-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/17-app-provisioning\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 17,
+      "episode_number": 16,
+      "title": "Key Value Observing",
+      "description": "Key Value Observing (or KVO) is a powerful technique that you can use to be notified when a property changes.  In this episode, we'll observe a property on a view to respond when it is updated.  In addition, we'll look at the ramifications of KVO on your own classes.",
+      "published_at": "2012-05-17T10:00:00Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/016-kvo\/kvo-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#000000",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/016-kvo\/kvo-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/016-kvo\/kvo-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/16-key-value-observing\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 16,
+      "episode_number": 15,
+      "title": "HTTP Caching",
+      "description": "HTTP Caching is an important concept to understand when building iPhone apps that consume HTTP APIs.  In this episode, we'll see how leveraging Etags, Last Modified dates, and Cache-Control headers can help make your app more efficient and tolerable to use.",
+      "published_at": "2012-05-10T10:00:00Z",
+      "duration": 9,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/015-http-caching\/http-caching-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#D56C26",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/015-http-caching\/http-caching-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/015-http-caching\/http-caching-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/15-http-caching\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 15,
+      "episode_number": 14,
+      "title": "Tracking Download Progress",
+      "description": "In this episode, we'll use AFNetworking to track the progress of a file download and display it in a UIProgressView.  Once we've downloaded a small movie, we'll play it using MPMoviePlayerViewController.",
+      "published_at": "2012-05-03T10:00:00Z",
+      "duration": 6,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/014-tracking-download-progress\/tracking-download-progress-poster.png",
+      "episode_type": "paid",
+      "dominant_color": "#456881",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/014-tracking-download-progress\/tracking-download-progress-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/014-tracking-download-progress\/tracking-download-progress-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/14-tracking-download-progress\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 14,
+      "episode_number": 13,
+      "title": "Setting up Jenkins",
+      "description": "In this episode, we'll set up a free continuous integration server called Jenkins (previously Hudson) to run our build.  We'll configure it to automatically check out changes from git, run the build, and finally run all of our tests.  We'll then use a conversion script to translate the test output into JUnit test report files that Jenkins natively understands.",
+      "published_at": "2012-04-26T14:55:00Z",
+      "duration": 13,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/013-jenkins\/setting-up-jenkins-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#000000",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/013-jenkins\/setting-up-jenkins-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/013-jenkins\/setting-up-jenkins-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/13-setting-up-jenkins\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 13,
+      "episode_number": 12,
+      "title": "Importing into Core Data",
+      "description": "In this screencast I'll pull down data from an API, map the JSON to a Core Data Managed Object and import them in bulk on a background thread.  Then we'll display the imported content in a UITableView using NSFetchedResultsController.",
+      "published_at": "2012-04-19T13:34:00Z",
+      "duration": 22,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/012-core-data-importing\/core-data-importing-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#759F33",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/012-core-data-importing\/core-data-importing-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/012-core-data-importing\/core-data-importing-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/12-importing-into-core-data\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 12,
+      "episode_number": 11,
+      "title": "Core Data Basics",
+      "description": "Core Data is Apple's framework for persisting data on Mac & iOS.  It can be though of as an ORM, however it's probably a lot different than most ORMs you've used in the past.  In this episode, we'll set up Core Data from scratch so you can see all the moving parts.",
+      "published_at": "2012-04-19T10:00:00Z",
+      "duration": 22,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/011-core-data-basics-p\/core-data-basics-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#759F33",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/011-core-data-basics-p\/core-data-basics-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/011-core-data-basics-p\/core-data-basics-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/11-core-data-basics\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 11,
+      "episode_number": 10,
+      "title": "Fun with Blocks",
+      "description": "Blocks are a great way to simplify code when dealing with asynchronous tasks (using GCD), callbacks, and atomic operations.  In this episode, we'll look at a few ways you can use blocks in your code.",
+      "published_at": "2012-04-04T10:00:00Z",
+      "duration": 21,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/010-fun-with-blocks\/fun-with-blocks-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#7B8596",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/010-fun-with-blocks\/fun-with-blocks-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/010-fun-with-blocks\/fun-with-blocks-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/10-fun-with-blocks\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 10,
+      "episode_number": 9,
+      "title": "Automatic Reference Counting",
+      "description": "In this episode, I'll show you how to convert your project to use Automatic Reference Counting (or ARC) to eliminate the need to use retain, release, autorelease, and dealloc in your Objective-C code!",
+      "published_at": "2012-03-29T10:00:00Z",
+      "duration": 10,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/009-arc\/arc-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#78A976",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/009-arc\/arc-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/009-arc\/arc-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/9-automatic-reference-counting\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 9,
+      "episode_number": 8,
+      "title": "Automatic UITableView Paging",
+      "description": "UITableView can support skimming through many rows of data, however fetching large amounts of remote data can slow down your app, use up too much memory, and bog down your web server.  This is all wasteful if users aren't ever going to scroll down that far.  In this episode you'll learn how to perform automatic UITableView paging using an easy technique.",
+      "published_at": "2012-03-22T15:16:00Z",
+      "duration": 19,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/008-uitableview-paging\/008-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#000000",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/008-uitableview-paging\/008-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/008-uitableview-paging\/008-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/8-automatic-uitableview-paging\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 8,
+      "episode_number": 7,
+      "title": "Serializing Data to Disk",
+      "description": "It can be useful to save lightweight application data to disk so that it persists between application launches.  This episode will show you how to serialize common objects such as NSArray and NSDictionary to disk, as well as implementing custom object serialization using NSKeyedArchiver.",
+      "published_at": "2012-03-15T15:16:00Z",
+      "duration": 16,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/007-serializing-data\/007-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#232323",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/007-serializing-data\/007-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/007-serializing-data\/007-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/7-serializing-data-to-disk\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 7,
+      "episode_number": 6,
+      "title": "AFNetworking",
+      "description": "AFNetworking is a simple-yet-powerful toolkit for making HTTP requests dead simple. It is my current go-to framework for writing API clients in iOS applications.",
+      "published_at": "2012-03-08T10:00:00Z",
+      "duration": 12,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/006-afnetworking\/poster.png",
+      "episode_type": "free",
+      "dominant_color": "#DEECF1",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/006-afnetworking\/poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/006-afnetworking\/poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/6-afnetworking\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 6,
+      "episode_number": 5,
+      "title": "CocoaPods",
+      "description": "Looking for a solution for managing dependencies similar to RubyGems?  Look no further!  CocoaPods is a great solution that makes it easy to manage dependencies to 3rd party libraries in your projects.",
+      "published_at": "2012-03-02T15:27:00Z",
+      "duration": 7,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/005-cocoapods\/cocoapods-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#DDD8D1",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/005-cocoapods\/cocoapods-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/005-cocoapods\/cocoapods-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/5-cocoapods\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 5,
+      "episode_number": 4,
+      "title": "Automated Testing with Kiwi",
+      "description": "In this episode, I show you how to start testing with Kiwi, a test framework built on top of SenTestKit that has a style similar to Rspec.",
+      "published_at": "2012-02-23T14:44:00Z",
+      "duration": 14,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/004-automated-testing-with-kiwi\/kiwi-poster.png",
+      "episode_type": "free",
+      "dominant_color": "#3C873F",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/004-automated-testing-with-kiwi\/kiwi-poster.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/004-automated-testing-with-kiwi\/kiwi-poster.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/4-automated-testing-with-kiwi\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 3,
+      "episode_number": 3,
+      "title": "UITableView Basics",
+      "description": "UITableView is one of the most common controls in UIKit.  This episode will show you the basics of how to make your view controller act as the delegate & datasource for the table view, as well as reading sample data (beers) from a plist file.",
+      "published_at": "2012-02-17T02:29:00Z",
+      "duration": 11,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/003-uitableview-basics\/poster-tableview-basics.png",
+      "episode_type": "free",
+      "dominant_color": "#CF6600",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/003-uitableview-basics\/poster-tableview-basics.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/003-uitableview-basics\/poster-tableview-basics.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/3-uitableview-basics\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 2,
+      "episode_number": 2,
+      "title": "Diagnosing Memory Problems",
+      "description": "In this episode, I cover what happens if you make a mistake in your memory management.  You'll see how the app behaves as well as how to find & fix these issues using Xcode & Instruments.",
+      "published_at": "2012-02-10T00:00:00Z",
+      "duration": 8,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/002-memory-problems\/diagnosing-memory-problems.png",
+      "episode_type": "free",
+      "dominant_color": "#A885DE",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/002-memory-problems\/diagnosing-memory-problems.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/002-memory-problems\/diagnosing-memory-problems.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/2-diagnosing-memory-problems\/play"
+    }
+  },
+  {
+    "episode": {
+      "id": 1,
+      "episode_number": 1,
+      "title": "Objective-C Basics",
+      "description": "In this episode, I cover Objective-C the language. I cover the syntax of classes & methods, then go over how to work with objects using retain, release, and autorelease.",
+      "published_at": "2012-02-10T15:17:00Z",
+      "duration": 21,
+      "thumbnail_url": "https:\/\/nsscreencast.s3.amazonaws.com\/001-objective-c-basics\/objective-c-basics.png",
+      "episode_type": "free",
+      "dominant_color": "#1674A4",
+      "retina_image_url": "null",
+      "medium_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/001-objective-c-basics\/objective-c-basics.png",
+      "large_artwork_url": "https:\/\/nsscreencast.s3.amazonaws.com\/001-objective-c-basics\/objective-c-basics.png",
+      "video_url": "http:\/\/nsscreencast.com\/api\/episodes\/1-objective-c-basics\/play"
+    }
+  }
+]

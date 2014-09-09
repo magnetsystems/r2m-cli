@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2014 Magnet Systems, Inc.
+  ~ All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you
+  ~ may not use this file except in compliance with the License. You
+  ~ may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+  ~ implied. See the License for the specific language governing
+  ~ permissions and limitations under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>magnet-tools</artifactId>
+    <groupId>com.magnet.tools</groupId>
+    <version>1.0.0-RC1</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>r2m-installer</artifactId>
+  <packaging>jar</packaging>
+  <name>Magnet Tools CLI R2M installer</name>
+
+  <dependencies>
+
+    <!-- Rest plugin (base) -->
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-cli-rest-plugin</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- Rest plugin (mobile generation) -->
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-cli-rest-mobile-plugin</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- Core CLI only-->
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-cli-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- R2M plugin -->
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-cli-r2m-plugin</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <filters>
+            <!-- TODO this should be packaged somewhere in maven.. -->
+            <filter>${project.basedir}/../config/target/classes/mab_config.properties</filter>
+          </filters>
+        </configuration>
+        <executions>
+          <execution>
+            <id>assemble</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/assembly/installer.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2014 Magnet Systems, Inc.
+  ~ All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you
+  ~ may not use this file except in compliance with the License. You
+  ~ may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+  ~ implied. See the License for the specific language governing
+  ~ permissions and limitations under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>magnet-tools</artifactId>
+    <groupId>com.magnet.tools</groupId>
+    <version>1.0.0-RC1</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>magnet-tools-cli-rest-plugin</artifactId>
+  <packaging>jar</packaging>
+  <name>Magnet Tools CLI Rest plugin</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-cli-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-templates</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-config</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- BEGIN magnet platform dependencies -->
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <version>1</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.magnet.platform</groupId>
+      <artifactId>magnet-platform-profiles-lang-tool</artifactId>
+      <version>${platform_version}</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/../cli-r2m-installer/src/main/lib/magnet-platform-profiles-lang-tool-${platform_version}.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.magnet.platform.core</groupId>
+      <artifactId>magnet-core-profiles-micro-kernel</artifactId>
+      <version>${platform_version}</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/../cli-r2m-installer/src/main/lib/magnet-core-profiles-micro-kernel-${platform_version}.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-core-asl</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>${freemarker.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons.lang3.version}</version>
+    </dependency>
+
+
+
+    <!-- END magnet platform dependencies -->
+
+
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-utils</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- test dependencies -->
+
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-utils</artifactId>
+      <version>${project.version}</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>

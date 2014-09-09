@@ -1,0 +1,15 @@
++Name Nexmo
++Request
+GET https://rest.nexmo.com/sms/json?api_key=00e72aa8&api_secret=d51b3b3b&from=12069396673&to=15105551212&text=My+Msg+Test
+
++Response 200 Content-Type application/json
++Body
+{
+	"message-count":"1",
+	"messages":[{"to":"15105551212",
+	"message-id":"030000004EC31DDC",
+	"status":"0",
+	"remaining-balance":"1.99040000",
+	"message-price":"0.00480000",
+	"network":"310004"}]
+}

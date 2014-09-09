@@ -1,0 +1,94 @@
++Name getAsanaUsers
++Request
+https://app.asana.com/api/1.0/users
+
++Headers
+Authorization: Basic 345UFuUO.NALWShyeFcRnacCPsxsAHnQ
+
++Response 200 Content-Type application/json
++Body
+{"data":[{
+		"id":10797459555105,
+		"name":"Naren Iyer"},
+	{
+		"id":3792968106556,
+		"name":""},
+	{
+		"id":4746922041487,
+		"name":""},
+	{
+		"id":4319912897322,
+		"name":"Anthony Tse"},
+	{
+		"id":11921240664237,
+		"name":"Arvind Jain"},
+	{
+		"id":267400985442,
+		"name":"Bill Wu"},
+	{
+		"id":267507178201,
+		"name":"Britta Meyer"},
+	{
+		"id":7385069933302,
+		"name":"Calvin Chou"},
+	{
+		"id":7385012198805,
+		"name":"Dennis Ashby"},
+	{
+		"id":7384697726094,
+		"name":"Dennis Ashby"},
+	{
+		"id":4746922041464,
+		"name":"Gil Haberman"},
+	{
+		"id":5387358315593,
+		"name":"Hanju Kim"},
+	{
+		"id":10797462790253,
+		"name":"hoa.nguyen@magnet.com"},
+	{
+		"id":8423729491391,
+		"name":"jeaninne.moya"},
+	{
+		"id":268043691851,
+		"name":"Jim Reed"},
+	{
+		"id":4746779388989,
+		"name":"Jonti McLaren"},
+	{
+		"id":10797462790226,
+		"name":"Paul Chan"},
+	{
+		"id":7385069933315,
+		"name":"Raj Rao"},
+	{
+		"id":4319931005285,
+		"name":"Ralph Harnden"},
+	{
+		"id":2942917290165,
+		"name":"Richard Pascual"},
+	{
+		"id":267531977522,
+		"name":"shanna"},
+	{
+		"id":10797462790230,
+		"name":"Stephen"},
+	{
+		"id":1229555312614,
+		"name":"Stephen Kreyenbuhl"},
+	{
+		"id":7385069933292,
+		"name":"Steven Xu"},
+	{
+		"id":4746922041496,
+		"name":"tom.ku@magnet.com"},
+	{
+		"id":10797462790244,
+		"name":"trung.nguyen@magnet.com"},
+	{
+		"id":7385069933282,
+		"name":"Vadim Draluk"},
+	{
+		"id":7385069933325,
+		"name":"Vincent Lau"}
+]}
