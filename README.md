@@ -13,7 +13,7 @@ If you are developing with Android Studio or IntelliJ, you can use the [rest2mob
 
 ## Information about installing and using r2m
 
-See the [r2m wiki][r2m-wiki] for details about installing and using the CLI.
+See the [r2m wiki] for details about installing and using the CLI.
 
 ## Installing r2m (Mac OS X and Linux)
 
@@ -46,7 +46,7 @@ Licensed under the **[Apache License, Version 2.0] [license]** (the "License");
 you may not use this software except in compliance with the License.
 -->
 [website]: http://developer.magnet.com
-[techdoc]: https://github.com/magnetsystems/r2m/wiki
+[techdoc]: https://github.com/magnetsystems/rest2mobile/wiki
 [r2m-plugin-android]:https://github.com/magnetsystems/r2m-plugin-android/
 [r2m-plugin-ios]:https://github.com/magnetsystems/r2m-plugin-ios/
 [r2m-cli]:https://github.com/magnetsystems/r2m-cli/
