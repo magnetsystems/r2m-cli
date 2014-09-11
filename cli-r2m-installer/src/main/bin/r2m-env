@@ -36,7 +36,7 @@ if [ -z "$MAGNET_TOOL_HOME" ]; then
     mabparent=$(realpath $(cd "$(dirname $mabexec)" && pwd))
     mabdir=$(cd "$(dirname $mabparent)" && pwd)
     if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
-      echo "Cannot determine ReST-to-Mobile installation directory, manually set your environment variable MAGNET_TOOL_HOME"
+      echo "Cannot determine rest2mobile installation directory, manually set your environment variable MAGNET_TOOL_HOME"
       exit -1
     fi;
   fi

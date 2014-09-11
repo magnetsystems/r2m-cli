@@ -44,7 +44,7 @@ fi
 
 . "${MAGNET_TOOL_HOME}/bin/${TOOL_NAME}-env"
 
-VERSION_MESSAGE="ReST-to-Mobile $MAGNET_TOOL_VERSION"
+VERSION_MESSAGE="rest2mobile $MAGNET_TOOL_VERSION"
 FULL_VERSION_MESSAGE="$VERSION_MESSAGE (${buildNumber}; ${buildTime})"
 
 while getopts v name

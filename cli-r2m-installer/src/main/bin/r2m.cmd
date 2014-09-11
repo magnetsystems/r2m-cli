@@ -16,7 +16,7 @@
 @echo off
 
 set MAGNET_TOOL_VERSION=${project.version}
-echo Starting ReST-to-Mobile %MAGNET_TOOL_VERSION%...
+echo Starting rest2mobile %MAGNET_TOOL_VERSION%...
 @REM Begin all REM lines with '@' in case MAGNET_BATCH_ECHO is 'on'
 
 @REM enable echoing my setting MAGNET_BATCH_ECHO to 'on'
