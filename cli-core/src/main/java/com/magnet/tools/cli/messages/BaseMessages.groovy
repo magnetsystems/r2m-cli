@@ -126,6 +126,7 @@ class BaseMessages extends MessagesSupport {
   static final String USE_OPEN_LOG = "USE_OPEN_LOG"
   public static final String MAGNET_INSTALLATION_BULLET = "MAGNET_INSTALLATION_BULLET"
   public static final String MAGNET_DIRECTORY_BULLET = "MAGNET_DIRECTORY_BULLET"
+  public static final String HELP_FOR_SPECIFIC_COMMAND = "HELP_FOR_SPECIFIC_COMMAND"
 
   static String getMessage(String key, Object... args) {
     _getMessage(MESSAGES_PATH + BaseMessages.getSimpleName(), key, args)

@@ -24,6 +24,8 @@ import com.magnet.tools.cli.core.CoreConstants
 import com.magnet.tools.cli.core.MagnetSettings
 import com.magnet.tools.cli.messages.CommonMessages
 import com.magnet.tools.utils.AnsiHelper
+import com.magnet.tools.utils.StringHelper
+
 import static com.magnet.tools.cli.messages.BaseMessages.*
 
 /**
@@ -69,6 +71,7 @@ class HelpCommand extends AbstractCommand {
         writer.println(s)
         writer.flush()
       }
+      info(getMessage(HELP_FOR_SPECIFIC_COMMAND, StringHelper.b("help <command> -v")))
       return CoreConstants.COMMAND_OK_CODE
     }
 

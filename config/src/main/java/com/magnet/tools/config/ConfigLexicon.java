@@ -278,7 +278,7 @@ public final class ConfigLexicon {
   public static final String DEFAULT_PROJECT_NAME_VALUE = DEFAULT_PROJECT_ARTIFACT_ID_VALUE;
   public static final String DEFAULT_PROJECT_DESCRIPTION_VALUE = DEFAULT_PROJECT_NAME_VALUE;
   public static final String DEFAULT_PROJECT_GROUP_ID_VALUE = "com.magnetapi.apps";
-  public static final String DEFAULT_PROJECT_VERSION_VALUE = "1.1.0-RC3";
+  public static final String DEFAULT_PROJECT_VERSION_VALUE = "1.0.0-RC3";
   public static final String DEFAULT_PROJECT_PACKAGE_VALUE = "com.magnetapis";
 
 
