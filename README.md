@@ -4,6 +4,10 @@ r2m generates Android, iOS, and JavaScript code for your mobile app to interact 
 
 If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios]. Note that if you use the plugins you still need to install the CLI because the plugin uses it to generate the code.
 
+##Releases
+
+Go to https://github.com/magnetsystems/r2m-cli/releases.
+
 ## Requirements
 
   - Java 6 or later
