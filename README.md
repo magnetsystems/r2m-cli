@@ -1,19 +1,19 @@
-# rest2mobile CLI
+# rest2mobile CLI (r2m)
 
-The rest2mobile CLI generates Android, iOS, and JavaScript code for your mobile app to interact with REST APIs. 
+r2m generates Android, iOS, and JavaScript code for your mobile app to interact with REST APIs. You supply r2m with the actual REST URLs and JSON responses in a r2m specification by example file. r2m takes this file and generate the REST code for you.
 
-rest2mobile turns actual REST URLs and JSON responses into Objective-C, Java, or JavaScript components that you can call from your mobile app. The components are native classes and interfaces that automatically handle server connections and type safety. In your own code, you call methods to set REST parameters and send the REST request. Your app receives a response object that bundles the JSON in objects or primitives.
-
-You supply the actual REST URLs and JSON responses in the rest2mobile specification by example file.
-
-For Android, you can use the CLI to generate the code, or you can also use the rest2mobile plugin for Android Studio and IntelliJ. For iOS, you can use the rest2mobile XCode plugin instead of the CLI.
+If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios]. Note that if you use the plugins you still need to install the CLI because the plugin uses it to generate the code.
 
 ## Requirements
 
   - Java 6 or later
   - Windows® 7 or later
   - Mac® OS X® 10.08 or later
-  - Linux® Ubuntu® 12   
+  - Linux® Ubuntu® 12
+
+## Information about installing and using r2m
+
+See the [r2mcli-wiki] for details about installing and using the CLI.
 
 ## Installing r2m (Mac OS X and Linux)
 
@@ -51,3 +51,4 @@ you may not use this software except in compliance with the License.
 [r2m-plugin-ios]:https://github.com/magnetsystems/r2m-plugin-ios/
 [r2m-cli]:https://github.com/magnetsystems/r2m-cli/
 [license]: http://www.apache.org/licenses/LICENSE-2.0
+[r2m wiki]:https://github.com/magnetsystems/r2m-cli/wiki
