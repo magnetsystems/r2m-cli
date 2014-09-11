@@ -13,7 +13,7 @@ If you are developing with Android Studio or IntelliJ, you can use the [rest2mob
 
 ## Information about installing and using r2m
 
-See the [r2mcli-wiki] for details about installing and using the CLI.
+See the [r2m wiki][r2m-wiki] for details about installing and using the CLI.
 
 ## Installing r2m (Mac OS X and Linux)
 
