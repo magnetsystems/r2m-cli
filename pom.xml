@@ -22,7 +22,7 @@
   <groupId>com.magnet.tools</groupId>
   <artifactId>magnet-tools</artifactId>
 
-  <version>1.0.0-RC3</version>
+  <version>1.1.0-RC4</version>
   <packaging>pom</packaging>
   <name>Magnet Tools</name>
   <description>${project.name}</description>
@@ -79,7 +79,7 @@
     <jar-plugin.version>2.4</jar-plugin.version>
     <!-- copts is an alias to cucumber.options, this is useful on win
     where powershell does not handle properties with "." -->
-    <copts>--tags ~@wip --tags @mob --tags ~@cloud</copts>
+    <copts>--tags ~@wip --tags @r2m --tags ~@cloud</copts>
     <cucumber.options>${copts}</cucumber.options>
 
     <!-- for platform -->
