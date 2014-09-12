@@ -28,12 +28,12 @@ function realpath {
 TOOL_NAME=r2m
 
 if [ -z "$MAGNET_TOOL_HOME" ]; then
-  mabexec=$(realpath $0)
-  mabdir=$(cd "$(dirname $mabexec)/.." && pwd)
+  mabexec=$(realpath "$0")
+  mabdir="$(cd "$(dirname "$mabexec")/.." && pwd)"
   if [ ! -f "$mabdir/config/magnet_configuration_override.groovy" ]; then
     # the bin may be a softlink
-    mabparent=$(realpath $(cd "$(dirname $mabexec)" && pwd))
-    mabdir=$(cd "$(dirname $mabparent)" && pwd)
+    mabparent="$(realpath "$(cd "$(dirname "$mabexec")" && pwd)")"
+    mabdir="$(cd "$(dirname "$mabparent")" && pwd)"
     if [ ! -f "$mabdir/config/magnet_configuration_override.groovy" ]; then
       echo "Cannot determine $TOOL_NAME installation directory, manually set your environment variable MAGNET_TOOL_HOME"
       exit -1
