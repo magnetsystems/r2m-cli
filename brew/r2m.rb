@@ -66,8 +66,8 @@ end
 #
 class R2m < Formula
   homepage 'http://factory.magnet.com'
-  url "https://github.com/magnetsystems/r2m-cli/releases/download/v1.1.0-RC4/r2m-installer-1.1.0-RC4.tar.gz"
-  sha1 'f1f1de1c1d9f28f07f7bd748cf82f47fd26562ff'
+  url "https://github.com/magnetsystems/r2m-cli/releases/download/v1.0.0-RC4/r2m-installer-1.0.0-RC4.tar.gz"
+  sha1 '854b7963ba834b2c2856be96684659360fd3ca42'
 
   depends_on JavaDependency => :recommended
 
