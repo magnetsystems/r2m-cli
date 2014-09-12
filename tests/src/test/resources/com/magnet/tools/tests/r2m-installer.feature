@@ -34,3 +34,17 @@ Feature: R2M Installer layout
       help gen
       quit
     """
+
+    @exotic
+    Scenario: verify you can start it from exotic directory
+      Given I setup a new r2m test under "${basedir}/target/r2m with space installer"
+      And I run the r2m script "${basedir}/target/installer-r2m-with-space-test.mab" with content:
+      """
+      help
+      exec echo magnet
+      history
+      set verbose
+      alias g gen
+      help gen
+      quit
+    """

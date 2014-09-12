@@ -35,12 +35,12 @@ if [ -z "$MAGNET_TOOL_HOME" ]; then
     # the bin may be a softlink
     mabparent=$(realpath $(cd "$(dirname $mabexec)" && pwd))
     mabdir=$(cd "$(dirname $mabparent)" && pwd)
-    if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+    if [ ! -f "$mabdir/config/magnet_configuration_override.groovy" ]; then
       echo "Cannot determine rest2mobile installation directory, manually set your environment variable MAGNET_TOOL_HOME"
       exit -1
     fi;
   fi
-  export MAGNET_TOOL_HOME=$(realpath $mabdir)
+  export MAGNET_TOOL_HOME=$(realpath "$mabdir")
 fi
 
 

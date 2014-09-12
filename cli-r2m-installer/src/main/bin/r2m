@@ -30,16 +30,16 @@ TOOL_NAME=r2m
 if [ -z "$MAGNET_TOOL_HOME" ]; then
   mabexec=$(realpath $0)
   mabdir=$(cd "$(dirname $mabexec)/.." && pwd)
-  if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+  if [ ! -f "$mabdir/config/magnet_configuration_override.groovy" ]; then
     # the bin may be a softlink
     mabparent=$(realpath $(cd "$(dirname $mabexec)" && pwd))
     mabdir=$(cd "$(dirname $mabparent)" && pwd)
-    if [ ! -f $mabdir/config/magnet_configuration_override.groovy ]; then
+    if [ ! -f "$mabdir/config/magnet_configuration_override.groovy"]; then
       echo "Cannot determine $TOOL_NAME installation directory, manually set your environment variable MAGNET_TOOL_HOME"
       exit -1
     fi;
   fi
-  export MAGNET_TOOL_HOME=$(realpath $mabdir)
+  export MAGNET_TOOL_HOME=$(realpath "$mabdir")
 fi
 
 . "${MAGNET_TOOL_HOME}/bin/${TOOL_NAME}-env"
@@ -66,8 +66,8 @@ if $cygwin; then
 fi
 
 # Set class path
-CONFIG_DIR="${MAGNET_TOOL_HOME}"/config
-LIB_DIR="${MAGNET_TOOL_HOME}"/lib/*
+CONFIG_DIR="${MAGNET_TOOL_HOME}/config"
+LIB_DIR="${MAGNET_TOOL_HOME}/lib/*"
 CLASSPATH="${CONFIG_DIR}":"${LIB_DIR}"
 if [ -n "$MAB_EXTRA_CLASSPATH" ]; then
     CLASSPATH="${MAB_EXTRA_CLASSPATH}":"${CLASSPATH}"
@@ -78,4 +78,4 @@ for f in "$@" ; do
     args+=("$f")
 done
 
-exec "$JAVACMD" $JAVA_ARGS -classpath $CLASSPATH com.magnet.tools.cli.core.Main "${args[@]}"
+exec "$JAVACMD" $JAVA_ARGS -classpath "$CLASSPATH" com.magnet.tools.cli.core.Main "${args[@]}"
