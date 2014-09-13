@@ -17,6 +17,7 @@
 package com.magnet.tools.cli.simple;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -113,9 +114,15 @@ public class SimpleGenCommand {
 
     // source is a directory
     if (sourceDir.isDirectory()) {
-      File[] files = sourceDir.listFiles();
+      File[] files = sourceDir.listFiles(new FileFilter() {
+          @Override
+          public boolean accept(File file) {
+              return !file.getName().startsWith(".");
+          }
+      });
       if (null != files) {
         for (File f : files) {
+
           sourceFiles.add(f.toURI().toURL());
         }
       }
