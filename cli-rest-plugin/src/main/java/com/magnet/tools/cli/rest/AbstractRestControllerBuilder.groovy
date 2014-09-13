@@ -56,7 +56,7 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
       if (!content) {
         return null
       }
-      return com.magnet.langpack.builder.rest.parser.ExampleParser.guessContentType(content);
+      return ExampleParser.guessContentType(content);
     }
 
     if (contentTypeStr.toLowerCase().contains("json")) {
