@@ -16,10 +16,8 @@ Feature: ReST-to-Mobile generation from downloaded file
   Scenario: check ios assets generation
     And the directory structure for "${test-dir}/mobile/ios" should be:
       | Podfile                             |
-      | README.txt                          |
       | Source/Controllers/RestController.h |
       | Source/Controllers/RestController.m |
-      | Source/magnet-mobile-assets.podspec |
       | Source/Nodes/GoogleDistanceResult.h |
       | Source/Nodes/GoogleDistanceResult.m |
       | Source/Nodes/Row.h                  |
