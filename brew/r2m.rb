@@ -1,16 +1,7 @@
 require "formula"
 
-JAVA_MIN_VERSION = 6 
-
 def error_no_java
   "ERROR: No Java executable found on PATH\n"
-end
-
-def error_invalid_java_version (version) 
-"""  
-ERROR: Incorrect Java version #{version}.
-  The Magnet Mobile Generator requires Java #{JAVA_MIN_VERSION} or above.
-"""
 end
 
 def error_incorrect_r2m(r2m_path)
@@ -28,12 +19,6 @@ def check_java
     return error_no_java
   end
   
-  version = /[0-9]+\.[0-9]+\.[\.0-9_]+/.match(`#{java} -version 2>&1| grep "java version"`).to_s
-  version_numbers = version.split('.')
-  if (version_numbers[1].to_i < JAVA_MIN_VERSION) 
-    return error_invalid_java_version(version)
-  end
-
   nil
 end
 
@@ -66,8 +51,8 @@ end
 #
 class R2m < Formula
   homepage 'http://factory.magnet.com'
-  url "https://github.com/magnetsystems/r2m-cli/releases/download/v1.0.0-RC6/r2m-installer-1.0.0-RC6.tar.gz"
-  sha1 'e3cf8c163d5e6a1e43b178a09640086708ee297e'
+  url "https://github.com/magnetsystems/r2m-cli/releases/download/v0.9.1/r2m-installer-0.9.1.tar.gz"
+  sha1 '242ce82d55655d4bf54ab51bfe7ff0073b52efea'
 
   depends_on JavaDependency => :recommended
 

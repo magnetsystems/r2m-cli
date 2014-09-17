@@ -22,7 +22,7 @@
   <groupId>com.magnet.tools</groupId>
   <artifactId>magnet-tools</artifactId>
 
-  <version>1.0.0-RC6</version>
+  <version>0.9.1</version>
   <packaging>pom</packaging>
   <name>Magnet Tools</name>
   <description>${project.name}</description>
@@ -546,6 +546,7 @@
     <module>cli-r2m-installer</module>
     <module>tests</module>
 
+    <module>cli-simple</module>
   </modules>
 
 </project>
