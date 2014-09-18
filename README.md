@@ -1,13 +1,13 @@
 ## rest2mobile Command-line Tool (r2m)
 <img style="margin:10px" src="http://developer.magnet.com/tmp/img/logo_r2m_main.png"
  alt="rest2mobile logo" title="rest2mobile" align="right" />
-r2m generates Android, iOS, and JavaScript code for your mobile app to interact with REST APIs. You supply r2m with the actual REST URLs and JSON responses in a r2m specification by example file. r2m takes this file and generate the REST code for you.
+<code>r2m</code> is a command-line tool that generates Android, iOS, and JavaScript code for your mobile app to interact with REST APIs. It takes REST request and JSON response information from a variety of sources you provide, and generates
+platform-specific code for making the request and retrieving the response.
 
-If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios]. Note that if you use the plugins you still need to install the CLI because the plugin uses it to generate the code.
+**Note:** If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios].
 
-### Releases
-
-To get the latest release, go to the [Releases](https://github.com/magnetsystems/r2m-cli/releases) page.
+If you use 
+### Get Started
 
 ### Prerequisites
 The <code>r2m</code> command-line tool runs on the following platforms:
@@ -15,14 +15,11 @@ The <code>r2m</code> command-line tool runs on the following platforms:
 * Windows® 7 or later
 * Mac® OS X® 10.08 or later
 * Linux® Ubuntu® 12
- 
+
+### Download  
 In addition, the tool requires Java JDK 6 or later.
 
-## Information about installing and using r2m
-
-See the [r2m wiki] for details about installing and using the CLI.
-
-## Installing r2m (Mac OS X and Linux)
+### Installing r2m (Mac OS X and Linux)
 
 Run:
 ```
