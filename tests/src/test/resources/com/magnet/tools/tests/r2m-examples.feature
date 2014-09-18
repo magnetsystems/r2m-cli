@@ -47,7 +47,7 @@ Feature: Generate Many Mobile API with the Mob tool
     Given I setup a new r2m test under "${basedir}/target/r2m-examples-git"
 
   @git
-  Scenario Outline: generate all controllers for all platforms
+  Scenario Outline: generate controllers for all platforms given examples on git repo
     When I run the commands:
       | command                                                                              | workingDirectory |
       | bash bin/r2m gen -o ${test-dir}/generated/<outputDir> -d <example> -c <className> -f | ${test-dir}      |
@@ -61,8 +61,9 @@ Feature: Generate Many Mobile API with the Mob tool
       | <className>.js |
 
   Examples:
-    | example        | outputDir    | className               |
-    | AsanaUsers.txt | AsanaUsers   | AsanaUsersController    |
-    | DNS2IP         | DNS2IP       | Dns2IpController        |
-    | GSUserTopics   | GSUSerTopics | GSUsersTopicsController |
+    | example      | outputDir    | className               |
+    | AsanaUsers   | AsanaUsers   | AsanaUsersController    |
+    | SFSearch     | SFSearch     | SFSearchController      |
+    | DNS2IP       | DNS2IP       | Dns2IpController        |
+    | GSUserTopics | GSUSerTopics | GSUsersTopicsController |
 
