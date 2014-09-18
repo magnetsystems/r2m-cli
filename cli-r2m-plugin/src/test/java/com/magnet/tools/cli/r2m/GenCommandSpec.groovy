@@ -151,7 +151,7 @@ class GenCommandSpec extends AbstractCommandSpecification {
   }
 
   @Unroll
-  def "should download example #example from repo"() {
+  def "should download example #spec from repo"() {
     given:
       def output = new File(testDir, dir)
     when:
@@ -169,9 +169,9 @@ class GenCommandSpec extends AbstractCommandSpecification {
 
 
     where:
-      spec                  | controller       | nodes                           | dir
-      'google-distance.txt' | "RestController" | ['GoogleDistanceResult', 'Row'] | 'test5_1'
-      'espn-headlines.txt'  | "RestController" | ['Links', 'Events', 'Headline'] | 'test5_2'
+      spec             | controller       | nodes                           | dir
+      'GoogleDistance' | "RestController" | ['GoogleDistanceResult', 'Row'] | 'test5_1'
+      'ESPNHeadlines'  | "RestController" | ['Links', 'Events', 'Headline'] | 'test5_2'
 
   }
 
@@ -182,7 +182,7 @@ class GenCommandSpec extends AbstractCommandSpecification {
     when:
       int ret = testMagnetShell << "${R2MConstants.GEN_COMMAND} -d $spec -f -o ${output.getCanonicalPath()}"
     then:
-      ret == CoreConstants.COMMAND_UNKNOWN_ERROR_CODE
+      ret == CoreConstants.COMMAND_INVALID_OPTION_VALUE
       assertConsoleOutputContains("Invalid value")
     where:
       spec                       | controller       | nodes                           | dir
