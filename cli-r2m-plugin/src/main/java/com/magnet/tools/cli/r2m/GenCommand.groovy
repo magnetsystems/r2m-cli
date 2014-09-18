@@ -47,6 +47,12 @@ class GenCommand extends AbstractCommand {
   static final String EXAMPLE_LIST_ENTRY = "?"
 
   /**
+   * Lazily loaded examples manifest
+   * A map of value (file and description), keyed by a logical id
+   */
+  private Map manifest
+
+  /**
    * The optional Namespace mapping
    */
   private String namespace
@@ -507,40 +513,47 @@ class GenCommand extends AbstractCommand {
   }
 
   /**
-   * Load the examples from the git repo
-   * @return a list file name
+   * Lazily load the examples manifest from the git repo
+   * @return manifest
    */
-  private List<String> loadExamplesList() {
+  private Map loadExamplesManifest() {
+    if (manifest != null) {
+      return manifest
+    }
     def response = HttpHelper.send(
         (String) shell.configuration.examplesHost,
-        (String) shell.configuration.examplesUrlPath,
+        (String) shell.configuration.examplesUrlManifest,
         [:], /* query */
         [:], /* headers */
         Method.GET, /* method */
         null)
 
-    def json = new JsonSlurper().parseText(response)
-    List<String> result = json.files*.path.collect { it.split("\\/")[1] }
-    trace("List found: " + result)
-    return result
+    manifest = new JsonSlurper().parseText(response)
+    // a map of values (file, description), keyed by a logical name.
+    trace("Manifest found: " + manifest)
+    return manifest
   }
 
   /**
    * Load the file from git repo
-   * @param name name of file
+   * @param name logical example name
    * @return temporary file which is a copy of the file on the git repo
    */
-  private File loadExamplesFile(String name) {
+  private File loadExamplesFile(String id) {
+    def entry = loadExamplesManifest().find { k, v -> k == id}
+    if (!entry) {
+      throw new CommandException(CoreConstants.COMMAND_INVALID_OPTION_VALUE, CommonMessages.invalidValue(id))
+    }
+    def name = entry.getValue()[R2MConstants.MANIFEST_FILE_KEY]
     try {
-      def response = HttpHelper.send(
+      trace("Fetching file ${shell.configuration.examplesHost}/${shell.configuration.examplesUrlPath + '/' + name}")
+      String data = HttpHelper.send(
           (String) shell.configuration.examplesHost,
           (String) shell.configuration.examplesUrlPath + '/' + name,
           [:], /* query */
           [:], /* headers */
           Method.GET, /* method */
           null)
-      def json = new JsonSlurper().parseText(response)
-      String data = json.data
       trace("Generating file with content:\n$data")
       def f = File.createTempFile(name, null)
 
@@ -551,7 +564,7 @@ class GenCommand extends AbstractCommand {
       return f
 
     } catch (Exception e) {
-      def l = loadExamplesList()
+      def l = loadExamplesManifest().collect{k, v -> k}
       throw new CommandException(CoreConstants.COMMAND_UNKNOWN_ERROR_CODE, CommonMessages.invalidValue(name, l))
     }
   }
@@ -561,13 +574,17 @@ class GenCommand extends AbstractCommand {
    * @return file path
    */
   private String getExampleFromRepo() {
-    def choices = loadExamplesList()
+    Map manifest = loadExamplesManifest();
+    List<String> choices = manifest.collect { k, v ->
+      StringHelper.padRight(k, 20) + ": " + v[R2MConstants.MANIFEST_DESCRIPTION_KEY]
+    } as List
+
     int choice = PromptHelper.promptOptions(shell,
         "Available Examples from ${shell.configuration.exampleGitSrcUrl}:",
         1,
         choices)
 
-    return loadExamplesFile(choices[choice]).getCanonicalPath()
+    return loadExamplesFile(choices[choice].split(':')[0].trim()).getCanonicalPath()
   }
 
 }

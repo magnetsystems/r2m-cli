@@ -5,7 +5,7 @@ Feature: Generate Many Mobile API with the Mob tool
   I want to generate Mobile APi using the mob tool
   In order to connect to existing ReST services
 
-  Scenario: setup test
+  Scenario: setup test with local examples
     # this sets the test-dir variable and initialize the directory for testing
     Given I setup a new r2m test under "${basedir}/target/r2m-examples"
 
@@ -40,4 +40,29 @@ Feature: Generate Many Mobile API with the Mob tool
     | ${basedir}/src/test/resources/rest/YouTube.txt              | YouTube                  | YouTubeController                 |
     | ${basedir}/src/test/resources/rest/screencast.txt           | screencast               | ScreenCastController              |
 
+
+  @git
+  Scenario: setup test with examples on git repo
+    # this sets the test-dir variable and initialize the directory for testing
+    Given I setup a new r2m test under "${basedir}/target/r2m-examples-git"
+
+  @git
+  Scenario Outline: generate all controllers for all platforms
+    When I run the commands:
+      | command                                                                              | workingDirectory |
+      | bash bin/r2m gen -o ${test-dir}/generated/<outputDir> -d <example> -c <className> -f | ${test-dir}      |
+    Then the directory structure for "${test-dir}/generated/<outputDir>/android/com/magnet/controller/api/" should be:
+      | <className>.java        |
+      | <className>Factory.java |
+    And the directory structure for "${test-dir}/generated/<outputDir>/ios/Source/Controllers" should be:
+      | <className>.h |
+      | <className>.m |
+    And the directory structure for "${test-dir}/generated/<outputDir>/js/Controllers" should be:
+      | <className>.js |
+
+  Examples:
+    | example        | outputDir    | className               |
+    | AsanaUsers.txt | AsanaUsers   | AsanaUsersController    |
+    | DNS2IP         | DNS2IP       | Dns2IpController        |
+    | GSUserTopics   | GSUSerTopics | GSUsersTopicsController |
 

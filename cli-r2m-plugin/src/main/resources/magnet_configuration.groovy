@@ -27,6 +27,7 @@ commands = [
     (GEN_COMMAND): [class: "com.magnet.tools.cli.r2m.GenCommand"],
 ]
 
-examplesHost = "https://bitbucket.org"
-examplesUrlPath = "/api/1.0/repositories/emmanuel_texier/mob-examples/src/master/examples/"
-exampleGitSrcUrl= "https://bitbucket.org/emmanuel_texier/mob-examples/src/master/examples/"
+examplesHost = "https://raw.githubusercontent.com"
+examplesUrlManifest = "/magnetsystems/r2m-examples/master/samples/manifest.json"
+examplesUrlPath = "/magnetsystems/r2m-examples/master/samples"
+exampleGitSrcUrl= "https://raw.githubusercontent.com/magnetsystems/r2m-examples/master/samples/"

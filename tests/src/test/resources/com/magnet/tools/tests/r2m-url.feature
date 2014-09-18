@@ -10,7 +10,7 @@ Feature: ReST-to-Mobile generation from a url
     Given I setup a new r2m test under "${basedir}/target/r2m-download"
     When I run the r2m script "${test-dir}/mobile.mob" with content:
     """
-      gen -e https://bitbucket.org/emmanuel_texier/mob-examples/raw/master/examples/google-distance.txt
+      gen -e https://raw.githubusercontent.com/magnetsystems/r2m-examples/master/samples/google-distance.txt
     """
 
   Scenario: check ios assets generation

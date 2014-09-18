@@ -29,4 +29,6 @@ interface R2MConstants {
   String DEFAULT_SPECIFICATIONS_LOCATION = "examples"
   String DEFAULT_CONTROLLER_CLASS_NAME = "RestController"
   String DEFAULT_PACKAGE_NAME = "com.magnet"
+  String MANIFEST_FILE_KEY = "file"
+  String MANIFEST_DESCRIPTION_KEY = "description"
 }

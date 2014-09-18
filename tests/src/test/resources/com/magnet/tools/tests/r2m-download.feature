@@ -10,7 +10,7 @@ Feature: ReST-to-Mobile generation from downloaded file
     Given I setup a new r2m test under "${basedir}/target/r2m-download"
     When I run the r2m script "${test-dir}/mobile.mob" with content:
     """
-      gen -d google-distance.txt
+      gen -d GoogleDistance
     """
 
   Scenario: check ios assets generation
