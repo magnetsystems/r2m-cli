@@ -1,4 +1,4 @@
-@mob @r2m @r2m-basic
+@simple-gen @wip
 Feature: Generate Mobile assets with simple java client
 
   As a mobile developer
@@ -10,12 +10,9 @@ Feature: Generate Mobile assets with simple java client
     Given I setup a new r2m test under "${basedir}/target/r2m-simple"
     And the file "${test-dir}/examples/espn_headlines.txt" is a copy of "${basedir}/src/test/resources/rest/espn_headlines.txt"
 
-    # simplest way of generating Mobile API
-    # by default ios, js, and android are generated under the local ./mobile directory
-    # the default examples are looked up in the local ./examples directory
-    When I run the r2m script "${test-dir}/mobile.mob" with content:
+    When I run the simple java client with options:
     """
-      gen -e examples
+      -e examples
     """
 
   Scenario: check ios assets generation
