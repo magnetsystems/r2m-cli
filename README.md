@@ -19,7 +19,7 @@ In addition, the tool requires Java JDK 6 or later.
 
 ### Download  
 
-Find the latest releases at https://github.com/magnetsystems/r2m-cli/releases 
+Find the latest releases at [rest2mobile CLI releases](https://github.com/magnetsystems/r2m-cli/releases) 
 
 ### Installing r2m (Mac)
 
@@ -63,22 +63,23 @@ You can get a list of examples with:
 ```
 r2m> gen -l
 ```
-or find examples at: https://github.com/magnetsystems/r2m-examples
+or find more examples in the [rest2mobile examples repo](https://github.com/magnetsystems/r2m-examples)
  
 
-You can also build your own example from other services. See https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-create-spec-file
+You can also build your own Mobile API from existing REST examples or documentation. 
+Find out how to create your own example [here](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-create-spec-file)
 
-For a full description of the CLI. Go to https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-generate-code-gen
-
-
-## Copyright
-
-Copyright © 2014 Magnet Systems, Inc. All rights reserved.
+Go (here)[https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-generate-code-gen
+] to find out all the options availables.
 
 ## License
 
 Licensed under the **[Apache License, Version 2.0] [license]** (the "License");
 you may not use this software except in compliance with the License.
+
+## Copyright
+
+Copyright © 2014 Magnet Systems, Inc. All rights reserved.
 
 [website]: http://developer.magnet.com
 [techdoc]: https://github.com/magnetsystems/rest2mobile/wiki
