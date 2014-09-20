@@ -41,6 +41,9 @@ Start in interactive mode:
 
 ```
 r2m
+Starting rest2mobile 1.0.0
+Run 'gen --interactive' to generate Mobile APIs in interactive mode.
+Type '?' for help. Use <TAB> for completion. <Ctrl-D> to abort commands.
 r2m> gen 
 ```
 
@@ -52,13 +55,13 @@ r2m> help -v gen
 Here's a simple example generating the Google distance Mobile API for iOS, Android and Javascript
 
 ``` 
-r2m -d GoogleDistance 
+r2m> gen -d GoogleDistance 
 ```
 
 You can get a list of examples with:
 
 ```
-r2m -l
+r2m> gen -l
 ```
 or find examples at: https://github.com/magnetsystems/r2m-examples
  
