@@ -278,7 +278,7 @@ public final class ConfigLexicon {
   public static final String DEFAULT_PROJECT_NAME_VALUE = DEFAULT_PROJECT_ARTIFACT_ID_VALUE;
   public static final String DEFAULT_PROJECT_DESCRIPTION_VALUE = DEFAULT_PROJECT_NAME_VALUE;
   public static final String DEFAULT_PROJECT_GROUP_ID_VALUE = "com.magnetapi.apps";
-  public static final String DEFAULT_PROJECT_VERSION_VALUE = "1.0.0";
+  public static final String DEFAULT_PROJECT_VERSION_VALUE = "1.1.0-SNAPSHOT";
   public static final String DEFAULT_PROJECT_PACKAGE_VALUE = "com.magnetapis";
 
 
@@ -672,7 +672,7 @@ public final class ConfigLexicon {
   public static final String LINKEDIN_CONTROLLER_ARCHETYPE_ARTIFACT_ID = "magnet-tools-maven-archetypes-linkedin";
   public static final String LINKEDIN_CONTROLLER_ARTIFACT_ID = "linkedin";
   public static final String LINKEDIN_CONTROLLER_GROUP_ID = "com.magnetapi";
-  public static final String LINKEDIN_CONTROLLER_VERSION = "1.0.0";
+  public static final String LINKEDIN_CONTROLLER_VERSION = "1.1.0-SNAPSHOT";
   public static final String LINKEDIN_DEFAULT_CONTROLLER_CLASS_NAME = "LinkedInController";
   public static final String LINKEDIN_OAUTH_DEFAULT_PROFILE = "r_basicprofile r_emailaddress r_contactinfo r_network";
   public static final String LINKEDIN_CONTROLLER_ARCHETYPE_GROUP_ID = MAGNET_TOOLS_GROUP_ID;
@@ -685,7 +685,7 @@ public final class ConfigLexicon {
   public static final String FACEBOOK_CONTROLLER_ARCHETYPE_ARTIFACT_ID = "magnet-tools-maven-archetypes-facebook";
   public static final String FACEBOOK_CONTROLLER_ARTIFACT_ID = "facebook";
   public static final String FACEBOOK_CONTROLLER_GROUP_ID = "com.magnetapi";
-  public static final String FACEBOOK_CONTROLLER_VERSION = "1.0.0";
+  public static final String FACEBOOK_CONTROLLER_VERSION = "1.1.0-SNAPSHOT";
   public static final String FACEBOOK_OAUTH_DEFAULT_PROFILE = "email publish_actions";
   public static final String FACEBOOK_DEFAULT_CONTROLLER_CLASS_NAME = "FacebookController";
   public static final String FACEBOOK_CONTROLLER_ARCHETYPE_GROUP_ID = MAGNET_TOOLS_GROUP_ID;
@@ -719,7 +719,7 @@ public final class ConfigLexicon {
   /**
    * Default Salesforce controller version
    */
-  public static final String SALESFORCE_CONTROLLER_VERSION = "1.0.0";
+  public static final String SALESFORCE_CONTROLLER_VERSION = "1.1.0-SNAPSHOT";
   /**
    * Default Salesforce controller package
    */

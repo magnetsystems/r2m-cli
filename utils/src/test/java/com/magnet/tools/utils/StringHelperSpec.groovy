@@ -34,11 +34,11 @@ class StringHelperSpec extends Specification {
       'server-config port -Dport=8080' + "\n" +
       'server-log -l 100'
 
-  static String content2 = 'pc -qf -n ${projectName}  -o ${outputDir}  -DgroupId=com.magnet -Dpackage=com.magnet.connect.baseline.project1 -Dversion=1.0.0\n' +
+  static String content2 = 'pc -qf -n ${projectName}  -o ${outputDir}  -DgroupId=com.magnet -Dpackage=com.magnet.connect.baseline.project1 -Dversion=1.1.0-SNAPSHOT\n' +
       'api-add simple -q'
-  static String expandedContent2 = "pc -qf -n name  -o C:\\Program\\ Files\\MABProjects\\name  -DgroupId=com.magnet -Dpackage=com.magnet.connect.baseline.project1 -Dversion=1.0.0\n" +
+  static String expandedContent2 = "pc -qf -n name  -o C:\\Program\\ Files\\MABProjects\\name  -DgroupId=com.magnet -Dpackage=com.magnet.connect.baseline.project1 -Dversion=1.1.0-SNAPSHOT\n" +
       "api-add simple -q"
-  static String expandedContent3 = 'pc -qf -n name  -o "C:\\Program Files\\MABProjects\\name"  -DgroupId=com.magnet -Dpackage=com.magnet.connect.baseline.project1 -Dversion=1.0.0\n' +
+  static String expandedContent3 = 'pc -qf -n name  -o "C:\\Program Files\\MABProjects\\name"  -DgroupId=com.magnet -Dpackage=com.magnet.connect.baseline.project1 -Dversion=1.1.0-SNAPSHOT\n' +
       'api-add simple -q'
 
   def 'should find variables'() {
