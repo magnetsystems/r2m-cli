@@ -52,12 +52,14 @@
       <groupId>com.magnet.platform</groupId>
       <artifactId>magnet-platform-profiles-lang-tool</artifactId>
       <version>${platform_version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>com.magnet.platform.core</groupId>
       <artifactId>magnet-core-profiles-micro-kernel</artifactId>
       <version>${platform_version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -83,6 +85,13 @@
 
     <!-- END magnet platform dependencies -->
 
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-utils</artifactId>
+      <version>1.0.0</version>
+      <scope>test</scope>
+      <type>test-jar</type>
+    </dependency>
 
   </dependencies>
 

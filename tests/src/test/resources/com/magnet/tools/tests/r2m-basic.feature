@@ -1,4 +1,4 @@
-@mob @r2m @r2m-simple
+@mob @r2m @r2m-basic
 Feature: ReST-to-Mobile generation
 
   As a mobile developer
