@@ -6,7 +6,6 @@ platform-specific code for making the request and retrieving the response.
 
 **Note:** If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios].
 
-If you use 
 ### Get Started
 
 ### Prerequisites
