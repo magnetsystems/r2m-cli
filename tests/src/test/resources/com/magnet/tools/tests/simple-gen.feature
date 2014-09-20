@@ -7,12 +7,12 @@ Feature: Generate Mobile assets with simple java client
 
   Scenario: generate espn headlines
     # set up test
-    Given I setup a new r2m test under "${basedir}/target/r2m-simple"
+    Given I setup a new java client test under "${basedir}/target/simple-gen"
     And the file "${test-dir}/examples/espn_headlines.txt" is a copy of "${basedir}/src/test/resources/rest/espn_headlines.txt"
 
     When I run the simple java client with options:
     """
-      -e examples
+      -e ${test-dir}/examples -o ${test-dir}/mobile
     """
 
   Scenario: check ios assets generation

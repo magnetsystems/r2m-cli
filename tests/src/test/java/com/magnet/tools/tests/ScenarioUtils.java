@@ -83,7 +83,7 @@ public class ScenarioUtils {
   /**
    * The location of the current test directory
    */
-  private static final String TEST_DIR_VARIABLE = "test-dir";
+  public static final String TEST_DIR_VARIABLE = "test-dir";
   private static final String TEST_DIR_REGEX = "\\$\\{" + TEST_DIR_VARIABLE + "\\}";
 
   /**
