@@ -51,6 +51,7 @@ Get help:
 ```
 r2m> help -v gen
 ```
+or check the [CLI usage](ttps://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-generate-code-gen) to find out all the options availables.
 
 Here's a simple example generating the Google distance Mobile API for iOS, Android and Javascript
 
@@ -67,9 +68,8 @@ or find more examples in the [rest2mobile examples repo](https://github.com/magn
  
 
 You can also build your own Mobile API from existing REST examples or documentation. 
-Find out how to create your own example [here](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-create-spec-file)
+Find out how to create your own example [here](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-create-spec-file).
 
-Go (here)[https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-generate-code-gen] to find out all the options availables.
 
 ## License
 
