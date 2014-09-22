@@ -9,19 +9,24 @@ platform-specific code for making the request and retrieving the response.
 ### Get Started
 
 ### Prerequisites
-The <code>r2m</code> command-line tool runs on the following platforms:
+<code>r2m</code> requires Java 6 or later and supports the following platforms:
 
 * Windows® 7 or later
 * Mac® OS X® 10.08 or later
 * Linux® Ubuntu® 12
 
-In addition, the tool requires Java JDK 6 or later.
+### Build and run
+```
+mvn clean install -am -pl cli-r2m-installer
+./cli-r2m-installer/target/magnet-tools-cli-r2m-installer-<version>/r2m
+r2m> gen --interactive
+```
 
-### Download  
+### Run it using installers
 
-Find the latest releases at [rest2mobile CLI releases](https://github.com/magnetsystems/r2m-cli/releases) 
+Find universal installers [here](https://github.com/magnetsystems/r2m-cli/releases) 
 
-### Installing r2m (Mac)
+#### On Mac
 
 Run:
 ```
@@ -31,13 +36,13 @@ brew install https://raw.githubusercontent.com/magnetsystems/r2m-cli/master/brew
 If you don't have _brew_, go to: http://brew.sh/
 
 
-## Installing the rest2mobile CLI (All Platforms)
+#### On all platforms
 
 Unzip the rest2mobile zip file and add r2m to the path.
 
 ## How to use it
 
-Start in interactive mode:
+### Start in interactive mode:
 
 ```
 r2m
@@ -47,11 +52,13 @@ Type '?' for help. Use <TAB> for completion. <Ctrl-D> to abort commands.
 r2m> gen 
 ```
 
-Get help:
+### Get help
 ```
 r2m> help -v gen
 ```
 or check the [CLI usage](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-generate-code-gen).
+
+### Build from existing examples
 
 Here's a simple example generating the Google distance Mobile API for iOS, Android and Javascript
 
@@ -64,12 +71,146 @@ You can get a list of examples with:
 ```
 r2m> gen -l
 ```
-or find more examples in the [rest2mobile examples repo](https://github.com/magnetsystems/r2m-examples)
+All examples are available on [rest2mobile examples repo](https://github.com/magnetsystems/r2m-examples)
  
+### Build with your own examples
 
 You can also build your own Mobile API from existing REST examples or documentation. 
 Find out how to create your own example [here](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-create-spec-file).
 
+Examples are usually text files containing the copy-pasted URL request and response payloads from a REST documentation, curl invocations, or simply your browser.
+Say you want to create a controller using the Google Time Zone API. Using curl, you can run on your browser:
+
+```
+https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&sensor=true
+```
+Then you get this JSON response:
+```
+{
+   "dstOffset" : 0,
+   "rawOffset" : -28800,
+   "status" : "OK",
+   "timeZoneId" : "America/Los_Angeles",
+   "timeZoneName" : "Pacific Standard Time"
+}
+```
+
+Using this request and response you can craft this file example.txt
+```
++Name getTimeZone
++Request
+https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&sensor=true
+
++Response
++Body
+{
+   "dstOffset" : 0,
+   "rawOffset" : -28800,
+   "status" : "OK",
+   "timeZoneId" : "America/Los_Angeles",
+   "timeZoneName" : "Pacific Standard Time"
+}
+
+```
+
+### Generating Mobile API
+
+Now you can run <code>r2m</code> to generate the mobile code with Android, Javascript and iOS.
+
+```
+r2m> gen -e example.txt 
+```
+
+And the generated Mobile API under the <code>mobile/</code> directory:
+You can now call the Mobile API using the generated method and object model generated out of the payloads.
+
+#### For Android
+<code>mobile/android/com/magnet/controller/api/RestController.java</code>:
+```
+  Call<TimeZoneResult> getTimeZone(
+     String location,
+     String timestamp,
+     String sensor,
+     StateChangedListener listener
+  );  
+```
+
+You can call it now, for example, with:
+```
+  RestControllerFactory factory = new RestControllerFactory(client);
+  RestController controller = factory.obtainInstance("demo");
+  Call resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true");
+  TimeZoneResult result = resp.get();
+  
+  assert result.getStatus() == "OK";
+  assert result.getTimeZoneId == "America/Los_Angeles";
+  assert result.getTimeZoneName == "Pacific Standard Time";
+  assert result.getDstOffSet() == 0;
+  assert result.getRawOffset() == -28800;
+```
+
+#### For iOS:
+Check the generated method in <code>RestController.h</code>
+```
+  (MMCall *)getTimeZone:(NSString *)location
+              timestamp:(NSString *)timestamp
+                 sensor:(NSString *)sensor
+                success:(void (^)(TimeZoneResult *response))success
+                failure:(void (^)(NSError *error))failure;
+```
+
+#### For Javascript:
+Check the generated function in <code>RestController.js</code>
+```
+  MagnetJS.Controllers.RestController.prototype.getTimeZone = function(data, options){
+    return MagnetJS.Method.call(this, data, options, {
+      params : {
+        name       : 'getTimeZone',
+        path       : '/maps/api/timezone/json',
+        baseUrl    : 'https://maps.googleapis.com',
+        method     : 'GET',
+        produces   : ['application/json'],
+        returnType : 'TimeZoneResult'
+      },
+      schema : {
+        "location" : {
+           style    : 'QUERY',
+           type     : 'string',
+           optional : true
+        },
+        "timestamp" : {
+           style    : 'QUERY',
+           type     : 'string',
+           optional : true
+        },
+        "sensor" : {
+           style    : 'QUERY',
+           type     : 'string',
+           optional : true
+        }
+      }
+    });
+  };
+
+```
+
+Here's how you can call it:
+```
+var controller = new MagnetJS.Controllers.RestController();
+
+var requestData = {
+location : "39.6034810,-119.6822510", timestamp : "1331161200", sensor : "true",
+}
+
+controller.getTimeZone(requestData, {
+    success : function(responseData, details){
+    // do something with response data
+    },
+    error : function(error, details){
+    // handle errors
+    }
+});
+```
 
 ## License
 
