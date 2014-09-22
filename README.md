@@ -78,8 +78,8 @@ All examples are available on [rest2mobile examples repo](https://github.com/mag
 You can also build your own Mobile API from existing REST examples or documentation. 
 Find out how to create your own example [here](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-create-spec-file).
 
-Examples are usually text files containing the copy-pasted URL request and response payloads from a REST documentation, curl invocations, or simply your browser.
-Say you want to create a controller using the Google Time Zone API. Using curl, you can run on your browser:
+Examples are usually text files containing the copy-pasted URL request and response payloads from a REST documentation, curl invocation, or simply your browser.
+Let's say you want to create a controller using the Google Time Zone API, simple type this in on your browser:
 
 ```
 https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&sensor=true
@@ -95,7 +95,7 @@ Then you get this JSON response:
 }
 ```
 
-Using this request and response you can craft this file example.txt
+Now copy-paste request and response in the file <code>example.txt</code>:
 ```
 +Name getTimeZone
 +Request
@@ -112,20 +112,23 @@ https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822
 }
 
 ```
+With this example file, you can now generate an async Mobile API with a strongly object model for Android, Javascript and iOS
 
 ### Generating Mobile API
 
-Now you can run <code>r2m</code> to generate the mobile code with Android, Javascript and iOS.
+Using the file created above, run <code>r2m</code> to generate the mobile code.
 
 ```
 r2m> gen -e example.txt 
 ```
 
-And the generated Mobile API under the <code>mobile/</code> directory:
-You can now call the Mobile API using the generated method and object model generated out of the payloads.
+This generates the Mobile API for all platforms under the <code>mobile/</code> directory.
+
+## Invoking the Mobile API
+
 
 #### For Android
-<code>mobile/android/com/magnet/controller/api/RestController.java</code>:
+Given the generated method under <code>mobile/android/com/magnet/controller/api/RestController.java</code>:
 ```
   Call<TimeZoneResult> getTimeZone(
      String location,
@@ -135,7 +138,7 @@ You can now call the Mobile API using the generated method and object model gene
   );  
 ```
 
-You can call it now, for example, with:
+Call it now, for example, with:
 ```
   RestControllerFactory factory = new RestControllerFactory(client);
   RestController controller = factory.obtainInstance("demo");
