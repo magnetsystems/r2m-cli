@@ -168,14 +168,15 @@ RestController *controller = [[RestController alloc] init];
 
 // Call the controller
 [controller getTimeZone:@"39.6034810,-119.6822510"
-  timestamp:@"1331161200",
-  sensor:@"true"
-success:^(TimeZoneResult *response) {
-// NSLog(@"response is %@", response);
-}
-failure:^(NSError *error) {
-// NSLog(@"error is %@", error);
-}];
+              timestamp:@"1331161200"
+                 sensor:@"true"
+                success:^(TimeZoneResult *response) {
+                    // NSLog(@"time zone name is %@", response.timeZoneName);
+                }
+                failure:^(NSError *error) {
+                    // NSLog(@"error is %@", error);
+                }];
+                
 ```
 
 #### For Javascript:
