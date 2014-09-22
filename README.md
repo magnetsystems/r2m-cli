@@ -161,6 +161,22 @@ Check the generated method in <code>RestController.h</code>
                 success:(void (^)(TimeZoneResult *response))success
                 failure:(void (^)(NSError *error))failure;
 ```
+Here's how you can call it:
+```
+// Create an instance
+RestController *controller = [[RestController alloc] init];
+
+// Call the controller
+[controller getTimeZone:@"39.6034810,-119.6822510"
+  timestamp:@"1331161200",
+  sensor:@"true"
+success:^(TimeZoneResult *response) {
+// NSLog(@"response is %@", response);
+}
+failure:^(NSError *error) {
+// NSLog(@"error is %@", error);
+}];
+```
 
 #### For Javascript:
 Check the generated function in <code>RestController.js</code>
