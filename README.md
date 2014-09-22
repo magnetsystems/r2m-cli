@@ -4,7 +4,7 @@
 <code>r2m</code> is a command-line tool that generates Android, iOS, and JavaScript code for your mobile app to interact with REST APIs. It takes REST request and JSON response information from a variety of sources you provide, and generates
 platform-specific code for making the request and retrieving the response.
 
-**Note:** If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios].
+**Note:** If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin for Android][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios].
 
 ### Get Started
 
