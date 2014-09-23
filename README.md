@@ -129,7 +129,10 @@ This generates the Mobile API for all platforms under the <code>mobile/</code> d
 
 
 #### For Android
-Given the generated method under <code>mobile/android/com/magnet/controller/api/RestController.java</code>:
+
+First, install the [rest2mobile Android SDK](https://github.com/magnetsystems/r2m-sdk-android) by modifying your app's build.gradle, as described [here](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-setup-studio#update-the-build-file)
+
+Then call the method in <code>mobile/android/com/magnet/controller/api/RestController.java</code>:
 ```java
   Call<TimeZoneResult> getTimeZone(
      String location,
@@ -139,22 +142,25 @@ Given the generated method under <code>mobile/android/com/magnet/controller/api/
   );  
 ```
 
-Call it now, for example, with:
+For example, with:
 ```java
+  MagnetMobileClient client = MagnetMobileClient.getInstance(this.getInstrumentation().getTargetContext());
   RestControllerFactory factory = new RestControllerFactory(client);
-  RestController controller = factory.obtainInstance("demo");
+  RestController controller = factory.obtainInstance();
   Call resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true");
   TimeZoneResult result = resp.get();
   
-  assert result.getStatus() == "OK";
-  assert result.getTimeZoneId == "America/Los_Angeles";
-  assert result.getTimeZoneName == "Pacific Standard Time";
-  assert result.getDstOffSet() == 0;
-  assert result.getRawOffset() == -28800;
+  // assert result.getStatus() == "OK";
+  // assert result.getTimeZoneId == "America/Los_Angeles";
+  // assert result.getTimeZoneName == "Pacific Standard Time";
+  // assert result.getDstOffSet() == 0;
+  // assert result.getRawOffset() == -28800;
 ```
 
 #### For iOS:
-Check the generated method in <code>RestController.h</code>
+First, install the [rest2mobile iOS SDK](https://github.com/magnetsystems/r2m-sdk-ios)
+
+Then call the method in <code>RestController.h</code>
 ```objectivec
   (MMCall *)getTimeZone:(NSString *)location
               timestamp:(NSString *)timestamp
@@ -162,7 +168,8 @@ Check the generated method in <code>RestController.h</code>
                 success:(void (^)(TimeZoneResult *response))success
                 failure:(void (^)(NSError *error))failure;
 ```
-Here's how you can call it:
+
+For example, with:
 ```objectivec
 // Create an instance
 RestController *controller = [[RestController alloc] init];
@@ -181,7 +188,9 @@ RestController *controller = [[RestController alloc] init];
 ```
 
 #### For Javascript:
-Check the generated function in <code>RestController.js</code>
+First set up your Phonegap or NodeJS app following the instructions for the [rest2mobile JS SDK](https://github.com/magnetsystems/r2m-sdk-js)
+
+Then call the generated function in <code>RestController.js</code>
 ```javascript
   MagnetJS.Controllers.RestController.prototype.getTimeZone = function(data, options){
     return MagnetJS.Method.call(this, data, options, {
