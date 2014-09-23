@@ -44,13 +44,22 @@ Unzip the rest2mobile zip file and add r2m to the path.
 
 ### Start in interactive mode:
 
+This starts the <code>r2m</code> shell console. It supports help, completion, and ANSI coloring.
 ```
-r2m
+$ r2m
 Starting rest2mobile 1.0.0
 Run 'gen --interactive' to generate Mobile APIs in interactive mode.
 Type '?' for help. Use <TAB> for completion. <Ctrl-D> to abort commands.
 r2m> gen 
 ```
+
+### Start in non-interactive mode:
+Useful to run single command, or include in script
+```
+$ r2m gen -e <file> [-o <outputdir>] [-p <package>] [-n <classPrefix>] [-c <ClassName>] [<target: android|js|ios>] [-flw] [-d <ApiID>]
+
+```
+For the rest of this tutorial <code>r2m</code> commands will be run in interactive mode. So you need to run <code>r2m</code> first.
 
 ### Get help
 ```
@@ -73,6 +82,28 @@ r2m> gen -l
 ```
 All examples are available on [rest2mobile examples repo](https://github.com/magnetsystems/r2m-examples)
  
+### Other few examples
+Generate the Android Mobile API from the example <code>myExample.txt</code>
+```
+r2m> gen -e myExample.txt -o myapp/src/java android
+```
+Same operation for Javascript:
+```
+r2m> gen -e myExample.txt -o jscode js
+```
+Same operation for iOS and Android only
+```
+r2m> gen -e myExample.txt -o xcodeProject/controllers ios android
+```
+Delete existing directory outputDir first if it exists with <code>-f</code>, before generating the API.
+```
+r2m> gen -f -e myExample.txt -o outputDir
+```
+Open the directory after generation of the Google Distance API with <code>-w</code>. Default output directory is <code>mobile</code>
+```
+r2m> gen -d GoogleDistance -f
+```
+
 ### Build with your own examples
 
 You can also build your own Mobile API from existing REST examples or documentation. 
@@ -123,7 +154,7 @@ Using the file created above, run <code>r2m</code> to generate the mobile code.
 r2m> gen -e example.txt 
 ```
 
-This generates the Mobile API for all platforms under the <code>mobile/</code> directory by default. You can customize the location of the output with <code>-o</code> as well as select on only one platform, for instance <code>ios</code>
+This generates the Mobile API for all platforms under the <code>mobile/</code> directory by default. You can customize the location of the output with <code>-o</code> as well as select on only one platform, for instance <code>android</code>, with:
 ```
 r2m> gen -e example.text -o myproject/myapp/src/main/java android
 ```
