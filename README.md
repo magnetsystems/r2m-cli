@@ -233,6 +233,11 @@ controller.getTimeZone(requestData, {
 });
 ```
 
+### Feedback
+
+We are constantly adding features and welcome feedback. 
+Please, ask questions or file requests [here](https://github.com/magnetsystems/rest2mobile/issues)
+
 ## License
 
 Licensed under the **[Apache License, Version 2.0] [license]** (the "License");
