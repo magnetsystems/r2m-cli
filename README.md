@@ -123,7 +123,10 @@ Using the file created above, run <code>r2m</code> to generate the mobile code.
 r2m> gen -e example.txt 
 ```
 
-This generates the Mobile API for all platforms under the <code>mobile/</code> directory.
+This generates the Mobile API for all platforms under the <code>mobile/</code> directory by default. You can customize the location of the output with <code>-o</code> as well as select on only one platform, for instance <code>ios</code>
+```
+r2m> gen -e example.text -o myproject/myapp/src/main/java android
+```
 
 ## Invoking the Mobile API
 
