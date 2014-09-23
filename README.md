@@ -185,8 +185,8 @@ For example, with:
   TimeZoneResult result = resp.get();
   
   // assert result.getStatus() == "OK";
-  // assert result.getTimeZoneId == "America/Los_Angeles";
-  // assert result.getTimeZoneName == "Pacific Standard Time";
+  // assert result.getTimeZoneId() == "America/Los_Angeles";
+  // assert result.getTimeZoneName() == "Pacific Standard Time";
   // assert result.getDstOffSet() == 0;
   // assert result.getRawOffset() == -28800;
 ```
