@@ -95,7 +95,7 @@ Same operation for iOS and Android only
 ```
 r2m> gen -e myExample.txt -o xcodeProject/controllers ios android
 ```
-Delete existing directory outputDir first if it exists with <code>-f</code>, before generating the API.
+Delete directory outputDir first, if it exists, with <code>-f</code>, before generating the API.
 ```
 r2m> gen -f -e myExample.txt -o outputDir
 ```
