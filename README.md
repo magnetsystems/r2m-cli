@@ -147,7 +147,7 @@ For example, with:
   MagnetMobileClient client = MagnetMobileClient.getInstance(this.getApplicationContext());
   RestControllerFactory factory = new RestControllerFactory(client);
   RestController controller = factory.obtainInstance();
-  Call resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true");
+  Call resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true", null);
   TimeZoneResult result = resp.get();
   
   // assert result.getStatus() == "OK";
