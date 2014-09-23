@@ -144,7 +144,7 @@ Then call the method in <code>mobile/android/com/magnet/controller/api/RestContr
 
 For example, with:
 ```java
-  MagnetMobileClient client = MagnetMobileClient.getInstance(this.getInstrumentation().getTargetContext());
+  MagnetMobileClient client = MagnetMobileClient.getInstance(this.getApplicationContext());
   RestControllerFactory factory = new RestControllerFactory(client);
   RestController controller = factory.obtainInstance();
   Call resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true");
@@ -242,10 +242,10 @@ controller.getTimeZone(requestData, {
 });
 ```
 
-### Feedback
+### Questions?
 
-We are constantly adding features and welcome feedback. 
-Please, ask questions or file requests [here](https://github.com/magnetsystems/rest2mobile/issues)
+We are constantly adding features and welcome your feedback. 
+Please, ask questions or reports issues [here](https://github.com/magnetsystems/r2m-cli/issues)
 
 ## License
 
