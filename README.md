@@ -56,7 +56,7 @@ r2m> gen
 ```
 r2m> help -v gen
 ```
-or check the [CLI usage](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-generate-code-gen).
+or check the [CLI usage](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-code-generation).
 
 ### Build from existing examples
 
