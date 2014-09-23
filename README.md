@@ -81,11 +81,12 @@ Find out how to create your own example [here](https://github.com/magnetsystems/
 Examples are usually text files containing the copy-pasted URL request and response payloads from a REST documentation, curl invocation, or simply your browser.
 Let's say you want to create a controller using the Google Time Zone API, simple type this in on your browser:
 
-```
+
 https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&sensor=true
-```
+
+
 Then you get this JSON response:
-```
+```json
 {
    "dstOffset" : 0,
    "rawOffset" : -28800,
@@ -129,7 +130,7 @@ This generates the Mobile API for all platforms under the <code>mobile/</code> d
 
 #### For Android
 Given the generated method under <code>mobile/android/com/magnet/controller/api/RestController.java</code>:
-```
+```java
   Call<TimeZoneResult> getTimeZone(
      String location,
      String timestamp,
@@ -139,7 +140,7 @@ Given the generated method under <code>mobile/android/com/magnet/controller/api/
 ```
 
 Call it now, for example, with:
-```
+```java
   RestControllerFactory factory = new RestControllerFactory(client);
   RestController controller = factory.obtainInstance("demo");
   Call resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true");
@@ -154,7 +155,7 @@ Call it now, for example, with:
 
 #### For iOS:
 Check the generated method in <code>RestController.h</code>
-```
+```objectivec
   (MMCall *)getTimeZone:(NSString *)location
               timestamp:(NSString *)timestamp
                  sensor:(NSString *)sensor
@@ -162,7 +163,7 @@ Check the generated method in <code>RestController.h</code>
                 failure:(void (^)(NSError *error))failure;
 ```
 Here's how you can call it:
-```
+```objectivec
 // Create an instance
 RestController *controller = [[RestController alloc] init];
 
@@ -181,7 +182,7 @@ RestController *controller = [[RestController alloc] init];
 
 #### For Javascript:
 Check the generated function in <code>RestController.js</code>
-```
+```javascript
   MagnetJS.Controllers.RestController.prototype.getTimeZone = function(data, options){
     return MagnetJS.Method.call(this, data, options, {
       params : {
@@ -215,7 +216,7 @@ Check the generated function in <code>RestController.js</code>
 ```
 
 Here's how you can call it:
-```
+```javascript
 var controller = new MagnetJS.Controllers.RestController();
 
 var requestData = {
