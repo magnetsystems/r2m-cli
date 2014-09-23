@@ -162,7 +162,7 @@ First, install the [rest2mobile iOS SDK](https://github.com/magnetsystems/r2m-sd
 
 Then call the method in <code>RestController.h</code>
 ```objectivec
-  (MMCall *)getTimeZone:(NSString *)location
+ -(MMCall *)getTimeZone:(NSString *)location
               timestamp:(NSString *)timestamp
                  sensor:(NSString *)sensor
                 success:(void (^)(TimeZoneResult *response))success
