@@ -113,7 +113,7 @@ https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822
 }
 
 ```
-With this example file, you can now generate an async Mobile API with a strongly object model for Android, Javascript and iOS
+With this example file, you can now generate an async Mobile API with a strongly-typed object model for Android, Javascript and iOS
 
 ### Generating Mobile API
 
