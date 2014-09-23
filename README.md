@@ -91,15 +91,15 @@ Same operation for Javascript:
 ```
 r2m> gen -e myExample.txt -o jscode js
 ```
-Same operation for iOS and Android only
+Same operation for iOS and Android only under controllers directory:
 ```
-r2m> gen -e myExample.txt -o xcodeProject/controllers ios android
+r2m> gen -e myExample.txt -o controllers ios android
 ```
-Delete directory outputDir first, if it exists, with <code>-f</code>, before generating the API.
+Delete directory outputDir first, if it exists, with <code>-f</code>, before generating the API:
 ```
 r2m> gen -f -e myExample.txt -o outputDir
 ```
-Open the directory after generation of the Google Distance API with <code>-w</code>. Default output directory is <code>mobile</code>
+Open the directory after generation of the Google Distance API with <code>-w</code>. Default output directory is <code>mobile</code>:
 ```
 r2m> gen -d GoogleDistance -f
 ```
