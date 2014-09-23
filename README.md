@@ -245,7 +245,7 @@ controller.getTimeZone(requestData, {
 ### Questions?
 
 We are constantly adding features and welcome your feedback. 
-Please, ask questions or reports issues [here](https://github.com/magnetsystems/r2m-cli/issues)
+Please, ask questions or report issues [here](https://github.com/magnetsystems/r2m-cli/issues)
 
 ## License
 
