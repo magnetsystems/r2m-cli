@@ -164,7 +164,7 @@ r2m> gen -e example.text -o myproject/myapp/src/main/java android
 
 #### For Android
 
-First, install the [rest2mobile Android SDK](https://github.com/magnetsystems/r2m-sdk-android) by modifying your app's build.gradle, as described [here](https://developer.magnet.com/android/).
+First, install the [rest2mobile Android SDK](https://github.com/magnetsystems/r2m-sdk-android) by modifying your app's build.gradle, as described in [Step 3 of using the android studio plugin](https://developer.magnet.com/android/). If you are using ant, go to [setup ant project](https://github.com/magnetsystems/rest2mobile/wiki/rest2mobile-setup-ant)
 
 Then call the method in <code>mobile/android/com/magnet/controller/api/RestController.java</code>:
 ```java
