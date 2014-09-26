@@ -107,7 +107,7 @@ r2m> gen -d GoogleDistance -f
 ### Build with your own examples
 
 You can also build your own Mobile API from existing REST examples or documentation. 
-Find out how to create your own example from the [Rest example wiki page](https://github.com/magnetsystems/rest2mobile/wiki/Rest-By-Example-Specifications).
+Find out how to create your own example from the [REST example wiki page](https://github.com/magnetsystems/rest2mobile/wiki/Rest-By-Example-Specifications).
 
 Examples are usually text files containing the copy-pasted URL request and response payloads from a REST documentation, curl invocation, or simply your browser.
 Let's say you want to create a controller using the Google Time Zone API, simple type this in on your browser:
