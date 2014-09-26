@@ -66,14 +66,6 @@
     </dependency>
 
     <dependency>
-      <groupId>com.magnet.platform.core</groupId>
-      <artifactId>magnet-core-profiles-micro-kernel</artifactId>
-      <version>${platform_version}</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/../cli-r2m-installer/src/main/lib/magnet-core-profiles-micro-kernel-${platform_version}.jar</systemPath>
-    </dependency>
-
-    <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-mapper-asl</artifactId>
       <version>${jackson.version}</version>
