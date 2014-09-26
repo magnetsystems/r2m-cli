@@ -30,6 +30,15 @@
 
   <profiles>
     <profile>
+      <id>with-cli-simple</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <modules>
+        <module>cli-simple</module>
+      </modules>
+    </profile>
+    <profile>
       <id>platform-custom</id>
       <activation>
         <property>
@@ -110,9 +119,6 @@
     <ant.version>1.9.2</ant.version>
 
 
-
-
-
     <!-- end cli properties -->
 
   </properties>
@@ -125,7 +131,6 @@
         <artifactId>commons-cli</artifactId>
         <version>1.2</version>
       </dependency>
-
 
 
       <dependency>
@@ -546,7 +551,6 @@
     <module>cli-r2m-installer</module>
     <module>tests</module>
 
-    <module>cli-simple</module>
   </modules>
 
 </project>
