@@ -17,7 +17,7 @@ platform-specific code for making the request and retrieving the response.
 
 ### Build and run
 ```
-mvn clean install -am -pl cli-r2m-installer
+mvn install -DskipTests
 ./cli-r2m-installer/target/magnet-tools-cli-r2m-installer-<version>/r2m
 r2m> gen --interactive
 ```
