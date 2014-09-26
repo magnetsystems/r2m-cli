@@ -25,17 +25,19 @@ import java.util.List;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.converters.FileConverter;
-import com.magnet.langpack.builder.rest.RestLangPackBuilder;
-import com.magnet.langpack.builder.rest.RestLangPackContainer;
+import com.magnet.langpack.builder.rest.RestExampleContainer;
+import com.magnet.langpack.builder.rest.RestExampleContainerBuilder;
 import com.magnet.langpack.builder.rest.parser.ExampleParser;
-import com.magnet.langpack.builder.rest.parser.SimpleModel;
+import com.magnet.langpack.builder.rest.parser.RestExampleModel;
 import com.magnet.langpack.tool.LangPackGenerator;
 import com.magnet.langpack.tool.LangPackTool;
+import com.magnet.langpack.builder.rest.EmptyPropertyPolicy;
 
 /**
  * Simplified generator command.
  */
 public class SimpleGenCommand {
+  private final static String SUPPORTED_EMPTY_PROPERTY_POLICIES_STRING = java.util.Arrays.toString(EmptyPropertyPolicy.values());
 
   @Parameter(description = "Get this usage", names = {"-h", "--help"})
   public boolean help = false;
@@ -67,6 +69,8 @@ public class SimpleGenCommand {
   @Parameter(names = {"-t", "--trace"}, description = "Enable tracing")
   public boolean tracing = false;
 
+  @Parameter(names = {"-j", "--policy"}, description = "Policy to handle empty property in json, choose from [abort|ignore|default-type]")
+  public String emptyPropertyPolicy;
 
   private StringBuilder sb = null;
 
@@ -140,13 +144,26 @@ public class SimpleGenCommand {
       throw new IllegalArgumentException("Parsing error: invalid example location:" + source);
     }
 
+    //
+    // Get policy
+    //
+    EmptyPropertyPolicy policy;
+    if (null != emptyPropertyPolicy) {
+      policy = EmptyPropertyPolicy.fromString(emptyPropertyPolicy);
+      if(null == policy) {
+        throw new Exception("policy must be one of " + SUPPORTED_EMPTY_PROPERTY_POLICIES_STRING);
+      }
+    } else {
+      policy = EmptyPropertyPolicy.ABORT;
+    }
+
     // Parse example(s)
-    RestLangPackBuilder builder = RestLangPackBuilder.getBuilder(controllerClass);
+    RestExampleContainerBuilder builder = RestExampleContainerBuilder.getBuilder(controllerClass, policy);
     LangPackGenerator langPackGenerator = LangPackTool.getInstance().createGenerator();
     int entriesAdded = 0;
     ExampleParser parser = new ExampleParser();
     for (URL e : sourceFiles) {
-      SimpleModel model;
+      RestExampleModel model;
       String resource = new File(e.getFile()).exists() ? e.getFile() : e.toString();
       try {
         info("Parsing example " + resource);
@@ -164,15 +181,14 @@ public class SimpleGenCommand {
       trace(" - headers : " + model.getRequestHeaders());
       trace(" - body : \n" + model.getRequestBody());
       trace("--------response--------");
-      trace(" - response code : " + model.getResponseCode());
+      //trace(" - response code : " + model.getResponseCode());
       trace(" - content-type : " + model.getResponseContentType());
-      trace(" - headers : " + model.getResponseHeaders());
       trace(" - body : \n" + model.getResponseBody());
 
       //
       // Generate java code
       //
-      RestLangPackContainer entry = builder.createByExample(model.getName(), //method name;
+      RestExampleContainer entry = builder.addExample(model.getName(), //method name;
           null, // description;
           path,
           model.getRequestUrl(),
@@ -181,8 +197,7 @@ public class SimpleGenCommand {
           model.getRequestHeaders(),
           model.getResponseCode(),
           Utils.guessContentType(model.getResponseContentType(), model.getResponseBody()),
-          model.getResponseBody(),
-          model.getResponseHeaders()).build();
+          model.getResponseBody()).build();
       langPackGenerator.add(entry);
 
       entriesAdded++;

@@ -62,7 +62,7 @@ class DefaultMobileRestControllerBuilder extends AbstractRestControllerBuilder<M
 
       shell.info(MobileRestMessages.generatingAssets(AnsiHelper.bold(platformId), basedir.toString()))
 
-      def langPackGenerator = getGeneratorFromExample(source, controllerClass, null)
+      def langPackGenerator = getGeneratorFromExample(source, controllerClass, null, params[MobileRestConstants.OPTION_EMPTY_PROPERTY_POLICY])
 
       if (!langPackGenerator) {
         throw new CommandException(CoreConstants.COMMAND_UNKNOWN_ERROR_CODE, CommonMessages.invalidResource(source))

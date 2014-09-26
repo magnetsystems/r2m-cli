@@ -16,10 +16,12 @@
  */
 package com.magnet.tools.cli.rest
 
-import com.magnet.langpack.builder.rest.RestLangPackBuilder
-import com.magnet.langpack.builder.rest.RestLangPackBuilderIface
+import com.magnet.langpack.builder.rest.RestExampleContainerBuilder
+import com.magnet.langpack.builder.rest.RestExampleContainer
 import com.magnet.langpack.builder.rest.parser.ExampleParser
-import com.magnet.langpack.builder.rest.parser.SimpleModel
+import com.magnet.langpack.builder.rest.parser.RestExampleModel
+import com.magnet.langpack.builder.rest.RestContentType
+import com.magnet.langpack.builder.rest.EmptyPropertyPolicy
 import com.magnet.langpack.tool.LangPackGenerator
 import com.magnet.langpack.tool.LangPackTool
 import com.magnet.tools.cli.core.CommandException
@@ -51,24 +53,24 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
    * @param content content string
    * @return content type  enum, null if no type nor content is passed
    */
-  static RestLangPackBuilderIface.ContentType guessContentType(String contentTypeStr, String content) {
+  static RestContentType guessContentType(String contentTypeStr, String content) {
     if (!contentTypeStr) {
       if (!content) {
         return null
       }
-      return ExampleParser.guessContentType(content);
+      return RestContentType.guessContentType(content);
     }
 
     if (contentTypeStr.toLowerCase().contains("json")) {
-      return RestLangPackBuilderIface.ContentType.JSON
+      return RestContentType.JSON
     } else if (contentTypeStr.toLowerCase().contains("form")) {
-      return RestLangPackBuilderIface.ContentType.FORM
+      return RestContentType.FORM
     } else if (contentTypeStr.toLowerCase().contains("text")) {
-      return RestLangPackBuilderIface.ContentType.TEXT
+      return RestContentType.TEXT
     }
 
     // default
-    return RestLangPackBuilderIface.ContentType.TEXT
+    return RestContentType.TEXT
   }
 
   /**
@@ -78,7 +80,7 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
    * @param path controller path
    * @return lang pack generator instance or null if no entries found
    */
-  LangPackGenerator getGeneratorFromExample(String source, String controllerClass, String path) {
+  LangPackGenerator getGeneratorFromExample(String source, String controllerClass, String path, EmptyPropertyPolicy policy) {
     File sourceDir = FileHelper.getDirectory(source)
     List<URL> sourceFiles = new ArrayList<URL>()
     if (sourceDir) {
@@ -93,12 +95,12 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
       throw new CommandException(CoreConstants.COMMAND_UNKNOWN_ERROR_CODE, CommonMessages.invalidResource(source))
     }
 
-    def builder = RestLangPackBuilder.getBuilder(controllerClass)
+    def builder = RestExampleContainerBuilder.getBuilder(controllerClass, policy)
     def langPackGenerator = LangPackTool.getInstance().createGenerator()
     int entriesAdded = 0
     def parser = new ExampleParser()
     for (URL oneFile : sourceFiles) {
-      SimpleModel model
+      RestExampleModel model
       String resource = new File(oneFile.file).exists() ? oneFile.file : oneFile.toString()
       try {
         shell.info(RestMessages.parsingResource(resource))
@@ -118,7 +120,6 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
       shell.trace("--------response--------")
       shell.trace(" - response code : ${model.getResponseCode()}")
       shell.trace(" - content-type : ${model.getResponseContentType()}")
-      shell.trace(" - headers : ${model.getResponseHeaders()}")
       shell.trace(" - body : \n${model.getResponseBody()}")
 
 //      boolean toContinue = PromptHelper.promptYesOrNo(shell, "Continue", true)
@@ -130,7 +131,7 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
       // Generate java code
       //
       //TODO : parse content type from model instead of hard coded JSON (WON-8111)
-      def entry = builder.createByExample(model.getName(), //method name
+      def entry = builder.addExample(model.getName(), //method name
           null, // description
           path,
           model.getRequestUrl(),
@@ -139,8 +140,7 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
           model.getRequestHeaders(),
           model.getResponseCode(),
           guessContentType(model.getResponseContentType(), model.getResponseBody()),
-          model.getResponseBody(),
-          model.getResponseHeaders()).build();
+          model.getResponseBody()).build();
       langPackGenerator.add(entry);
 
       entriesAdded++

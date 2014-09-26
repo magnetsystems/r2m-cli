@@ -16,7 +16,9 @@
  */
 package com.magnet.tools.cli.rest
 
+import java.util.Arrays;
 import com.magnet.tools.config.ConfigLexicon;
+import com.magnet.langpack.builder.rest.EmptyPropertyPolicy
 
 /**
  * Constants for Mobile Rest plugin
@@ -39,6 +41,10 @@ public interface MobileRestConstants {
   String OPTION_OUTPUT_DIR = "out";
   String OPTION_REST_SPECIFICATIONS_LOCATION = "examples";
   String OPTION_LIST = "list";
+  String OPTION_EMPTY_PROPERTY_POLICY = "policy";
+
+  List<String> SUPPORTED_EMPTY_PROPERTY_POLICIES = EmptyPropertyPolicy.values();
+  String SUPPORTED_EMPTY_PROPERTY_POLICIES_STRING = Arrays.toString(EmptyPropertyPolicy.values());
 
   /** List of supported Mobile platform targets for the Mobile generation */
   List<String> SUPPORTED_PLATFORM_TARGETS = [ConfigLexicon.IOS_PLATFORM_TARGET, ConfigLexicon.ANDROID_PLATFORM_TARGET, ConfigLexicon.JS_PLATFORM_TARGET]

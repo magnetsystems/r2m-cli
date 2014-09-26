@@ -27,6 +27,7 @@ import com.magnet.tools.config.ConfigLexicon
 import com.magnet.tools.utils.AnsiHelper
 import com.magnet.tools.utils.HttpHelper
 import com.magnet.tools.utils.StringHelper
+import com.magnet.langpack.builder.rest.EmptyPropertyPolicy
 import groovy.json.JsonSlurper
 import groovy.util.logging.Slf4j
 import groovyx.net.http.Method
@@ -88,6 +89,11 @@ class GenCommand extends AbstractCommand {
   private String packageName = R2MConstants.DEFAULT_PACKAGE_NAME
 
   /**
+   * Policy to handl empty json property
+   */
+  private EmptyPropertyPolicy policy
+
+  /**
    * Ctor
    * @param name command name
    * @param aliases command aliases
@@ -107,7 +113,7 @@ class GenCommand extends AbstractCommand {
     i(longOpt: MobileRestConstants.OPTION_INTERACTIVE, args: 0, 'Whether to start the interactive mode')
     d(longOpt: MobileRestConstants.OPTION_DOWNLOAD, args: 1, 'Download example from git repo')
     l(longOpt: MobileRestConstants.OPTION_LIST, args: 0, 'Show a list of examples')
-
+    j(longOpt: MobileRestConstants.OPTION_EMPTY_PROPERTY_POLICY, args: 1, 'The policy for empty property in the json request or response. Choose from ' + MobileRestConstants.SUPPORTED_EMPTY_PROPERTY_POLICIES_STRING)
   }
 
 
@@ -212,6 +218,18 @@ class GenCommand extends AbstractCommand {
     }
 
     //
+    // Get policy
+    //
+    if (options.j) {
+      policy = EmptyPropertyPolicy.fromString(options.j)
+      if(!policy) {
+        throw new CommandException(CoreConstants.COMMAND_INVALID_OPTION_VALUE, 'policy must be one of ' + MobileRestConstants.OPTION_EMPTY_PROPERTY_POLICY_STRING)
+      }
+    } else {
+      policy = EmptyPropertyPolicy.ABORT
+    }
+
+    //
     // Finally Generate API
     //
     for (target in platformTargets) {
@@ -223,7 +241,8 @@ class GenCommand extends AbstractCommand {
           (MobileRestConstants.OPTION_NAMESPACE)                   : namespace,
           (MobileRestConstants.OPTION_OUTPUT_DIR)                  : mobileOutputDirectory,
           (MobileRestConstants.OPTION_CONTROLLER_CLASS)            : controllerClassName,
-          (MobileRestConstants.OPTION_REST_SPECIFICATIONS_LOCATION): examples
+          (MobileRestConstants.OPTION_REST_SPECIFICATIONS_LOCATION): examples,
+          (MobileRestConstants.OPTION_EMPTY_PROPERTY_POLICY)       : policy
 
       ]
       getBuilder(target).build(params)
