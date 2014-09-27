@@ -146,7 +146,7 @@ https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822
 ```
 With this example file, you can now generate an async Mobile API with a strongly-typed object model for Android, Javascript and iOS
 
-### Generating Mobile API
+### Generating Mobile APIs
 
 Using the file created above, run <code>r2m</code> to generate the mobile code.
 
@@ -154,7 +154,7 @@ Using the file created above, run <code>r2m</code> to generate the mobile code.
 r2m> gen -e example.txt 
 ```
 
-This generates the Mobile API for all platforms under the <code>mobile/</code> directory by default. You can customize the location of the output with <code>-o</code> as well as select on only one platform, for instance <code>android</code>, with:
+This generates the Mobile API for all platforms under the local <code>mobile/</code> directory. You can customize the location of the output with <code>-o</code> as well as select one ore more target platforms, for instance <code>android</code>, with:
 ```
 r2m> gen -e example.text -o myproject/myapp/src/main/java android
 ```
