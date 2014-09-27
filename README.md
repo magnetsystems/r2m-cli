@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/magnetsystems/r2m-cli.svg)](https://travis-ci.org/magnetsystems/r2m-cli)
+
 ## rest2mobile CLI (r2m)
 <img style="margin:10px" src="http://developer.magnet.com/tmp/img/logo_r2m_main.png"
  alt="rest2mobile logo" title="rest2mobile" align="right" />
