@@ -20,6 +20,7 @@ import java.io.File;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import sun.security.util.PendingException;
 
 /**
  * Steps to invoke simple rest2mobile java client
@@ -29,7 +30,8 @@ public class SimpleJavaClientSteps {
   public void runJavaClient(String options) throws Throwable {
 
     String[] args = ScenarioUtils.expandVariables(options.trim()).split("\\s+");
-    com.magnet.tools.cli.simple.Main.main(args);
+    //com.magnet.tools.cli.simple.Main.main(args);
+    throw new PendingException("TO BE IMPLEMENTED");
   }
 
   @Given("^I setup a new java client test under \"([^\"]*)\"$")
