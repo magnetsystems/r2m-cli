@@ -24,6 +24,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.text.StringContains;
 import org.junit.Assert;
@@ -59,7 +60,8 @@ public class FileSystemStepDefs {
       for (File f : FileUtils.listFilesAndDirs(new File(dir), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE)) {
         tree.append(f).append("\n");
       }
-      throw new AssertionError(tree.toString(), errors.get(0));
+      String errorMsg = tree.append(ExceptionUtils.getStackTrace(errors.get(0))).toString();
+      throw new AssertionError(errorMsg);
     }
   }
 
@@ -76,7 +78,8 @@ public class FileSystemStepDefs {
       for (File f : FileUtils.listFilesAndDirs(new File(directory), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE)) {
         tree.append(f).append("\n");
       }
-      throw new AssertionError(tree.toString(), e);
+      String errorMsg = tree.append(ExceptionUtils.getStackTrace(e)).toString();
+      throw new AssertionError(errorMsg);
     }
   }
 
