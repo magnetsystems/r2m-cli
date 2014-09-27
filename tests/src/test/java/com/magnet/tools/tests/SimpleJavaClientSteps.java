@@ -16,8 +16,6 @@
  */
 package com.magnet.tools.tests;
 
-import java.io.File;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import sun.security.util.PendingException;
@@ -36,17 +34,18 @@ public class SimpleJavaClientSteps {
 
   @Given("^I setup a new java client test under \"([^\"]*)\"$")
   public static void setupJavaClientTest(String dir) throws Throwable {
-    // Given I cleanup my environment
-    String directory = ScenarioUtils.expandVariables(dir);
-
-    ScenarioUtils.log("====> Setting a new test directory: " + directory);
-
-    ScenarioUtils.cleanup();
-    //And I delete "xxx"
-    ScenarioUtils.delete_file(directory);
-
-    new File(directory).mkdirs();
-    ScenarioUtils.setEnvironmentVariable(ScenarioUtils.TEST_DIR_VARIABLE, new File(directory).getCanonicalPath());
+    throw new PendingException("TO BE IMPLEMENTED");
+//    // Given I cleanup my environment
+//    String directory = ScenarioUtils.expandVariables(dir);
+//
+//    ScenarioUtils.log("====> Setting a new test directory: " + directory);
+//
+//    ScenarioUtils.cleanup();
+//    //And I delete "xxx"
+//    ScenarioUtils.delete_file(directory);
+//
+//    new File(directory).mkdirs();
+//    ScenarioUtils.setEnvironmentVariable(ScenarioUtils.TEST_DIR_VARIABLE, new File(directory).getCanonicalPath());
 
   }
 
