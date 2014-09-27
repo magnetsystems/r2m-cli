@@ -553,4 +553,16 @@
 
   </modules>
 
+  <repositories>
+    <repository>
+      <id>magnet</id>
+      <name>Magnet Public Maven Repository</name>
+      <layout>default</layout>
+      <url>http://repo.magnet.com:8081/artifactory/public</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
 </project>
