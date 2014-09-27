@@ -30,15 +30,6 @@
 
   <profiles>
     <profile>
-      <id>with-cli-simple</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <modules>
-        <module>cli-simple</module>
-      </modules>
-    </profile>
-    <profile>
       <id>platform-custom</id>
       <activation>
         <property>
@@ -549,6 +540,7 @@
     <module>cli-rest-mobile-plugin</module>
     <module>cli-r2m-plugin</module>
     <module>cli-r2m-installer</module>
+    <module>cli-simple</module>
     <module>tests</module>
 
   </modules>
