@@ -16,6 +16,8 @@
  */
 package com.magnet.tools.cli.simple;
 
+import static com.magnet.tools.cli.simple.Utils.*;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.net.URL;
@@ -87,13 +89,15 @@ public class SimpleGenCommand {
       return sb;
     }
     if (null == platforms) {
-      for (String platform: SimpleGenConstants.SUPPORTED_PLATFORM_TARGETS)
-      generate(platform, new File(outputDirectory, platform));
-    }
-    for (String platform : platforms) {
-      generate(platform, outputDirectory);
+      platforms = SimpleGenConstants.SUPPORTED_PLATFORM_TARGETS;
     }
 
+    if (platforms.size() == 1) {
+      generate(platforms.get(0), outputDirectory);
+    } else {
+      for (String platform : SimpleGenConstants.SUPPORTED_PLATFORM_TARGETS)
+        generate(platform, new File(outputDirectory, platform));
+    }
     info("Success! The mobile API is generated under " + outputDirectory);
 
     return sb;
@@ -115,10 +119,10 @@ public class SimpleGenCommand {
     // source is a directory
     if (sourceDir.isDirectory()) {
       File[] files = sourceDir.listFiles(new FileFilter() {
-          @Override
-          public boolean accept(File file) {
-              return !file.getName().startsWith(".");
-          }
+        @Override
+        public boolean accept(File file) {
+          return !file.getName().startsWith(".");
+        }
       });
       if (null != files) {
         for (File f : files) {
@@ -127,11 +131,15 @@ public class SimpleGenCommand {
         }
       }
     } else { // a file or a URL
-      sourceFiles.add(Utils.getURL(source));
+      URL u = getURL(source);
+      if (u == null) {
+        throw new IllegalArgumentException("Parsing error: cannot find resource " + source);
+      }
+      sourceFiles.add(u);
     }
 
     if (sourceFiles.isEmpty()) {
-      throw new Exception("Invalid example location:" + source);
+      throw new IllegalArgumentException("Parsing error: invalid example location:" + source);
     }
 
     // Parse example(s)
@@ -146,21 +154,20 @@ public class SimpleGenCommand {
         info("Parsing example " + resource);
         model = parser.parse(e);
       } catch (Exception pe) {
-        throw new Exception("Parsing error: " + pe.getMessage());
+        throw new IllegalArgumentException("Parsing error: " + pe.getMessage());
       }
 
       // print parse result for preview;
-      trace("========parse result of file " + resource+ "========");
+      trace("========parse result of file " + resource + "========");
       trace(" - name : " + model.getName());
       trace("--------request--------");
-      trace(" - url : " +  model.getRequestUrl());
+      trace(" - url : " + model.getRequestUrl());
       trace(" - content-type : " + model.getRequestContentType());
       trace(" - headers : " + model.getRequestHeaders());
       trace(" - body : \n" + model.getRequestBody());
       trace("--------response--------");
       trace(" - response code : " + model.getResponseCode());
       trace(" - content-type : " + model.getResponseContentType());
-      trace(" - headers : " + model.getResponseHeaders());
       trace(" - body : \n" + model.getResponseBody());
 
       //
@@ -170,11 +177,11 @@ public class SimpleGenCommand {
           null, // description;
           path,
           model.getRequestUrl(),
-          Utils.guessContentType(model.getRequestContentType(), model.getRequestBody()),
+          guessContentType(model.getRequestContentType(), model.getRequestBody()),
           model.getRequestBody(),
           model.getRequestHeaders(),
           model.getResponseCode(),
-          Utils.guessContentType(model.getResponseContentType(), model.getResponseBody()),
+          guessContentType(model.getResponseContentType(), model.getResponseBody()),
           model.getResponseBody(),
           model.getResponseHeaders()).build();
       langPackGenerator.add(entry);
@@ -201,6 +208,9 @@ public class SimpleGenCommand {
     if (force) {
       info("Cleanup directory " + outputDir);
       cleanup(outputDir);
+    }
+    if (null == exampleLocation) {
+      throw new IllegalArgumentException("-e|--examples option is mandatory");
     }
     LangPackGenerator langPackGenerator = getGeneratorFromExample(exampleLocation, controllerClass, null);
 
@@ -229,7 +239,7 @@ public class SimpleGenCommand {
     if (!dir.exists()) {
       return;
     }
-    Utils.deleteDir(dir);
+    deleteDir(dir);
   }
 
   private void trace(String s) {

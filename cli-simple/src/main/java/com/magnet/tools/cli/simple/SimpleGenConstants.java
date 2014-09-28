@@ -24,7 +24,6 @@ import java.util.List;
  */
 public interface SimpleGenConstants {
 
-  String TOOL_NAME = "rest2mobile";
   String DEFAULT_PACKAGE = "com.magnet";
   String CONTROLLER_API_SUB_PACKAGE = "controller.api";
   String MODEL_BEANS_SUB_PACKAGE = "model.beans";
