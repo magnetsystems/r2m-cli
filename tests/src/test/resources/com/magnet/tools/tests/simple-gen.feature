@@ -1,4 +1,4 @@
-@simple-gen @wip
+@simple-gen
 Feature: Generate Mobile assets with simple java client
 
   As a mobile developer

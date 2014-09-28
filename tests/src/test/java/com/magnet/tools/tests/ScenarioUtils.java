@@ -61,7 +61,7 @@ public class ScenarioUtils {
     MAB_DEBUG_SUSPEND
   }
 
-  public static final String TEST_MAB_CONFIG_PROPERTIES_PATH = "test_mab_config.properties";
+  public static final String TEST_MAB_CONFIG_PROPERTIES_PATH = "test_magnet_tools_config.properties";
 
   public static final TrustManager[] TRUST_ALL_CERTS;
 

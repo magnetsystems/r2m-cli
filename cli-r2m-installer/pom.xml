@@ -70,7 +70,7 @@
         <configuration>
           <filters>
             <!-- TODO this should be packaged somewhere in maven.. -->
-            <filter>${project.basedir}/../config/target/classes/mab_config.properties</filter>
+            <filter>${project.basedir}/../config/target/classes/magnet_tools_config.properties</filter>
           </filters>
         </configuration>
         <executions>

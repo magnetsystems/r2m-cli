@@ -101,11 +101,11 @@
 
 
     <!-- Simple java client -->
-    <!--<dependency>-->
-      <!--<groupId>com.magnet.tools</groupId>-->
-      <!--<artifactId>magnet-tools-cli-simple</artifactId>-->
-      <!--<version>1.1.0-SNAPSHOT</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-cli-simple</artifactId>
+      <version>1.1.0-SNAPSHOT</version>
+    </dependency>
 
   </dependencies>
 
@@ -117,7 +117,7 @@
         <executions>
           <execution>
             <phase>test-compile</phase>
-            <id>create test_mab_config.properties file</id>
+            <id>create test_magnet_tools_config.properties file</id>
             <goals>
               <goal>execute</goal>
             </goals>
@@ -126,7 +126,7 @@
               <source>
                 try {
                 def p = new Properties()
-                def f = new File(project.build.testOutputDirectory, 'test_mab_config.properties')
+                def f = new File(project.build.testOutputDirectory, 'test_magnet_tools_config.properties')
                 def magnet_tools_version = project.properties['magnet_tools_version'] ?: project.version
                 p.put('platform_version', project.properties['platform_version'])
                 p.put('magnet_tools_version', magnet_tools_version)

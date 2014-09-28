@@ -1,4 +1,4 @@
-@mob @r2m @r2m-basic
+ @r2m @r2m-basic
 Feature: ReST-to-Mobile generation
 
   As a mobile developer
@@ -7,7 +7,7 @@ Feature: ReST-to-Mobile generation
 
   Scenario: generate espn headlines
     # set up test
-    Given I setup a new r2m test under "${basedir}/target/r2m-simple"
+    Given I setup a new r2m test under "${basedir}/target/r2m-basic"
     And the file "${test-dir}/examples/espn_headlines.txt" is a copy of "${basedir}/src/test/resources/rest/espn_headlines.txt"
 
     # simplest way of generating Mobile API

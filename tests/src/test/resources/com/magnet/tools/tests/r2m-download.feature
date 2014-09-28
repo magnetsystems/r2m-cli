@@ -1,4 +1,4 @@
-@mob @r2m @r2m-download
+ @r2m @r2m-download
 Feature: ReST-to-Mobile generation from downloaded file
 
   As a mobile developer

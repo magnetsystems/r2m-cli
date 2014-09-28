@@ -30,15 +30,6 @@
 
   <profiles>
     <profile>
-      <id>with-cli-simple</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <modules>
-        <module>cli-simple</module>
-      </modules>
-    </profile>
-    <profile>
       <id>platform-custom</id>
       <activation>
         <property>
@@ -88,7 +79,7 @@
     <jar-plugin.version>2.4</jar-plugin.version>
     <!-- copts is an alias to cucumber.options, this is useful on win
     where powershell does not handle properties with "." -->
-    <copts>--tags ~@wip --tags @r2m --tags ~@cloud</copts>
+    <copts>--tags ~@wip</copts>
     <cucumber.options>${copts}</cucumber.options>
 
     <!-- for platform -->
@@ -549,6 +540,11 @@
     <module>cli-rest-mobile-plugin</module>
     <module>cli-r2m-plugin</module>
     <module>cli-r2m-installer</module>
+
+    <!-- simple java client -->
+    <module>cli-simple</module>
+
+    <!-- integration tests -->
     <module>tests</module>
 
   </modules>
