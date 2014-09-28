@@ -1,21 +1,18 @@
-@r2m @r2m-simple
-Feature: ReST-to-Mobile generation
+@simple-gen
+Feature: Generate Mobile assets with simple java client
 
   As a mobile developer
-  I want to generate Mobile APi using the r2m tool
-  In order to connect to existing ReST services
+  I want to generate Mobile APIs using the lightweight simple java client
+  In order to integrate rest2mobile capabilities in Java programs
 
   Scenario: generate espn headlines
     # set up test
-    Given I setup a new r2m test under "${basedir}/target/r2m-simple"
+    Given I setup a new java client test under "${basedir}/target/simple-gen"
     And the file "${test-dir}/examples/espn_headlines.txt" is a copy of "${basedir}/src/test/resources/rest/espn_headlines.txt"
 
-    # simplest way of generating Mobile API
-    # by default ios, js, and android are generated under the local ./mobile directory
-    # the default examples are looked up in the local ./examples directory
-    When I run the r2m script "${test-dir}/mobile.mob" with content:
+    When I run the simple java client with options:
     """
-      gen -e examples
+      -e ${test-dir}/examples -o ${test-dir}/mobile
     """
 
   Scenario: check ios assets generation

@@ -1,4 +1,4 @@
-@r2m-examples @r2m @mob
+@r2m-examples @r2m
 Feature: Generate Many Mobile API with the Mob tool
 
   As a mobile developer

@@ -1,4 +1,4 @@
-@mob @r2m @r2m-url
+ @r2m @r2m-url
 Feature: ReST-to-Mobile generation from a url
 
   As a mobile developer

@@ -39,15 +39,6 @@
       <directoryMode>755</directoryMode>
     </fileSet>
 
-    <!-- magnet platform bits -->
-    <fileSet>
-      <directory>src/main/lib</directory>
-      <outputDirectory>lib</outputDirectory>
-      <useDefaultExcludes>true</useDefaultExcludes>
-      <fileMode>644</fileMode>
-      <directoryMode>755</directoryMode>
-    </fileSet>
-
     <!-- Populate binaries in bin/ directory -->
     <fileSet>
       <directory>src/main/bin</directory>
@@ -70,9 +61,6 @@
       <outputDirectory>lib</outputDirectory>
       <useProjectArtifact>true</useProjectArtifact>
       <useTransitiveDependencies>true</useTransitiveDependencies>
-      <excludes>
-        <exclude>com.magnet.platform*:*:*</exclude>
-      </excludes>
       <scope>compile</scope>
     </dependencySet>
 

@@ -30,15 +30,6 @@
 
   <profiles>
     <profile>
-      <id>with-cli-simple</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <modules>
-        <module>cli-simple</module>
-      </modules>
-    </profile>
-    <profile>
       <id>platform-custom</id>
       <activation>
         <property>
@@ -88,7 +79,7 @@
     <jar-plugin.version>2.4</jar-plugin.version>
     <!-- copts is an alias to cucumber.options, this is useful on win
     where powershell does not handle properties with "." -->
-    <copts>--tags ~@wip --tags @r2m --tags ~@cloud</copts>
+    <copts>--tags ~@wip</copts>
     <cucumber.options>${copts}</cucumber.options>
 
     <!-- for platform -->
@@ -504,10 +495,9 @@
           <useFile>false</useFile>
           <runOrder>random</runOrder>
           <argLine>-enableassertions</argLine>
-          <argLine>-enableassertions</argLine>
           <systemPropertyVariables>
             <cucumber.options>${cucumber.options}</cucumber.options>
-            <testgroup.cloud.run>${testgroup.cloud.run}</testgroup.cloud.run>
+            <java.util.logging.config.file>logging.properties</java.util.logging.config.file>
           </systemPropertyVariables>
           <includes>
             <include>**/*Test*.java</include>
@@ -549,8 +539,21 @@
     <module>cli-rest-mobile-plugin</module>
     <module>cli-r2m-plugin</module>
     <module>cli-r2m-installer</module>
+    <module>cli-simple</module>
     <module>tests</module>
 
   </modules>
+
+  <repositories>
+    <repository>
+      <id>magnet</id>
+      <name>Magnet Public Maven Repository</name>
+      <layout>default</layout>
+      <url>http://repo.magnet.com:8081/artifactory/public</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
 </project>
