@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -60,6 +61,8 @@ public class ScenarioUtils {
     R2M_DEBUG_SUSPEND,
     MAB_DEBUG_SUSPEND
   }
+
+  public static Logger LOG = Logger.getLogger(ScenarioUtils.class.getName());
 
   public static final String TEST_MAB_CONFIG_PROPERTIES_PATH = "test_magnet_tools_config.properties";
 
@@ -461,7 +464,10 @@ public class ScenarioUtils {
 
   @Given("^I log \"([^\"]*)\"$")
   public static void log(String s) {
-    System.out.println(s);
+    if (LOG == null) {
+      LOG = Logger.getLogger(ScenarioUtils.class.getName());
+    }
+    LOG.info(s);
   }
 
 
