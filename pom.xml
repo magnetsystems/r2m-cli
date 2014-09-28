@@ -495,10 +495,9 @@
           <useFile>false</useFile>
           <runOrder>random</runOrder>
           <argLine>-enableassertions</argLine>
-          <argLine>-enableassertions</argLine>
           <systemPropertyVariables>
             <cucumber.options>${cucumber.options}</cucumber.options>
-            <testgroup.cloud.run>${testgroup.cloud.run}</testgroup.cloud.run>
+            <java.util.logging.config.file>logging.properties</java.util.logging.config.file>
           </systemPropertyVariables>
           <includes>
             <include>**/*Test*.java</include>
