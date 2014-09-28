@@ -61,7 +61,7 @@ public class ScenarioUtils {
     MAB_DEBUG_SUSPEND
   }
 
-  public static final String TEST_MAB_CONFIG_PROPERTIES_PATH = "test_mab_config.properties";
+  public static final String TEST_MAB_CONFIG_PROPERTIES_PATH = "test_magnet_tools_config.properties";
 
   public static final TrustManager[] TRUST_ALL_CERTS;
 
@@ -83,7 +83,7 @@ public class ScenarioUtils {
   /**
    * The location of the current test directory
    */
-  private static final String TEST_DIR_VARIABLE = "test-dir";
+  public static final String TEST_DIR_VARIABLE = "test-dir";
   private static final String TEST_DIR_REGEX = "\\$\\{" + TEST_DIR_VARIABLE + "\\}";
 
   /**

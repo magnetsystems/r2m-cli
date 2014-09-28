@@ -16,9 +16,10 @@
  */
 package com.magnet.tools.tests;
 
+import java.io.File;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
-import sun.security.util.PendingException;
 
 /**
  * Steps to invoke simple rest2mobile java client
@@ -28,24 +29,22 @@ public class SimpleJavaClientSteps {
   public void runJavaClient(String options) throws Throwable {
 
     String[] args = ScenarioUtils.expandVariables(options.trim()).split("\\s+");
-    //com.magnet.tools.cli.simple.Main.main(args);
-    throw new PendingException("TO BE IMPLEMENTED");
+    com.magnet.tools.cli.simple.Main.main(args);
   }
 
   @Given("^I setup a new java client test under \"([^\"]*)\"$")
   public static void setupJavaClientTest(String dir) throws Throwable {
-    throw new PendingException("TO BE IMPLEMENTED");
-//    // Given I cleanup my environment
-//    String directory = ScenarioUtils.expandVariables(dir);
-//
-//    ScenarioUtils.log("====> Setting a new test directory: " + directory);
-//
-//    ScenarioUtils.cleanup();
-//    //And I delete "xxx"
-//    ScenarioUtils.delete_file(directory);
-//
-//    new File(directory).mkdirs();
-//    ScenarioUtils.setEnvironmentVariable(ScenarioUtils.TEST_DIR_VARIABLE, new File(directory).getCanonicalPath());
+    // Given I cleanup my environment
+    String directory = ScenarioUtils.expandVariables(dir);
+
+    ScenarioUtils.log("====> Setting a new test directory: " + directory);
+
+    ScenarioUtils.cleanup();
+    //And I delete "xxx"
+    ScenarioUtils.delete_file(directory);
+
+    new File(directory).mkdirs();
+    ScenarioUtils.setEnvironmentVariable(ScenarioUtils.TEST_DIR_VARIABLE, new File(directory).getCanonicalPath());
 
   }
 
