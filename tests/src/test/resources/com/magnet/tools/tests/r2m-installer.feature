@@ -1,4 +1,4 @@
-@mob @r2m-installer @r2m
+ @r2m-installer @r2m
 Feature: R2M Installer layout
 
   As a Magnet User

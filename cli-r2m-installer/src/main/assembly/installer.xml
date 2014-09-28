@@ -70,9 +70,6 @@
       <outputDirectory>lib</outputDirectory>
       <useProjectArtifact>true</useProjectArtifact>
       <useTransitiveDependencies>true</useTransitiveDependencies>
-      <excludes>
-        <exclude>com.magnet.platform*:*:*</exclude>
-      </excludes>
       <scope>compile</scope>
     </dependencySet>
 

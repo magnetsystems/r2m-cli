@@ -79,7 +79,7 @@
     <jar-plugin.version>2.4</jar-plugin.version>
     <!-- copts is an alias to cucumber.options, this is useful on win
     where powershell does not handle properties with "." -->
-    <copts>--tags ~@wip --tags @r2m --tags ~@cloud</copts>
+    <copts>--tags ~@wip</copts>
     <cucumber.options>${copts}</cucumber.options>
 
     <!-- for platform -->
