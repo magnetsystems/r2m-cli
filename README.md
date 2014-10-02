@@ -49,7 +49,7 @@ Unzip the rest2mobile zip file and add r2m to the path.
 This starts the <code>r2m</code> shell console. It supports help, completion, and ANSI coloring.
 ```
 $ r2m
-Starting rest2mobile 1.0.0
+Starting rest2mobile 1.1.0-RC1
 Run 'gen --interactive' to generate Mobile APIs in interactive mode.
 Type '?' for help. Use <TAB> for completion. <Ctrl-D> to abort commands.
 r2m> gen 
