@@ -27,7 +27,6 @@ Feature: Generate Many Mobile API with the Mob tool
     | -e     | ${basedir}/src/test/resources/rest/userManager             | userManager          | UserManagerController             |
     | -d     | AsanaUsers                                                 | AsanaUsers           | AsanaUsersController              |
     | -d     | DNS2IP                                                     | DNS2IP               | Dns2IpController                  |
-    | -d     | ${basedir}/src/test/resources/rest/google-geocode.rest.txt | google-geocode       | GoogleGeoCodeController           |
     | -d     | GSUserTopics                                               | GSUSerTopics         | GSUsersTopicsController           |
     | -d     | Nexmo                                                      | Nexmo                | NexmoController                   |
     | -d     | QRGenerator                                                | QRGenerator          | QrGeneratorController             |
