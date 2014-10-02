@@ -4,7 +4,6 @@ Feature: R2M Installer layout
   As a Magnet User
   I want to be able to install the R2M tool
   in order to start using it
-  | bin/r2m.cmd                                                |
 
   Scenario:  install the r2m tool
     Given I setup a new r2m test under "${basedir}/target/r2m-installer"
