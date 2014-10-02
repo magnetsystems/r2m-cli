@@ -59,7 +59,6 @@
       <artifactId>jackson-mapper-asl</artifactId>
       <version>${jackson.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-core-asl</artifactId>
@@ -78,6 +77,13 @@
 
     <!-- END magnet platform dependencies -->
 
+    <dependency>
+      <groupId>com.magnet.tools</groupId>
+      <artifactId>magnet-tools-utils</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+      <type>test-jar</type>
+    </dependency>
 
   </dependencies>
 
