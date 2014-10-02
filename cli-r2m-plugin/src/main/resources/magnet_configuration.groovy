@@ -30,4 +30,5 @@ commands = [
 examplesHost = "https://raw.githubusercontent.com"
 examplesUrlManifest = "/magnetsystems/r2m-examples/master/samples/manifest.json"
 examplesUrlPath = "/magnetsystems/r2m-examples/master/samples"
-exampleGitSrcUrl= "https://raw.githubusercontent.com/magnetsystems/r2m-examples/master/samples/"
+exampleGitSrcUrl= "${examplesHost}/magnetsystems/r2m-examples/master/samples/"
+exampleGitDirectory="https://github.com/magnetsystems/r2m-examples/tree/master/samples"

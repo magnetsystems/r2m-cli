@@ -580,7 +580,7 @@ class GenCommand extends AbstractCommand {
     } as List
 
     int choice = PromptHelper.promptOptions(shell,
-        "Available Examples from ${shell.configuration.exampleGitSrcUrl}:",
+        "Available Examples from ${shell.configuration.exampleGitDirectory}:",
         1,
         choices)
 
