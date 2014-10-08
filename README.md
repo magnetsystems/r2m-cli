@@ -186,9 +186,9 @@ For example, with:
   Call<TimeZoneResult> resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true", null);
   TimeZoneResult result = resp.get();
   
-  // assert result.getStatus() == "OK";
-  // assert result.getTimeZoneId() == "America/Los_Angeles";
-  // assert result.getTimeZoneName() == "Pacific Standard Time";
+  // assert result.getStatus().equals("OK");
+  // assert result.getTimeZoneId().equals("America/Los_Angeles");
+  // assert result.getTimeZoneName().equals("Pacific Standard Time");
   // assert result.getDstOffSet() == 0;
   // assert result.getRawOffset() == -28800;
 ```
