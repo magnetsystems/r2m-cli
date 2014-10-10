@@ -1,4 +1,4 @@
-@simple-gen
+@simple-gen @simple-gen-espn
 Feature: Generate Mobile assets with simple java client
 
   As a mobile developer
@@ -7,7 +7,7 @@ Feature: Generate Mobile assets with simple java client
 
   Scenario: generate espn headlines
     # set up test
-    Given I setup a new java client test under "${basedir}/target/simple-gen"
+    Given I setup a new java client test under "${basedir}/target/simple-gen-espn"
     And the file "${test-dir}/examples/espn_headlines.txt" is a copy of "${basedir}/src/test/resources/rest/espn_headlines.txt"
 
     When I run the simple java client with options:
@@ -15,7 +15,7 @@ Feature: Generate Mobile assets with simple java client
       -e ${test-dir}/examples -o ${test-dir}/mobile
     """
 
-  Scenario: check ios assets generation
+  Scenario: check ESPN ios assets generation
     And the directory structure for "${test-dir}/mobile/ios" should be:
       | Podfile                             |
       | Source/Controllers/RestController.h |
@@ -44,7 +44,7 @@ Feature: Generate Mobile assets with simple java client
       | Source/Nodes/Video.h                |
       | Source/Nodes/Web.h                  |
 
-  Scenario: check android assets generation
+  Scenario: check ESPN android assets generation
     And the directory structure for "${test-dir}/mobile/android/com/magnet/controller/api/" should be:
       | RestController.java        |
       | RestControllerFactory.java |
@@ -70,7 +70,7 @@ Feature: Generate Mobile assets with simple java client
       | Video.java                |
       | Web.java                  |
 
-  Scenario: check js assets generation
+  Scenario: check ESPN js assets generation
     And the directory structure for "${test-dir}/mobile/js" should be:
       | Controllers/RestController.js   |
       | Beans/Api.js                  |

@@ -163,44 +163,50 @@ public class SimpleGenCommand {
     int entriesAdded = 0;
     ExampleParser parser = new ExampleParser();
     for (URL e : sourceFiles) {
-      RestExampleModel model;
+      List<RestExampleModel> models;
       String resource = new File(e.getFile()).exists() ? e.getFile() : e.toString();
       try {
         info("Parsing example " + resource);
-        model = parser.parse(e);
+        models = parser.parseExample(e);
       } catch (Exception pe) {
         throw new IllegalArgumentException("Parsing error: " + pe.getMessage());
       }
 
-      // print parse result for preview;
-      trace("========parse result of file " + resource + "========");
-      trace(" - name : " + model.getName());
-      trace("--------request--------");
-      trace(" - url : " + model.getRequestUrl());
-      trace(" - content-type : " + model.getRequestContentType());
-      trace(" - headers : " + model.getRequestHeaders());
-      trace(" - body : \n" + model.getRequestBody());
-      trace("--------response--------");
-      //trace(" - response code : " + model.getResponseCode());
-      trace(" - content-type : " + model.getResponseContentType());
-      trace(" - body : \n" + model.getResponseBody());
+      trace("========parse result of file ${oneFile.file}========");
+      for (RestExampleModel model: models) {
+        // print parse result for preview
+        trace(" === new method ====");
+        trace(" - name : " + model.getName());
+        trace("--------request--------");
+        trace(" - url : " + model.getRequestUrl());
+        trace(" - content-type : " + model.getRequestContentType());
+        trace(" - headers : " + model.getRequestHeaders());
+        trace(" - body : \n" + model.getRequestBody());
+        trace("--------response--------");
+        trace(" - response code : " + model.getResponseCode());
+        trace(" - content-type : " + model.getResponseContentType());
+        trace(" - body : \n" + model.getResponseBody());
+        trace(" ==== end method ====");
+        //
+        // Generate java code
+        //
+        RestExampleContainer entry = builder.addExample(model.getName(), //method name;
+            null, // description;
+            path,
+            model.getRequestUrl(),
+            Utils.guessContentType(model.getRequestContentType(), model.getRequestBody()),
+            model.getRequestBody(),
+            model.getRequestHeaders(),
+            model.getResponseCode(),
+            Utils.guessContentType(model.getResponseContentType(), model.getResponseBody()),
+            model.getResponseBody()).build();
+        langPackGenerator.add(entry);
 
-      //
-      // Generate java code
-      //
-      RestExampleContainer entry = builder.addExample(model.getName(), //method name;
-          null, // description;
-          path,
-          model.getRequestUrl(),
-          Utils.guessContentType(model.getRequestContentType(), model.getRequestBody()),
-          model.getRequestBody(),
-          model.getRequestHeaders(),
-          model.getResponseCode(),
-          Utils.guessContentType(model.getResponseContentType(), model.getResponseBody()),
-          model.getResponseBody()).build();
-      langPackGenerator.add(entry);
+        entriesAdded++;
 
-      entriesAdded++;
+
+      }
+
     }
 
     return entriesAdded > 0 ? langPackGenerator : null;
