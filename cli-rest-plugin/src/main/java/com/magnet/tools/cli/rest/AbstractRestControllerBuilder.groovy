@@ -16,12 +16,11 @@
  */
 package com.magnet.tools.cli.rest
 
+import com.magnet.langpack.builder.rest.EmptyPropertyPolicy
+import com.magnet.langpack.builder.rest.RestContentType
 import com.magnet.langpack.builder.rest.RestExampleContainerBuilder
-import com.magnet.langpack.builder.rest.RestExampleContainer
 import com.magnet.langpack.builder.rest.parser.ExampleParser
 import com.magnet.langpack.builder.rest.parser.RestExampleModel
-import com.magnet.langpack.builder.rest.RestContentType
-import com.magnet.langpack.builder.rest.EmptyPropertyPolicy
 import com.magnet.langpack.tool.LangPackGenerator
 import com.magnet.langpack.tool.LangPackTool
 import com.magnet.tools.cli.core.CommandException
@@ -46,9 +45,9 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
   }
 
   /**
-   * Utility method to find the content type enum value {@link RestLangPackBuilderIface.ContentType}
+   * Utility method to find the content type enum value {@link RestContentType}
    * If <code>contentTypeStr</code> is null, then guess the content type (checking if it is json or not)
-   * Otherwise convert the content type string to the assocaited enum
+   * Otherwise convert the content type string to the associated enum
    * @param contentTypeStr content type string, can be null
    * @param content content string
    * @return content type  enum, null if no type nor content is passed
@@ -100,27 +99,30 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
     int entriesAdded = 0
     def parser = new ExampleParser()
     for (URL oneFile : sourceFiles) {
-      RestExampleModel model
+      List<RestExampleModel> models
       String resource = new File(oneFile.file).exists() ? oneFile.file : oneFile.toString()
       try {
         shell.info(RestMessages.parsingResource(resource))
-        model = parser.parse(oneFile)
+        models = parser.parseExample(oneFile)
       } catch (Exception e) {
         throw new CommandException(CoreConstants.COMMAND_PARSING_ERROR_CODE, RestMessages.failedToParseExample(resource, e.getMessage()))
       }
 
-      // print parse result for preview
       shell.trace("========parse result of file ${oneFile.file}========")
-      shell.trace(" - name : ${model.getName()}")
-      shell.trace("--------request--------")
-      shell.trace(" - url : ${model.getRequestUrl()}")
-      shell.trace(" - content-type : ${model.getRequestContentType()}")
-      shell.trace(" - headers : ${model.getRequestHeaders()}")
-      shell.trace(" - body : \n${model.getRequestBody()}")
-      shell.trace("--------response--------")
-      shell.trace(" - response code : ${model.getResponseCode()}")
-      shell.trace(" - content-type : ${model.getResponseContentType()}")
-      shell.trace(" - body : \n${model.getResponseBody()}")
+      for (model in models) {
+        // print parse result for preview
+        shell.trace(" === new method ====")
+        shell.trace(" - name : ${model.getName()}")
+        shell.trace("--------request--------")
+        shell.trace(" - url : ${model.getRequestUrl()}")
+        shell.trace(" - content-type : ${model.getRequestContentType()}")
+        shell.trace(" - headers : ${model.getRequestHeaders()}")
+        shell.trace(" - body : \n${model.getRequestBody()}")
+        shell.trace("--------response--------")
+        shell.trace(" - response code : ${model.getResponseCode()}")
+        shell.trace(" - content-type : ${model.getResponseContentType()}")
+        shell.trace(" - body : \n${model.getResponseBody()}")
+        shell.trace(" ==== end method ====")
 
 //      boolean toContinue = PromptHelper.promptYesOrNo(shell, "Continue", true)
 //      if(!toContinue) {
@@ -131,22 +133,23 @@ abstract class AbstractRestControllerBuilder<T> implements Builder<T>, ShellAwar
       // Generate java code
       //
       //TODO : parse content type from model instead of hard coded JSON (WON-8111)
-      def entry = builder.addExample(model.getName(), //method name
-          null, // description
-          path,
-          model.getRequestUrl(),
-          guessContentType(model.getRequestContentType(), model.getRequestBody()),
-          model.getRequestBody(),
-          model.getRequestHeaders(),
-          model.getResponseCode(),
-          guessContentType(model.getResponseContentType(), model.getResponseBody()),
-          model.getResponseBody()).build();
-      langPackGenerator.add(entry);
+        def entry = builder.addExample(model.getName(), //method name
+            null, // description
+            path,
+            model.getRequestUrl(),
+            guessContentType(model.getRequestContentType(), model.getRequestBody()),
+            model.getRequestBody(),
+            model.getRequestHeaders(),
+            model.getResponseCode(),
+            guessContentType(model.getResponseContentType(), model.getResponseBody()),
+            model.getResponseBody()).build();
+        langPackGenerator.add(entry);
+        entriesAdded++
+      }
 
-      entriesAdded++
     }
 
-    return entriesAdded? langPackGenerator : null
+    return entriesAdded ? langPackGenerator : null
 
   }
 
