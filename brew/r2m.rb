@@ -52,7 +52,7 @@ end
 class R2m < Formula
   homepage 'http://developer.magnet.com'
   url "https://github.com/magnetsystems/r2m-cli/releases/download/v1.1.0-RC1/r2m-installer-1.1.0-RC1.tar.gz"
-  sha1 '297986c092f9c3de3ec4de8f1e03ebea93aa19a0'
+  sha1 '46384dbca35f9c3a6113e0025535954de4f06241'
 
   depends_on JavaDependency => :recommended
 
