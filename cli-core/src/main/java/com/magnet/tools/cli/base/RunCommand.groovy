@@ -98,7 +98,7 @@ class RunCommand extends AbstractCommand {
     }
     if (!options.arguments()) {
       throw new CommandException(CoreConstants.COMMAND_PARSING_ERROR_CODE,
-          "Missing mab script path.\n")
+          "Missing script path.\n")
     }
 
     List<String> args = options.arguments()
@@ -169,7 +169,7 @@ class RunCommand extends AbstractCommand {
     List<String> lines = expandedContent.readLines()
     for (String line : lines) {
       if (verbose || (!line.startsWith('println') && !line.isEmpty())) {
-        boldGreen(CoreConstants.PROMPT + line)
+        boldGreen(line)
       }
       res = shell << line
       if (res) {
