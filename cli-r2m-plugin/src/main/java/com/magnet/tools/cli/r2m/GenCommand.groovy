@@ -131,18 +131,29 @@ class GenCommand extends AbstractCommand {
     //
     if (options.e) {
       if (options.e == EXAMPLE_LIST_ENTRY) {
-        examples = getExampleFromRepo()
+        def response = getExampleFromRepo()
+        controllerClassName = response.controllerName
+        packageName = response.packageName
+        examples = response.filePath
       } else {
         examples = options.e
       }
     } else if (options.d) {
       if (options.d == EXAMPLE_LIST_ENTRY) {
-        examples = getExampleFromRepo()
+        def response = getExampleFromRepo()
+        controllerClassName = response.controllerName
+        packageName = response.packageName
+        examples = response.filePath
       } else {
         examples = loadExamplesFile(options.d).getCanonicalPath()
+        packageName = R2MConstants.DEFAULT_REST_EXAMPLES_REPO_PACKAGE_NAME
+        controllerClassName = options.d
       }
     } else if (options.l) {
-      examples = getExampleFromRepo()
+      def response = getExampleFromRepo()
+      controllerClassName = response.controllerName
+      packageName = response.packageName
+      examples = response.filePath
       if (!PromptHelper.promptYesOrNo(shell, "Do you want to generate this Mobile API now?", true)) {
         return CoreConstants.COMMAND_OK_CODE
       }
@@ -158,11 +169,15 @@ class GenCommand extends AbstractCommand {
     //
     // Get controller name
     //
-    controllerClassName = options.c ?: R2MConstants.DEFAULT_CONTROLLER_CLASS_NAME
-
-    if (!options.i && !options.l && !options.c) {
-      info(R2MMessages.usingDefaultClassName(StringHelper.b(controllerClassName)))
+    if (options.c) {
+      controllerClassName = options.c
+    } else {
+      controllerClassName = controllerClassName ?: R2MConstants.DEFAULT_CONTROLLER_CLASS_NAME
+      if (!options.i && !options.l) {
+        info(R2MMessages.usingDefaultClassName(StringHelper.b(controllerClassName)))
+      }
     }
+
 
     validateController(controllerClassName)
 
@@ -289,7 +304,14 @@ class GenCommand extends AbstractCommand {
 
     // specifications
     if (askLocation) {
-      examples = getSpecificationsInteractively()
+      def response = getSpecificationsInteractively()
+      examples = response.filePath
+      if (response.controllerName) {
+        controllerClassName = response.controllerName
+      }
+      if (response.packageName) {
+        controllerClassName = response.packageName
+      }
     }
 
     // platform targets
@@ -326,8 +348,12 @@ class GenCommand extends AbstractCommand {
   }
 
 
-  private String getSpecificationsInteractively() {
+  /**
+   * @return a triple (controller name suggestion, file path), controller name can be null
+   */
+  private ExampleResponse getSpecificationsInteractively() {
     def URL_PATTERN = /http[s]?:\/\/.*/
+    def response = new String[2]
     while (true) {
       def specs = null
       if (examples) {
@@ -335,7 +361,7 @@ class GenCommand extends AbstractCommand {
         boolean isURL = examples.toLowerCase() ==~ URL_PATTERN
 
         if (isURL) {
-          return examples
+          return new ExampleResponse(null, null, examples)
         }
       }
       // use default specification location if it exists otherwise, ask for help.
@@ -345,12 +371,13 @@ class GenCommand extends AbstractCommand {
       d = d?.trim()
 
       if (d == EXAMPLE_LIST_ENTRY) {
-        d = getExampleFromRepo()
+        return getExampleFromRepo()
       }
 
       if ((d && new File(d).exists()) || d.toLowerCase() ==~ URL_PATTERN) {
-        return d
+        return new ExampleResponse(null, null, d)
       }
+
       if (!PromptHelper.promptYesOrNo(shell, R2MMessages.specificationsMustBeValid(d) + " Do you want to retry?", true)) {
         throw new CommandException(CoreConstants.COMMAND_ABORT_CODE, CommonMessages.commandAborted())
       }
@@ -376,7 +403,7 @@ class GenCommand extends AbstractCommand {
 
   private String getPackageNameInteractively() {
     while (true) {
-      def p = PromptHelper.prompt(shell, "Enter the package for your Android Mobile API?", R2MConstants.DEFAULT_PACKAGE_NAME)
+      def p = PromptHelper.prompt(shell, "Enter the package for your Android Mobile API?", packageName ?:R2MConstants.DEFAULT_PACKAGE_NAME)
       p = p?.trim()
       try {
         validatePackageName(p)
@@ -590,9 +617,9 @@ class GenCommand extends AbstractCommand {
 
   /**
    * Get an example file path copied from the git repo
-   * @return file path
+   * @return a triple with controller name (can be null), package name (can be null), and a file path string
    */
-  private String getExampleFromRepo() {
+  private ExampleResponse getExampleFromRepo() {
     Map manifest = loadExamplesManifest();
     List<String> choices = manifest.collect { k, v ->
       StringHelper.padRight(k, 20) + ": " + v[R2MConstants.MANIFEST_DESCRIPTION_KEY]
@@ -603,7 +630,9 @@ class GenCommand extends AbstractCommand {
         1,
         choices)
 
-    return loadExamplesFile(choices[choice].split(':')[0].trim()).getCanonicalPath()
+    def name = choices[choice].split(':')[0].trim()
+    def result = new ExampleResponse(name, R2MConstants.DEFAULT_REST_EXAMPLES_REPO_PACKAGE_NAME, loadExamplesFile(name).getCanonicalPath())
+    return result
   }
 
 }

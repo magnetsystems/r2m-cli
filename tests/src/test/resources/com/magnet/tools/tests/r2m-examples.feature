@@ -51,7 +51,7 @@ Feature: Generate Many Mobile API with the Mob tool
     When I run the commands:
       | command                                                                              | workingDirectory |
       | bash bin/r2m gen -o ${test-dir}/generated/<outputDir> -d <example> -c <className> -f | ${test-dir}      |
-    Then the directory structure for "${test-dir}/generated/<outputDir>/android/com/magnet/controller/api/" should be:
+    Then the directory structure for "${test-dir}/generated/<outputDir>/android/com/magnetapi/examples/controller/api/" should be:
       | <className>.java        |
       | <className>Factory.java |
     And the directory structure for "${test-dir}/generated/<outputDir>/ios/Source/Controllers" should be:
