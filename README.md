@@ -26,7 +26,7 @@ r2m> gen --interactive
 
 ### Run it using installers
 
-Find universal installers [here](https://github.com/magnetsystems/r2m-cli/releases) 
+Find universal installers [here](https://github.com/magnetsystems/r2m-cli/releases/latest) 
 
 #### On Mac
 
