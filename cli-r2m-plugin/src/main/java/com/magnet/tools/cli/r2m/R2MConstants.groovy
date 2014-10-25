@@ -31,4 +31,5 @@ interface R2MConstants {
   String DEFAULT_PACKAGE_NAME = "com.magnet"
   String MANIFEST_FILE_KEY = "file"
   String MANIFEST_DESCRIPTION_KEY = "description"
+  String DEFAULT_REST_EXAMPLES_REPO_PACKAGE_NAME = "com.magnetapi.examples"
 }

@@ -22,7 +22,7 @@
   <parent>
     <artifactId>magnet-tools</artifactId>
     <groupId>com.magnet.tools</groupId>
-    <version>1.1.0-RC1</version>
+    <version>1.1.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -81,7 +81,7 @@
         <executions>
           <execution>
             <phase>compile</phase>
-            <id>create mab_config.properties file</id>
+            <id>create magnet_tools_config.properties file</id>
             <goals>
               <goal>execute</goal>
             </goals>
@@ -89,7 +89,7 @@
               <providerSelection>2.0</providerSelection>
               <source>
                 def p = new Properties()
-                def f = new File(project.build.outputDirectory, 'mab_config.properties')
+                def f = new File(project.build.outputDirectory, 'magnet_tools_config.properties')
                 p.put('platform_version', project.properties['platform_version'])
                 p.put('magnet_tools_version', project.version)
                 p.put('magnet_langpack_tools_version', project.properties['magnet_langpack_tools_version'])

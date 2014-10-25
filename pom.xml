@@ -22,7 +22,7 @@
   <groupId>com.magnet.tools</groupId>
   <artifactId>magnet-tools</artifactId>
 
-  <version>1.1.0-RC1</version>
+  <version>1.1.0</version>
   <packaging>pom</packaging>
   <name>Magnet Tools</name>
   <description>${project.name}</description>
@@ -45,7 +45,7 @@
         </property>
       </activation>
       <properties>
-        <platform_version>2.3.1</platform_version>
+        <platform_version>2.3.2</platform_version>
         <magnet_langpack_tools_version>${platform_version}</magnet_langpack_tools_version>
       </properties>
     </profile>
@@ -495,9 +495,10 @@
           <useFile>false</useFile>
           <runOrder>random</runOrder>
           <argLine>-enableassertions</argLine>
+          <argLine>-enableassertions</argLine>
           <systemPropertyVariables>
             <cucumber.options>${cucumber.options}</cucumber.options>
-            <java.util.logging.config.file>logging.properties</java.util.logging.config.file>
+            <testgroup.cloud.run>${testgroup.cloud.run}</testgroup.cloud.run>
           </systemPropertyVariables>
           <includes>
             <include>**/*Test*.java</include>
@@ -512,20 +513,6 @@
 
   </build>
 
-  <distributionManagement>
-    <repository>
-      <id>libs-release-local</id>
-      <name>Releases</name>
-      <url>${env.MAVEN_RELEASES_URL}</url>
-    </repository>
-
-    <snapshotRepository>
-      <id>libs-snapshot-local</id>
-      <name>Snapshots</name>
-      <url>${env.MAVEN_SNAPSHOTS_URL}</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <modules>
 
     <!-- core -->
@@ -539,7 +526,11 @@
     <module>cli-rest-mobile-plugin</module>
     <module>cli-r2m-plugin</module>
     <module>cli-r2m-installer</module>
+
+    <!-- simple java client -->
     <module>cli-simple</module>
+
+    <!-- integration tests -->
     <module>tests</module>
 
   </modules>

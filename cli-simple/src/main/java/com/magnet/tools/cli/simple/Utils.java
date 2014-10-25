@@ -20,31 +20,31 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import com.magnet.langpack.builder.rest.RestLangPackBuilderIface;
+import com.magnet.langpack.builder.rest.RestContentType;
 import com.magnet.langpack.builder.rest.parser.ExampleParser;
 
 /**
  * Various utilities used for generation
  */
 public class Utils {
-  static RestLangPackBuilderIface.ContentType guessContentType(String contentTypeStr, String content) {
+  static RestContentType guessContentType(String contentTypeStr, String content) {
     if (contentTypeStr == null || contentTypeStr.isEmpty()) {
       if (content == null || content.isEmpty()) {
         return null;
       }
-      return ExampleParser.guessContentType(content);
+      return RestContentType.guessContentType(content);
     }
 
     if (contentTypeStr.toLowerCase().contains("json")) {
-      return RestLangPackBuilderIface.ContentType.JSON;
+      return RestContentType.JSON;
     } else if (contentTypeStr.toLowerCase().contains("form")) {
-      return RestLangPackBuilderIface.ContentType.FORM;
+      return RestContentType.FORM;
     } else if (contentTypeStr.toLowerCase().contains("text")) {
-      return RestLangPackBuilderIface.ContentType.TEXT;
+      return RestContentType.TEXT;
     }
 
     // default;
-    return RestLangPackBuilderIface.ContentType.TEXT;
+    return RestContentType.TEXT;
   }
 
   /**

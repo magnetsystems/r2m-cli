@@ -159,19 +159,19 @@ class GenCommandSpec extends AbstractCommandSpecification {
     then:
 
       // ios generation
-      expectIOSAssets(new File(output, "ios"), nodes, controller)
+      expectIOSAssets(new File(output, "ios"), nodes, spec)
 
       // android generation
-      expectAndroidAssets(new File(output, "android"), nodes, controller)
+      expectAndroidAssets(new File(output, "android"), nodes, spec, R2MConstants.DEFAULT_REST_EXAMPLES_REPO_PACKAGE_NAME)
 
       // js generation
-      expectJsAssets(new File(output, "js"), nodes, controller)
+      expectJsAssets(new File(output, "js"), nodes, spec)
 
 
     where:
-      spec             | controller       | nodes                           | dir
-      'GoogleDistance' | "RestController" | ['GoogleDistanceResult', 'Row'] | 'test5_1'
-      'ESPNHeadlines'  | "RestController" | ['Links', 'Events', 'Headline'] | 'test5_2'
+      spec             | nodes                           | dir
+      'GoogleDistance' | ['GoogleDistanceResult', 'Row'] | 'test5_1'
+      'ESPNHeadlines'  | ['Links', 'Events', 'Headline'] | 'test5_2'
 
   }
 

@@ -1,0 +1,83 @@
++name createUser
++Request
+POST http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/createUser
++Headers
+appId : app1
++Content-type application/json
++Body
+{
+"id":1,
+"primaryEmailAddress":"jim.liu@magnet.com"
+}
++Response 200
++Content-type application/json
++Body
+{
+  "id" : 1,
+  "appId" : "app1",
+  "createdTime" : "2013-12-29T08:00:00Z",
+  "updatedTime" : "2013-12-29T08:00:00Z",
+  "primaryEmailAddress" : "jim.liu@magnet.com"
+}
++name deleteUser
++Request
+DELETE http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/users/{userId}
++Headers
+appId : app1
+
++Response 200
++Name listUsers
++Request
+GET http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/listUsers?startIndex=1&pageSize=10
++Headers
+appId : app1
+
++Response 200
++Content-type application/json
++Body
+[ {
+    "id" : 1,
+    "appId" : "app1",
+    "createdTime" : "2013-12-29T08:00:00Z",
+    "primaryEmailAddress" : "jim.liu@magnet.com"
+  }, {
+    "id" : 1,
+    "appId" : "app1",
+    "createdTime" : "2013-12-29T08:00:00Z",
+    "primaryEmailAddress" : "jim.liu2@magnet.com",
+    "updatedTime" : "2013-12-29T20:00:00Z"
+  } ]
++name login
++Request
+POST http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/login
++Headers
+appId : app1
++Content-type application/x-www-form-urlencoded
++Body
+userName=jim.liu&password=password
+
++Response 200 text/plain
++Body
+success
++name updateUser
++Request
+PUT http://ec2-54-235-127-73.compute-1.amazonaws.com:8088/rest/updateUser
++Headers
+appId : app1
++Content-type application/json
++Body
+{
+  "id" : 1,
+  "createdTime" : "2013-12-29T08:00:00Z",
+  "primaryEmailAddress" : "jim.liu2@magnet.com"
+}
++Response 200
++Content-type application/json
++Body
+{
+  "id" : 1,
+  "appId" : "app1",
+  "createdTime" : "2013-12-29T08:00:00Z",
+  "primaryEmailAddress" : "jim.liu2@magnet.com",
+  "updatedTime" : "2013-12-29T20:00:00Z"
+}

@@ -22,7 +22,7 @@
   <parent>
     <artifactId>magnet-tools</artifactId>
     <groupId>com.magnet.tools</groupId>
-    <version>1.1.0-RC1</version>
+    <version>1.1.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -80,7 +80,7 @@
     <dependency>
       <groupId>com.magnet.tools</groupId>
       <artifactId>magnet-tools-utils</artifactId>
-      <version>${project.version}</version>
+      <version>1.1.0</version>
       <scope>test</scope>
       <type>test-jar</type>
     </dependency>
