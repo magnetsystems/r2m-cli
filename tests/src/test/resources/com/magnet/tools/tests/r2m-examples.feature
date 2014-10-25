@@ -66,4 +66,5 @@ Feature: Generate Many Mobile API with the Mob tool
     | SFSearch     | SFSearch     | SFSearchController      |
     | DNS2IP       | DNS2IP       | Dns2IpController        |
     | GSUserTopics | GSUSerTopics | GSUsersTopicsController |
+    | YouTube      | YouTube      | YouTubeController       |
 
