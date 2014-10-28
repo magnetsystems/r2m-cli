@@ -23,5 +23,6 @@ Feature: Generate API by ignoring null values
       | <className>.js |
 
   Examples:
-    | example                                    | outputDir | className     |
-    | ${basedir}/src/test/resources/rest/box.txt | box       | BoxController |
+    | example                                                                            | outputDir | className     |
+    | ${basedir}/src/test/resources/rest/box.txt                                         | box       | BoxController |
+    | https://raw.githubusercontent.com/magnetsystems/r2m-examples/master/samples/yo.txt | yo        | YoController  |
