@@ -45,7 +45,7 @@
         </property>
       </activation>
       <properties>
-        <platform_version>2.3.2-SNAPSHOT</platform_version>
+        <platform_version>2.3.2</platform_version>
         <magnet_langpack_tools_version>${platform_version}</magnet_langpack_tools_version>
       </properties>
     </profile>
