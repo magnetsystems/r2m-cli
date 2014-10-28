@@ -1,12 +1,16 @@
 [![Build Status](https://travis-ci.org/magnetsystems/r2m-cli.svg?branch=master)](https://travis-ci.org/magnetsystems/r2m-cli)
 
 ## rest2mobile CLI (r2m)
-<img style="margin:10px" src="http://developer.magnet.com/tmp/img/logo_r2m_main.png"
+<img style="margin:10px" src="http://developer.magnet.com/img/logo_r2m_main.png"
  alt="rest2mobile logo" title="rest2mobile" align="right" />
 <code>r2m</code> is a command-line tool that generates Android, iOS, and JavaScript code for your mobile app to interact with REST APIs. It takes REST request and JSON response information from a variety of sources you provide, and generates
 platform-specific code for making the request and retrieving the response.
 
 **Note:** If you are developing with Android Studio or IntelliJ, you can use the [rest2mobile plugin for Android][r2m-plugin-android] instead of the CLI. For iOS apps, you can use the [rest2mobile plugin for Xcode][r2m-plugin-ios].
+
+## Stable releases
+* [1.1.0](https://github.com/magnetsystems/r2m-cli/releases/1.1.0) 
+* [1.0.0](https://github.com/magnetsystems/r2m-cli/releases/v1.0.0) 
 
 ## Getting Started
 
@@ -58,7 +62,7 @@ r2m> gen
 ### Start in non-interactive mode:
 Useful to run single command, or include in script
 ```
-$ r2m gen -e <file> [-o <outputdir>] [-p <package>] [-n <classPrefix>] [-c <ClassName>] [<target: android|js|ios>] [-flw] [-d <ApiID>]
+$ r2m gen -e <file> [-o <outputdir>] [-p <package>] [-j IGNORE] [-n <classPrefix>] [-c <ClassName>] [<target: android|js|ios>] [-flw] [-d <ApiID>]
 
 ```
 For the rest of this tutorial <code>r2m</code> commands will be run in interactive mode. So you need to run <code>r2m</code> first.
