@@ -492,18 +492,16 @@
         <configuration>
           <!-- To enable reload magnetDirectory -->
           <forkMode>always</forkMode>
-          <useFile>false</useFile>
           <runOrder>random</runOrder>
           <argLine>-enableassertions</argLine>
-          <argLine>-enableassertions</argLine>
           <systemPropertyVariables>
+            <java.util.logging.config.file>logging.properties</java.util.logging.config.file>
             <cucumber.options>${cucumber.options}</cucumber.options>
             <testgroup.cloud.run>${testgroup.cloud.run}</testgroup.cloud.run>
           </systemPropertyVariables>
           <includes>
             <include>**/*Test*.java</include>
             <include>**/*Spec.java</include>
-            <!-- not **/*Spec.groovy , since groovy compiler generates associated .java classes -->
           </includes>
         </configuration>
 
