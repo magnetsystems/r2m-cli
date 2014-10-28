@@ -1,0 +1,281 @@
+#
+# Box REST API example
+#
+
+#
+# Delete a folder
+#
++Name boxDelete
++Request
+DELETE https://api.box.com/2.0/folders/2615508927
++Headers
+
+Authorization: Bearer someToken
+
++Response
++Body
+
+
+
+#
+# Search a folder
+#
++Name boxGet
++Request
+GET https://api.box.com/2.0/search
++Headers
+
+Authorization: Bearer someToken
+
+
++Response
+
++Body
+{
+  "entries" : [
+    {
+      "purged_at" : null,
+      "modified_at" : "2014-10-17T11:21:02-07:00",
+      "content_created_at" : "2014-10-17T11:21:02-07:00",
+      "name" : "AndroidDND",
+      "sequence_id" : "0",
+      "type" : "folder",
+      "size" : 0,
+      "folder_upload_email" : null,
+      "id" : "2579698979",
+      "parent" : {
+        "sequence_id" : null,
+        "id" : "0",
+        "etag" : null,
+        "type" : "folder",
+        "name" : "All Files"
+      },
+      "item_status" : "active",
+      "trashed_at" : null,
+      "modified_by" : {
+        "id" : "223055841",
+        "login" : "blah@magnet.com",
+        "type" : "user",
+        "name" : "Paul Chan"
+      },
+      "owned_by" : {
+        "id" : "223055841",
+        "login" : "blah@magnet.com",
+        "type" : "user",
+        "name" : "Paul Chan"
+      },
+      "shared_link" : null,
+      "created_at" : "2014-10-17T11:21:02-07:00",
+      "etag" : "0",
+      "path_collection" : {
+        "total_count" : 1,
+        "entries" : [
+          {
+            "sequence_id" : null,
+            "id" : "0",
+            "etag" : null,
+            "type" : "folder",
+            "name" : "All Files"
+          }
+        ]
+      },
+      "created_by" : {
+        "id" : "223055841",
+        "login" : "blah@magnet.com",
+        "type" : "user",
+        "name" : "Paul Chan"
+      },
+      "content_modified_at" : "2014-10-17T11:21:02-07:00",
+      "description" : ""
+    }
+  ],
+  "total_count" : 1,
+  "offset" : 0,
+  "limit" : 30
+}
+
+
+#
+# Update a folder
+#
++Name boxPost
++Request
+POST https://api.box.com/2.0/folders
++Headers
+
+Authorization: Bearer someToken
+
++Body
+
+{
+"name":"PostFolderDan",
+"parent":{"id":"0"}
+}
+
+
++Response
+
++Body
+{
+  "purged_at" : null,
+  "modified_at" : "2014-10-27T15:22:19-07:00",
+  "content_created_at" : "2014-10-27T15:22:19-07:00",
+  "name" : "PostFolderDan",
+  "sequence_id" : "0",
+  "type" : "folder",
+  "size" : 0,
+  "folder_upload_email" : null,
+  "id" : "2615508927",
+  "parent" : {
+    "sequence_id" : null,
+    "id" : "0",
+    "etag" : null,
+    "type" : "folder",
+    "name" : "All Files"
+  },
+  "item_status" : "active",
+  "trashed_at" : null,
+  "modified_by" : {
+    "id" : "223055841",
+    "login" : "blah@magnet.com",
+    "type" : "user",
+    "name" : "Paul Chan"
+  },
+  "owned_by" : {
+    "id" : "223055841",
+    "login" : "blah@magnet.com",
+    "type" : "user",
+    "name" : "Paul Chan"
+  },
+  "shared_link" : null,
+  "item_collection" : {
+    "entries" : [],
+    "order" : [
+      {
+        "direction" : "ASC",
+        "by" : "type"
+      },
+      {
+        "direction" : "ASC",
+        "by" : "name"
+      }
+    ],
+    "total_count" : 0,
+    "offset" : 0,
+    "limit" : 100
+  },
+  "created_at" : "2014-10-27T15:22:19-07:00",
+  "etag" : "0",
+  "path_collection" : {
+    "total_count" : 1,
+    "entries" : [
+      {
+        "sequence_id" : null,
+        "id" : "0",
+        "etag" : null,
+        "type" : "folder",
+        "name" : "All Files"
+      }
+    ]
+  },
+  "created_by" : {
+    "id" : "223055841",
+    "login" : "blah@magnet.com",
+    "type" : "user",
+    "name" : "Paul Chan"
+  },
+  "content_modified_at" : "2014-10-27T15:22:19-07:00",
+  "description" : ""
+}
+
+#
+# Create a folder
+#
++Name boxPut
++Request
+PUT https://api.box.com/2.0/folders/2615508927
++Headers
+
+Authorization: Bearer someToken
+
++Body
+
+{
+"name":"DanPutFolder"
+}
+
+
++Response
+
++Body
+{
+  "purged_at" : null,
+  "modified_at" : "2014-10-27T15:26:48-07:00",
+  "content_created_at" : "2014-10-27T15:22:19-07:00",
+  "name" : "DanPutFolder",
+  "sequence_id" : "1",
+  "type" : "folder",
+  "size" : 0,
+  "folder_upload_email" : null,
+  "id" : "2615508927",
+  "parent" : {
+    "sequence_id" : null,
+    "id" : "0",
+    "etag" : null,
+    "type" : "folder",
+    "name" : "All Files"
+  },
+  "item_status" : "active",
+  "trashed_at" : null,
+  "modified_by" : {
+    "id" : "223055841",
+    "login" : "blah@magnet.com",
+    "type" : "user",
+    "name" : "Paul Chan"
+  },
+  "owned_by" : {
+    "id" : "223055841",
+    "login" : "blah@magnet.com",
+    "type" : "user",
+    "name" : "Paul Chan"
+  },
+  "shared_link" : null,
+  "item_collection" : {
+    "entries" : [],
+    "order" : [
+      {
+        "direction" : "ASC",
+        "by" : "type"
+      },
+      {
+        "direction" : "ASC",
+        "by" : "name"
+      }
+    ],
+    "total_count" : 0,
+    "offset" : 0,
+    "limit" : 100
+  },
+  "created_at" : "2014-10-27T15:22:19-07:00",
+  "etag" : "1",
+  "path_collection" : {
+    "total_count" : 1,
+    "entries" : [
+      {
+        "sequence_id" : null,
+        "id" : "0",
+        "etag" : null,
+        "type" : "folder",
+        "name" : "All Files"
+      }
+    ]
+  },
+  "created_by" : {
+    "id" : "223055841",
+    "login" : "blah@magnet.com",
+    "type" : "user",
+    "name" : "Paul Chan"
+  },
+  "content_modified_at" : "2014-10-27T15:26:48-07:00",
+  "description" : ""
+}

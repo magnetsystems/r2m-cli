@@ -17,6 +17,7 @@
 
 package com.magnet.tools.cli.rest
 
+import com.magnet.langpack.builder.rest.EmptyPropertyPolicy
 import com.magnet.tools.utils.MessagesSupport
 import com.magnet.tools.utils.StringHelper
 import groovy.util.logging.Slf4j
@@ -43,7 +44,7 @@ class RestMessages extends MessagesSupport {
   }
 
   static String restControllerGenerationFailure(def error) {
-    getMessage(REST_CONTROLLER_GENERATION_FAILURE, error)
+    getMessage(REST_CONTROLLER_GENERATION_FAILURE, error, EmptyPropertyPolicy.IGNORE)
   }
 
   static String tokenCannotBeFoundAfter(def token1, def token2) {
