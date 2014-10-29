@@ -109,6 +109,23 @@ Open the directory after generation of the Google Distance API with <code>-w</co
 ```
 r2m> gen -d GoogleDistance -f
 ```
+(Only on 1.1.0+) Ignore invalid values with <code>-j IGNORE</code>. In the example below, the generator will exclude the properties <code>a, b, c</code>, and only declare <code>d</code> in the generated object model <code>FooResult</code>.
+```
+cat << EOF > exampleWithInvalidValues.txt
++name foo
++request
+GET http://foo.com/some/path
++response
++body
+{ "a": null,
+  "b": [],
+  "c": {},
+  "d": 123
+ }
+ EOF
+r2m gen -e exampleWithInvalidValues.txt -j IGNORE -f
+```
+
 
 ### Build with your own examples
 
