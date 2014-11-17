@@ -205,6 +205,7 @@ For example, with:
   RestController controller = factory.obtainInstance();
   Call<TimeZoneResult> resp = controller.getTimeZone("39.6034810,-119.6822510", "1331161200", "true", null);
   TimeZoneResult result = resp.get();
+  resp.dispose(true); 
   
   // assert result.getStatus().equals("OK");
   // assert result.getTimeZoneId().equals("America/Los_Angeles");
